@@ -17,4 +17,7 @@
     <Content Include="../Binaries/Converted/Microsoft.SharePoint.Client.dll" PackagePath="lib/net46" />
     <Content Include="../Binaries/Converted/Microsoft.SharePoint.Client.Runtime.dll" PackagePath="lib/net46" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FakeItEasy" Version="4.4.0" />
+  </ItemGroup>
 </Project>

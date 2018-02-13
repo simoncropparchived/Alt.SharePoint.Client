@@ -1,9 +1,7 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
-using Fody;
 using Mono.Cecil;
 using Xunit;
 #pragma warning disable 618
@@ -44,6 +42,7 @@ public class Converter
         }))
         {
             new EmptyConstructor().Execute(module);
+            new Virtual().Execute(module);
             var runtimeRef = module.AssemblyReferences.Single(x => x.Name == "Microsoft.SharePoint.Client.Runtime");
             runtimeRef.PublicKeyToken = runtimePublicKeyToken;
             var newFilePath = Path.Combine(converted, client);

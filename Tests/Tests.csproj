@@ -8,5 +8,16 @@
     <PackageReference Include="Xunit" Version="2.3.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="FakeItEasy">
+      <HintPath>..\..\..\Users\ascropp\.nuget\packages\fakeiteasy\4.4.0\lib\net45\FakeItEasy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client">
+      <HintPath>..\Binaries\Converted\Microsoft.SharePoint.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Runtime">
+      <HintPath>..\Binaries\Converted\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 
 </Project>

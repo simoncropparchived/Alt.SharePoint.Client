@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using Fody;
 using Mono.Cecil;
 using Mono.Cecil.Cil;
 
