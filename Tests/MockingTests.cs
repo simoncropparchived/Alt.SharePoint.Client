@@ -8,10 +8,12 @@ public class MockingTests
     public void Run()
     {
         var listItem = A.Fake<ListItem>();
-        // set up a call to return a value
+var context = A.Fake<ClientContext>();
+
+        new mock
+        var item = new ListItem();
         A.CallTo(() => listItem.DisplayName).Returns("Hello");
 
         Assert.Equal("Hello", listItem.DisplayName);
-
     }
 }

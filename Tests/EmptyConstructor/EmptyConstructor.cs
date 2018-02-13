@@ -7,13 +7,10 @@ public partial class EmptyConstructor
 {
     public void Execute(ModuleDefinition  moduleDefinition)
     {
-        var queue = new Queue<TypeDefinition>(moduleDefinition.GetTypes());
-
         var processed = new Dictionary<TypeDefinition, MethodReference>();
         var external = new Dictionary<TypeReference, MethodReference>();
-        while (queue.Count != 0)
+        foreach (var type in moduleDefinition.GetTypes())
         {
-            var type = queue.Dequeue();
             if (!type.IsClass)
             {
                 continue;
@@ -37,11 +34,15 @@ public partial class EmptyConstructor
                 continue;
             }
 
+            if (type.Name == "ClientObject")
+            {
+                Debug.WriteLine("Sdf");
+            }
             var typeEmptyConstructor = type.GetEmptyConstructor();
 
             if (typeEmptyConstructor != null)
             {
-                MakeConstructorVisibleIfConfiguredAndNecessary(typeEmptyConstructor);
+                MakeConstructorVisible(typeEmptyConstructor);
 
                 processed.Add(type, typeEmptyConstructor);
                 continue;
@@ -50,11 +51,7 @@ public partial class EmptyConstructor
             MethodReference baseEmptyConstructor;
             if (baseType is TypeDefinition baseTypeDefinition)
             {
-                if (!processed.TryGetValue(baseTypeDefinition, out baseEmptyConstructor))
-                {
-                    queue.Enqueue(type);
-                    continue;
-                }
+                baseEmptyConstructor = processed[baseTypeDefinition];
             }
             else
             {
@@ -99,7 +96,7 @@ public partial class EmptyConstructor
         return method;
     }
 
-    void MakeConstructorVisibleIfConfiguredAndNecessary(MethodDefinition typeEmptyConstructor)
+    void MakeConstructorVisible(MethodDefinition typeEmptyConstructor)
     {
         if (typeEmptyConstructor.IsPublic)
         {

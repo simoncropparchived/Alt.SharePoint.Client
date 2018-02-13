@@ -41,10 +41,10 @@ public class Converter
             AssemblyResolver = new AssemblyResolver()
         }))
         {
-            new EmptyConstructor().Execute(module);
-            new Virtual().Execute(module);
             var runtimeRef = module.AssemblyReferences.Single(x => x.Name == "Microsoft.SharePoint.Client.Runtime");
             runtimeRef.PublicKeyToken = runtimePublicKeyToken;
+            new EmptyConstructor().Execute(module);
+            new Virtual().Execute(module);
             var newFilePath = Path.Combine(converted, client);
             var writerParameters = GetWriterParameters();
             module.Write(newFilePath, writerParameters);
@@ -79,11 +79,18 @@ public class Converter
 
     public class AssemblyResolver : DefaultAssemblyResolver
     {
+        AssemblyDefinition runtime;
+
         public override AssemblyDefinition Resolve(AssemblyNameReference name, ReaderParameters parameters)
         {
             if (name.Name == "Microsoft.SharePoint.Client.Runtime")
             {
-                return AssemblyDefinition.ReadAssembly(Path.Combine(source, "Microsoft.SharePoint.Client.Runtime.dll"));
+                if (runtime == null)
+                {
+                    runtime = AssemblyDefinition.ReadAssembly(Path.Combine(converted, "Microsoft.SharePoint.Client.Runtime.dll"));
+                }
+
+                return runtime;
             }
 
             return base.Resolve(name, parameters);
