@@ -6,8 +6,49 @@ A clone of the SharePoint client NuGets but with the following changes
  * A public parameterless constructor added to all public types.
  * Constructors of public type made public.
  * StrongNamed with a new key
+ * Un-sealed
 
 **This results in the public types being mockable for unit testing purposes.**
+
+
+## Mocking examples
+
+
+### Custom Mock
+
+
+```csharp
+[Fact]
+public void CustomMock()
+{
+    var listItem = new MockListItem
+    {
+        DisplayNameEx = "The Display Name"
+    };
+    Assert.Equal("The Display Name", listItem.DisplayName);
+}
+
+class MockListItem : ListItem
+{
+    public override string DisplayName => DisplayNameEx;
+
+    public string DisplayNameEx { get; set; }
+}
+```
+
+
+### FakeItEasy
+
+```csharp
+[Fact]
+public void FakeItEasy()
+{
+    var listItem = A.Fake<ListItem>();
+    A.CallTo(() => listItem.DisplayName)
+        .Returns("The Display Name");
+    Assert.Equal("The Display Name", listItem.DisplayName);
+}
+```
 
 
 ## Source NuGets
@@ -27,3 +68,4 @@ A clone of the SharePoint client NuGets but with the following changes
  * [Alt.SharePointOnline.CSOM.Min](https://www.nuget.org/packages/Alt.SharePointOnline.CSOM.Min/)
 
 The *.Min* variants contain  only `Microsoft.SharePoint.Client.dll` and `Microsoft.SharePoint.Client.Runtime.dll`.
+

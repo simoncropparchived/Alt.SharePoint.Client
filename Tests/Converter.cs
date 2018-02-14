@@ -10,13 +10,12 @@ using Xunit;
 public class Converter
 {
     static string source;
-    static string binariesPath;
     static string converted;
     static string keyPath;
 
     static Converter()
     {
-        binariesPath = GetBinariesPath();
+        var binariesPath = GetBinariesPath();
         source = Path.Combine(binariesPath, "Source");
         converted = Path.Combine(binariesPath, "Converted");
         keyPath = Path.Combine(GetSolutionPath(), "key.snk");
@@ -28,7 +27,7 @@ public class Converter
         foreach (var directory in Directory.EnumerateDirectories(source))
         {
             var newDirPath = Path.Combine(converted, Path.GetFileName(directory));
-            Directory.Delete(newDirPath,true);
+            Directory.Delete(newDirPath, true);
             Directory.CreateDirectory(newDirPath);
             var readerParameters = new ReaderParameters
             {
@@ -92,13 +91,13 @@ public class Converter
         {
             this.converted = converted;
         }
+
         public override AssemblyDefinition Resolve(AssemblyNameReference name, ReaderParameters parameters)
         {
             if (name.Name.StartsWith("Microsoft.SharePoint"))
             {
                 if (!refs.TryGetValue(name.Name, out var reference))
                 {
-                    var first = base.GetSearchDirectories().First();
                     reference = AssemblyDefinition.ReadAssembly(Path.Combine(converted, name.Name + ".dll"));
                     refs[name.Name] = reference;
                 }
