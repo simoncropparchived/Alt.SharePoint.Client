@@ -1,3 +1,7 @@
+The code in this repo is licensed under MIT.
+
+The resulting nuget packages are under the combined MS License (http://go.microsoft.com/fwlink/?LinkId=280198) and MIT.
+
 MIT License
 
 Copyright (c) 2018 Simon Cropp
