@@ -3,15 +3,6 @@
   <PropertyGroup>
     <TargetFrameworks>net46</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <IncludeBuildOutput>false</IncludeBuildOutput>
-    <NoPackageAnalysis>true</NoPackageAnalysis>
-    <PackageLicenseUrl>http://www.opensource.org/licenses/mit-license.php</PackageLicenseUrl>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageOutputPath>$(SolutionDir)nugets</PackageOutputPath>
-    <Authors>Simon Cropp</Authors>
-    <PackageProjectUrl>https://github.com/SimonCropp/Alt.SharePoint.Client</PackageProjectUrl>
-    <PackageIconUrl>https://github.com/SimonCropp/Alt.SharePoint.Client/master/package_icon.png</PackageIconUrl>
-    <PackageTags>SharePoint</PackageTags>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="../Binaries/Converted/Microsoft.SharePointOnline.CSOM/Microsoft.SharePoint.Client.dll" PackagePath="lib/net46" />

@@ -4,5 +4,14 @@
     <Version>1.0.0</Version>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <LangVersion>latest</LangVersion>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <NoPackageAnalysis>true</NoPackageAnalysis>
+    <PackageLicenseUrl>http://www.opensource.org/licenses/mit-license.php</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageOutputPath>$(SolutionDir)nugets</PackageOutputPath>
+    <Authors>Simon Cropp</Authors>
+    <PackageProjectUrl>https://github.com/SimonCropp/Alt.SharePoint.Client</PackageProjectUrl>
+    <PackageIconUrl>https://github.com/SimonCropp/Alt.SharePoint.Client/master/package_icon.png</PackageIconUrl>
+    <PackageTags>SharePoint</PackageTags>
   </PropertyGroup>
 </Project>
