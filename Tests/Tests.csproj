@@ -12,13 +12,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="FakeItEasy" Version="4.4.0" />
-    <ProjectReference Include="..\Alt.SharePoint.Client.Mocks\Alt.SharePoint.Client.Mocks.csproj" />
     <Reference Include="Microsoft.SharePoint.Client">
       <HintPath>..\Binaries\Converted\Microsoft.SharePoint.Client.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SharePoint.Client.Runtime">
       <HintPath>..\Binaries\Converted\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="System.Net.Http" />
   </ItemGroup>
 
 </Project>

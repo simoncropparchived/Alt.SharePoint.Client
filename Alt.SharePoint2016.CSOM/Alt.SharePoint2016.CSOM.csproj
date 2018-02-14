@@ -14,7 +14,6 @@
     <PackageTags>SharePoint</PackageTags>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="../Binaries/Converted/Microsoft.SharePoint.Client.dll" PackagePath="lib/net46" />
-    <Content Include="../Binaries/Converted/Microsoft.SharePoint.Client.Runtime.dll" PackagePath="lib/net46" />
+    <Content Include="../Binaries/Converted/Microsoft.SharePoint2016.CSOM/*.dll" PackagePath="lib/net46" />
   </ItemGroup>
 </Project>

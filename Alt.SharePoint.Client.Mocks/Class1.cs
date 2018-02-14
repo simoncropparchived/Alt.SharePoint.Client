@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.SharePoint.Client;
+﻿using Microsoft.SharePoint.Client;
 
 namespace Alt.SharePoint.Client.Mocks
 {

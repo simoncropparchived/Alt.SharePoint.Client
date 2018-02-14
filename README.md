@@ -1,5 +1,12 @@
 # Alt.SharePoint.Client
 
-[SharePoint Server 2016 Client Components SDK](https://www.microsoft.com/en-us/download/details.aspx?id=51679)
 
-[SharePoint Online Client Components SDK](https://www.microsoft.com/en-us/download/details.aspx?id=42038)
+## Source NuGets
+
+ * [Microsoft.SharePoint2013.CSOM](https://www.nuget.org/packages/Microsoft.SharePoint2013.CSOM/)
+ * [Microsoft.SharePoint2016.CSOM](https://www.nuget.org/packages/Microsoft.SharePoint2016.CSOM/)
+ * [Microsoft.SharePointOnline.CSOM](https://www.nuget.org/packages/Microsoft.SharePointOnline.CSOM/)
+
+
+## Produce NuGets 
+ 

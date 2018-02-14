@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -24,31 +25,36 @@ public class Converter
     [Fact]
     public void Run()
     {
-        var clientRuntime = "Microsoft.SharePoint.Client.Runtime.dll";
-        byte[] runtimePublicKeyToken;
-        using (var module = ModuleDefinition.ReadModule(Path.Combine(source, clientRuntime)))
+        foreach (var directory in Directory.EnumerateDirectories(source))
         {
-            new EmptyConstructor().Execute(module);
-            var newFilePath = Path.Combine(converted, clientRuntime);
-            var writerParameters = GetWriterParameters();
-            module.Write(newFilePath, writerParameters);
-            runtimePublicKeyToken = module.Assembly.Name.PublicKeyToken;
-        }
+            var newDirPath = Path.Combine(converted, Path.GetFileName(directory));
+            Directory.Delete(newDirPath,true);
+            Directory.CreateDirectory(newDirPath);
+            var readerParameters = new ReaderParameters
+            {
+                AssemblyResolver = new AssemblyResolver(newDirPath)
+            };
+            var modules = Directory.EnumerateFiles(directory).Select(x => ModuleDefinition.ReadModule(x, readerParameters)).ToList();
+            foreach (var module in modules.OrderBy(x => SharePointRefs(x).Count()))
+            {
+                foreach (var reference in SharePointRefs(module))
+                {
+                    var refModule = modules.Single(x => x.Assembly.Name.Name == reference.Name);
+                    reference.PublicKeyToken = refModule.Assembly.Name.PublicKeyToken;
+                }
 
-        var client = "Microsoft.SharePoint.Client.dll";
-        using (var module = ModuleDefinition.ReadModule(Path.Combine(source, client), new ReaderParameters
-        {
-            AssemblyResolver = new AssemblyResolver()
-        }))
-        {
-            var runtimeRef = module.AssemblyReferences.Single(x => x.Name == "Microsoft.SharePoint.Client.Runtime");
-            runtimeRef.PublicKeyToken = runtimePublicKeyToken;
-            new EmptyConstructor().Execute(module);
-            new Virtual().Execute(module);
-            var newFilePath = Path.Combine(converted, client);
-            var writerParameters = GetWriterParameters();
-            module.Write(newFilePath, writerParameters);
+                EmptyConstructor.Execute(module);
+                new Virtual().Execute(module);
+                var newFilePath = Path.Combine(converted, Path.GetFileName(directory), module.Name);
+                var writerParameters = GetWriterParameters();
+                module.Write(newFilePath, writerParameters);
+            }
         }
+    }
+
+    static IEnumerable<AssemblyNameReference> SharePointRefs(ModuleDefinition x)
+    {
+        return x.AssemblyReferences.Where(y => y.Name.StartsWith("Microsoft.SharePoint"));
     }
 
     WriterParameters GetWriterParameters()
@@ -79,22 +85,28 @@ public class Converter
 
     public class AssemblyResolver : DefaultAssemblyResolver
     {
-        AssemblyDefinition runtime;
+        string converted;
+        Dictionary<string, AssemblyDefinition> refs = new Dictionary<string, AssemblyDefinition>();
 
+        public AssemblyResolver(string converted)
+        {
+            this.converted = converted;
+        }
         public override AssemblyDefinition Resolve(AssemblyNameReference name, ReaderParameters parameters)
         {
-            if (name.Name == "Microsoft.SharePoint.Client.Runtime")
+            if (name.Name.StartsWith("Microsoft.SharePoint"))
             {
-                if (runtime == null)
+                if (!refs.TryGetValue(name.Name, out var reference))
                 {
-                    runtime = AssemblyDefinition.ReadAssembly(Path.Combine(converted, "Microsoft.SharePoint.Client.Runtime.dll"));
+                    var first = base.GetSearchDirectories().First();
+                    reference = AssemblyDefinition.ReadAssembly(Path.Combine(converted, name.Name + ".dll"));
+                    refs[name.Name] = reference;
                 }
 
-                return runtime;
+                return reference;
             }
 
             return base.Resolve(name, parameters);
         }
     }
-
 }

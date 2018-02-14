@@ -3,9 +3,9 @@ using System.Diagnostics;
 using Mono.Cecil;
 using Mono.Cecil.Cil;
 
-public partial class EmptyConstructor
+public class EmptyConstructor
 {
-    public void Execute(ModuleDefinition  moduleDefinition)
+    public static void Execute(ModuleDefinition  moduleDefinition)
     {
         var processed = new Dictionary<TypeDefinition, MethodReference>();
         var external = new Dictionary<TypeReference, MethodReference>();
@@ -34,10 +34,6 @@ public partial class EmptyConstructor
                 continue;
             }
 
-            if (type.Name == "ClientObject")
-            {
-                Debug.WriteLine("Sdf");
-            }
             var typeEmptyConstructor = type.GetEmptyConstructor();
 
             if (typeEmptyConstructor != null)
@@ -84,7 +80,7 @@ public partial class EmptyConstructor
         }
     }
 
-    MethodDefinition AddEmptyConstructor(TypeDefinition type)
+    static MethodDefinition AddEmptyConstructor(TypeDefinition type)
     {
         var methodAttributes = MethodAttributes.Public | MethodAttributes.HideBySig | MethodAttributes.SpecialName | MethodAttributes.RTSpecialName;
         var method = new MethodDefinition(".ctor", methodAttributes, type.Module.TypeSystem.Void);
@@ -96,7 +92,7 @@ public partial class EmptyConstructor
         return method;
     }
 
-    void MakeConstructorVisible(MethodDefinition typeEmptyConstructor)
+    static void MakeConstructorVisible(MethodDefinition typeEmptyConstructor)
     {
         if (typeEmptyConstructor.IsPublic)
         {

@@ -5,8 +5,9 @@ public partial class Virtual
     public void Execute(ModuleDefinition module)
     {
         ProcessAssembly(module);
-        ConvertCallToCallVirtual(module);
-        ConvertNewToOverrides(module);
-        ConvertFunctionPointer(module);
+        //TODO: work out if the below are required
+        //ConvertCallToCallVirtual(module);
+        //ConvertNewToOverrides(module);
+        //ConvertFunctionPointer(module);
     }
 }
