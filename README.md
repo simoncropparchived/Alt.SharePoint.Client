@@ -7,6 +7,8 @@ A clone of the SharePoint client NuGets but with the following changes
  * Constructors of public type made public.
  * StrongNamed with a new key
 
+**This results in the public types being mockable for unit testing purposes.**
+
 
 ## Source NuGets
 
