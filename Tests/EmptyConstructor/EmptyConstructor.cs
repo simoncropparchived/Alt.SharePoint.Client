@@ -23,7 +23,7 @@ public class EmptyConstructor
             {
                 continue;
             }
-            if (type.IsStaticClass())
+            if (type.IsStatic())
             {
                 continue;
             }
