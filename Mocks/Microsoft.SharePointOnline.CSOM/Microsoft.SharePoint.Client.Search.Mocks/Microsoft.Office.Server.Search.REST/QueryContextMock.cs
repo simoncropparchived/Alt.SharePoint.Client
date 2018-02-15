@@ -1,7 +1,7 @@
 
 namespace Microsoft.Office.Server.Search.REST
 {
-    public class QueryContextMock
+    public class QueryContextMock : QueryContext
     {
 
 

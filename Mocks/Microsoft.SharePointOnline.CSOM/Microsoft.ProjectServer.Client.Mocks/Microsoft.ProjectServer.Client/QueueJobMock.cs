@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class QueueJobMock
+    public class QueueJobMock : QueueJob
     {
 
 

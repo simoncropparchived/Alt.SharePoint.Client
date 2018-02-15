@@ -1,7 +1,7 @@
 
 namespace Microsoft.Office.Server.Search.REST
 {
-    public class PromotedResultsMock
+    public class PromotedResultsMock : PromotedResults
     {
 
 

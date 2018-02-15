@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class WebMock
+    public class WebMock : Web
     {
 
 
@@ -164,8 +164,8 @@ namespace Microsoft.SharePoint.Client
         public override Microsoft.SharePoint.Client.UserCollection SiteUsers => SiteUsersEx;
         public Microsoft.SharePoint.Client.UserCollection SiteUsersEx { get; set; }
 
-        public override System.Collections.Generic.IEnumerable`1<System.Int32> SupportedUILanguageIds => SupportedUILanguageIdsEx;
-        public System.Collections.Generic.IEnumerable`1<System.Int32> SupportedUILanguageIdsEx { get; set; }
+        public override System.Collections.Generic.IEnumerable<System.Int32> SupportedUILanguageIds => SupportedUILanguageIdsEx;
+        public System.Collections.Generic.IEnumerable<System.Int32> SupportedUILanguageIdsEx { get; set; }
 
         public override System.Boolean SyndicationEnabled => SyndicationEnabledEx;
         public System.Boolean SyndicationEnabledEx { get; set; }

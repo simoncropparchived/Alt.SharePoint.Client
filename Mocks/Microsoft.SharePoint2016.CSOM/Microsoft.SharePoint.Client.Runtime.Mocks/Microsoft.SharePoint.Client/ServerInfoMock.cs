@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ServerInfoMock
+    public class ServerInfoMock : ServerInfo
     {
 
 

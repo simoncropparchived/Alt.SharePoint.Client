@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class PlanAssignmentIntervalMock
+    public class PlanAssignmentIntervalMock : PlanAssignmentInterval
     {
 
 

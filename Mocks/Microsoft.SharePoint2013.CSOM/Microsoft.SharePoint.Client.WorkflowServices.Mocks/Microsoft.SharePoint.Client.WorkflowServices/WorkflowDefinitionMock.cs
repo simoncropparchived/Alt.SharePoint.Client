@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.WorkflowServices
 {
-    public class WorkflowDefinitionMock
+    public class WorkflowDefinitionMock : WorkflowDefinition
     {
 
 
@@ -26,8 +26,8 @@ namespace Microsoft.SharePoint.Client.WorkflowServices
         public override System.String InitiationUrl => InitiationUrlEx;
         public System.String InitiationUrlEx { get; set; }
 
-        public override System.Collections.Generic.IDictionary`2<System.String,System.String> Properties => PropertiesEx;
-        public System.Collections.Generic.IDictionary`2<System.String,System.String> PropertiesEx { get; set; }
+        public override System.Collections.Generic.IDictionary<System.String,System.String> Properties => PropertiesEx;
+        public System.Collections.Generic.IDictionary<System.String,System.String> PropertiesEx { get; set; }
 
         public override System.Boolean Published => PublishedEx;
         public System.Boolean PublishedEx { get; set; }

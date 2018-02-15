@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Utilities
 {
-    public class UploadStatusMock
+    public class UploadStatusMock : UploadStatus
     {
 
 

@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class RenderListFilterDataParametersMock
+    public class RenderListFilterDataParametersMock : RenderListFilterDataParameters
     {
 
 

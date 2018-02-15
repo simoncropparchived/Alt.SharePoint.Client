@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class WebTemplateMock
+    public class WebTemplateMock : WebTemplate
     {
 
 

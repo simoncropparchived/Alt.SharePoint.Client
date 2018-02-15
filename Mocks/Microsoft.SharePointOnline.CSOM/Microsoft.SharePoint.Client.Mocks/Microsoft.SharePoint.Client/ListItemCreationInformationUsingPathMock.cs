@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ListItemCreationInformationUsingPathMock
+    public class ListItemCreationInformationUsingPathMock : ListItemCreationInformationUsingPath
     {
 
 

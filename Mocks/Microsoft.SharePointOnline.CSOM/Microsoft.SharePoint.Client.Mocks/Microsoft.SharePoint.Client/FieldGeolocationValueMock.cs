@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class FieldGeolocationValueMock
+    public class FieldGeolocationValueMock : FieldGeolocationValue
     {
 
 

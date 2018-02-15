@@ -1,7 +1,7 @@
 
 namespace Microsoft.Office.SharePoint.Tools
 {
-    public class MetadataObjectMock
+    public class MetadataObjectMock : MetadataObject
     {
 
 

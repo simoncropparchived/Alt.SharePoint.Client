@@ -1,7 +1,7 @@
 
 namespace Microsoft.Office.SharePoint.Tools
 {
-    public class MethodMock
+    public class MethodMock : Method
     {
 
 

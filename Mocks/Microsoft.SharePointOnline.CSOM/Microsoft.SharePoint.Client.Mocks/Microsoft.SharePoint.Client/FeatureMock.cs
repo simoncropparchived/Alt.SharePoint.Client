@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class FeatureMock
+    public class FeatureMock : Feature
     {
 
 

@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class CreatablesInfoMock
+    public class CreatablesInfoMock : CreatablesInfo
     {
 
 

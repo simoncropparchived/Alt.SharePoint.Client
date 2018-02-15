@@ -1,7 +1,7 @@
 
 namespace Microsoft.BusinessData.MetadataModel
 {
-    public class TypeDescriptorMock
+    public class TypeDescriptorMock : TypeDescriptor
     {
 
 

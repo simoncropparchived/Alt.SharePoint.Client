@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ListItemCollectionPositionMock
+    public class ListItemCollectionPositionMock : ListItemCollectionPosition
     {
 
 

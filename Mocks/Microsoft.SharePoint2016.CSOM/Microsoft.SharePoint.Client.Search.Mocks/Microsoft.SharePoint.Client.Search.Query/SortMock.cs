@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Search.Query
 {
-    public class SortMock
+    public class SortMock : Sort
     {
 
 

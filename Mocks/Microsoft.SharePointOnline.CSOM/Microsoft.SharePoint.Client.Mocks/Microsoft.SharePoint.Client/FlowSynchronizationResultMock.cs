@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class FlowSynchronizationResultMock
+    public class FlowSynchronizationResultMock : FlowSynchronizationResult
     {
 
 

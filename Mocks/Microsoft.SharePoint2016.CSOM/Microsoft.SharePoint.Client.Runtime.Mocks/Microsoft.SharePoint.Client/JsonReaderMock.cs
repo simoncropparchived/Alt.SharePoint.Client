@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class JsonReaderMock
+    public class JsonReaderMock : JsonReader
     {
 
 

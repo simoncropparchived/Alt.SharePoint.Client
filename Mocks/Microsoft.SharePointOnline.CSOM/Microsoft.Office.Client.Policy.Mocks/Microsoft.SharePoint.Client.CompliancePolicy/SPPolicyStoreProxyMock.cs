@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.CompliancePolicy
 {
-    public class SPPolicyStoreProxyMock
+    public class SPPolicyStoreProxyMock : SPPolicyStoreProxy
     {
 
 

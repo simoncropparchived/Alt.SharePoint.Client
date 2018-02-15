@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class CreatableItemInfoCollectionMock
+    public class CreatableItemInfoCollectionMock : CreatableItemInfoCollection
     {
 
 

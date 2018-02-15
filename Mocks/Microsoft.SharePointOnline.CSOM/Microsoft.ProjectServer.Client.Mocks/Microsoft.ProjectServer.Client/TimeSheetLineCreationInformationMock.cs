@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class TimeSheetLineCreationInformationMock
+    public class TimeSheetLineCreationInformationMock : TimeSheetLineCreationInformation
     {
 
 

@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class MultiGeoCopyParametersMock
+    public class MultiGeoCopyParametersMock : MultiGeoCopyParameters
     {
 
 

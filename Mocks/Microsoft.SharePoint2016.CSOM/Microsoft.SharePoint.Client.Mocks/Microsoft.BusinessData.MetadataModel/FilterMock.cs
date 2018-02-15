@@ -1,7 +1,7 @@
 
 namespace Microsoft.BusinessData.MetadataModel
 {
-    public class FilterMock
+    public class FilterMock : Filter
     {
 
 

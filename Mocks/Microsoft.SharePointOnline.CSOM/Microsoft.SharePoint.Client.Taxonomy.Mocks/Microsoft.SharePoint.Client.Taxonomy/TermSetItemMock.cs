@@ -1,12 +1,12 @@
 
 namespace Microsoft.SharePoint.Client.Taxonomy
 {
-    public class TermSetItemMock
+    public class TermSetItemMock : TermSetItem
     {
 
 
-        public override System.Collections.Generic.IDictionary`2<System.String,System.String> CustomProperties => CustomPropertiesEx;
-        public System.Collections.Generic.IDictionary`2<System.String,System.String> CustomPropertiesEx { get; set; }
+        public override System.Collections.Generic.IDictionary<System.String,System.String> CustomProperties => CustomPropertiesEx;
+        public System.Collections.Generic.IDictionary<System.String,System.String> CustomPropertiesEx { get; set; }
 
         public override System.String CustomSortOrder => CustomSortOrderEx;
         public System.String CustomSortOrderEx { get; set; }

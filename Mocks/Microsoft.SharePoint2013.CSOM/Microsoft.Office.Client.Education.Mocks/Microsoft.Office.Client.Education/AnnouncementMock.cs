@@ -1,7 +1,7 @@
 
 namespace Microsoft.Office.Client.Education
 {
-    public class AnnouncementMock
+    public class AnnouncementMock : Announcement
     {
 
 

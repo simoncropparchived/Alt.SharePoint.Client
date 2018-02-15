@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class CurrencyInformationMock
+    public class CurrencyInformationMock : CurrencyInformation
     {
 
 

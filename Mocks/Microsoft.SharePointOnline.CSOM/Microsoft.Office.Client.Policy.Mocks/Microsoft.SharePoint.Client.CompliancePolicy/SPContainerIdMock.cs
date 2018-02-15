@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.CompliancePolicy
 {
-    public class SPContainerIdMock
+    public class SPContainerIdMock : SPContainerId
     {
 
 

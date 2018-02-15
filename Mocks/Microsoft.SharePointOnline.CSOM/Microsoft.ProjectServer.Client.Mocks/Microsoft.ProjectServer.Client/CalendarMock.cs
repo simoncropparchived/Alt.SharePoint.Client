@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class CalendarMock
+    public class CalendarMock : Calendar
     {
 
 

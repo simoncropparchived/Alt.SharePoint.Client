@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class FieldRatingScaleQuestionAnswerMock
+    public class FieldRatingScaleQuestionAnswerMock : FieldRatingScaleQuestionAnswer
     {
 
 

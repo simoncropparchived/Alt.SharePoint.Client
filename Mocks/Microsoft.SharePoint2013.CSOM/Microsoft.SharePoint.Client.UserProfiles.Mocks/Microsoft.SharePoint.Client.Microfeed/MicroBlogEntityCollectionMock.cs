@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Microfeed
 {
-    public class MicroBlogEntityCollectionMock
+    public class MicroBlogEntityCollectionMock : MicroBlogEntityCollection
     {
 
 

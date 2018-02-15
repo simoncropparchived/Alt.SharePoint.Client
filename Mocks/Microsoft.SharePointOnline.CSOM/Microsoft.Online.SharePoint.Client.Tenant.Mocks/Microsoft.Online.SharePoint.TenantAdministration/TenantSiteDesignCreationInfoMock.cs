@@ -1,7 +1,7 @@
 
 namespace Microsoft.Online.SharePoint.TenantAdministration
 {
-    public class TenantSiteDesignCreationInfoMock
+    public class TenantSiteDesignCreationInfoMock : TenantSiteDesignCreationInfo
     {
 
 

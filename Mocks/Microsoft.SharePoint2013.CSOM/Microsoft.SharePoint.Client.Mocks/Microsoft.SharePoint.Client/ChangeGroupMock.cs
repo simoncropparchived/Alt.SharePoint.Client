@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ChangeGroupMock
+    public class ChangeGroupMock : ChangeGroup
     {
 
 

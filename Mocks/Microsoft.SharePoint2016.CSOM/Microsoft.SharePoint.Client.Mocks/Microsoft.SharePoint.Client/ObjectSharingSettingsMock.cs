@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ObjectSharingSettingsMock
+    public class ObjectSharingSettingsMock : ObjectSharingSettings
     {
 
 
@@ -47,8 +47,8 @@ namespace Microsoft.SharePoint.Client
         public override System.Boolean CanShareFolder => CanShareFolderEx;
         public System.Boolean CanShareFolderEx { get; set; }
 
-        public override System.Collections.Generic.IDictionary`2<System.String,System.String> GroupsList => GroupsListEx;
-        public System.Collections.Generic.IDictionary`2<System.String,System.String> GroupsListEx { get; set; }
+        public override System.Collections.Generic.IDictionary<System.String,System.String> GroupsList => GroupsListEx;
+        public System.Collections.Generic.IDictionary<System.String,System.String> GroupsListEx { get; set; }
 
         public override System.Boolean HasEditRole => HasEditRoleEx;
         public System.Boolean HasEditRoleEx { get; set; }
@@ -86,8 +86,8 @@ namespace Microsoft.SharePoint.Client
         public override System.Boolean PermissionsOnlyMode => PermissionsOnlyModeEx;
         public System.Boolean PermissionsOnlyModeEx { get; set; }
 
-        public override System.Collections.Generic.IDictionary`2<System.String,System.String> Roles => RolesEx;
-        public System.Collections.Generic.IDictionary`2<System.String,System.String> RolesEx { get; set; }
+        public override System.Collections.Generic.IDictionary<System.String,System.String> Roles => RolesEx;
+        public System.Collections.Generic.IDictionary<System.String,System.String> RolesEx { get; set; }
 
         public override System.Boolean ShareByEmailEnabled => ShareByEmailEnabledEx;
         public System.Boolean ShareByEmailEnabledEx { get; set; }
@@ -101,8 +101,8 @@ namespace Microsoft.SharePoint.Client
         public override System.Boolean ShowExternalSharingWarning => ShowExternalSharingWarningEx;
         public System.Boolean ShowExternalSharingWarningEx { get; set; }
 
-        public override System.Collections.Generic.IDictionary`2<System.String,System.String> SimplifiedRoles => SimplifiedRolesEx;
-        public System.Collections.Generic.IDictionary`2<System.String,System.String> SimplifiedRolesEx { get; set; }
+        public override System.Collections.Generic.IDictionary<System.String,System.String> SimplifiedRoles => SimplifiedRolesEx;
+        public System.Collections.Generic.IDictionary<System.String,System.String> SimplifiedRolesEx { get; set; }
 
         public override System.Boolean SupportsAclPropagation => SupportsAclPropagationEx;
         public System.Boolean SupportsAclPropagationEx { get; set; }

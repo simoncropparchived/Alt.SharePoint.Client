@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.EventReceivers
 {
-    public class SPRemoteEventResultMock
+    public class SPRemoteEventResultMock : SPRemoteEventResult
     {
 
 
@@ -14,8 +14,8 @@ namespace Microsoft.SharePoint.Client.EventReceivers
         public override System.String RedirectUrl => RedirectUrlEx;
         public System.String RedirectUrlEx { get; set; }
 
-        public override System.Collections.Generic.Dictionary`2<System.String,System.Object> ChangedItemProperties => ChangedItemPropertiesEx;
-        public System.Collections.Generic.Dictionary`2<System.String,System.Object> ChangedItemPropertiesEx { get; set; }
+        public override System.Collections.Generic.Dictionary<System.String,System.Object> ChangedItemProperties => ChangedItemPropertiesEx;
+        public System.Collections.Generic.Dictionary<System.String,System.Object> ChangedItemPropertiesEx { get; set; }
 
     }
 }

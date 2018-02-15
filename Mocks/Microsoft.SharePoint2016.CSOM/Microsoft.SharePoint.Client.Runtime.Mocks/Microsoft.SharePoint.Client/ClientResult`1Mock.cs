@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ClientResult`1Mock
+    public class ClientResult`1Mock : ClientResult`1
     {
 
 

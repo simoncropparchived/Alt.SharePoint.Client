@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class ProjectContextMock
+    public class ProjectContextMock : ProjectContext
     {
 
 

@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ProvisionedMigrationContainersInfoMock
+    public class ProvisionedMigrationContainersInfoMock : ProvisionedMigrationContainersInfo
     {
 
 

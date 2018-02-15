@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class LookupCostMock
+    public class LookupCostMock : LookupCost
     {
 
 

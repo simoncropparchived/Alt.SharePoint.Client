@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class SharePointOnlineCredentialsWebRequestEventArgsMock
+    public class SharePointOnlineCredentialsWebRequestEventArgsMock : SharePointOnlineCredentialsWebRequestEventArgs
     {
 
 

@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class PushNotificationSubscriberMock
+    public class PushNotificationSubscriberMock : PushNotificationSubscriber
     {
 
 

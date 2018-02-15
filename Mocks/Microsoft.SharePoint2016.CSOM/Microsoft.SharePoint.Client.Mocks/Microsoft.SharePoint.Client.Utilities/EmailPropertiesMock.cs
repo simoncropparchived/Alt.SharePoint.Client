@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Utilities
 {
-    public class EmailPropertiesMock
+    public class EmailPropertiesMock : EmailProperties
     {
 
 

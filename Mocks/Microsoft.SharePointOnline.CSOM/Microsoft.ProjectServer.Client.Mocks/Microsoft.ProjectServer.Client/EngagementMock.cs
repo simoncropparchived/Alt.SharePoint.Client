@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class EngagementMock
+    public class EngagementMock : Engagement
     {
 
 

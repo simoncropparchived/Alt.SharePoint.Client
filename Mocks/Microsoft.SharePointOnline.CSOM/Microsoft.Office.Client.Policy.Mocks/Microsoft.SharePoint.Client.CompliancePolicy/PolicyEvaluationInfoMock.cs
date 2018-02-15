@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.CompliancePolicy
 {
-    public class PolicyEvaluationInfoMock
+    public class PolicyEvaluationInfoMock : PolicyEvaluationInfo
     {
 
 

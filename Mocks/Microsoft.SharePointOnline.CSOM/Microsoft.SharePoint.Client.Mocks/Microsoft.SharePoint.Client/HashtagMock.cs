@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class HashtagMock
+    public class HashtagMock : Hashtag
     {
 
 

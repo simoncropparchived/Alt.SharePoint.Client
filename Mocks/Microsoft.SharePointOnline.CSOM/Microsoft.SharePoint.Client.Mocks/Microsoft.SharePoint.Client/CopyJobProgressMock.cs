@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class CopyJobProgressMock
+    public class CopyJobProgressMock : CopyJobProgress
     {
 
 

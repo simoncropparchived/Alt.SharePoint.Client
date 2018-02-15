@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class IdcrlExceptionMock
+    public class IdcrlExceptionMock : IdcrlException
     {
 
 

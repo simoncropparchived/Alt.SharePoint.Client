@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Social
 {
-    public class SocialFeedOptionsMock
+    public class SocialFeedOptionsMock : SocialFeedOptions
     {
 
 

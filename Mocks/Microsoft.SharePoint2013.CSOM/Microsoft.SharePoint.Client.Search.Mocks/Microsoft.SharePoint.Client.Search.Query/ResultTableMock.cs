@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Search.Query
 {
-    public class ResultTableMock
+    public class ResultTableMock : ResultTable
     {
 
 
@@ -11,8 +11,8 @@ namespace Microsoft.SharePoint.Client.Search.Query
         public override System.String ItemTemplateId => ItemTemplateIdEx;
         public System.String ItemTemplateIdEx { get; set; }
 
-        public override System.Collections.Generic.IDictionary`2<System.String,System.Object> Properties => PropertiesEx;
-        public System.Collections.Generic.IDictionary`2<System.String,System.Object> PropertiesEx { get; set; }
+        public override System.Collections.Generic.IDictionary<System.String,System.Object> Properties => PropertiesEx;
+        public System.Collections.Generic.IDictionary<System.String,System.Object> PropertiesEx { get; set; }
 
         public override System.String QueryId => QueryIdEx;
         public System.String QueryIdEx { get; set; }
@@ -20,8 +20,8 @@ namespace Microsoft.SharePoint.Client.Search.Query
         public override System.String QueryRuleId => QueryRuleIdEx;
         public System.String QueryRuleIdEx { get; set; }
 
-        public override System.Collections.Generic.IEnumerable`1<System.Collections.Generic.IDictionary`2<System.String,System.Object>> ResultRows => ResultRowsEx;
-        public System.Collections.Generic.IEnumerable`1<System.Collections.Generic.IDictionary`2<System.String,System.Object>> ResultRowsEx { get; set; }
+        public override System.Collections.Generic.IEnumerable<System.Collections.Generic.IDictionary<System.String,System.Object>> ResultRows => ResultRowsEx;
+        public System.Collections.Generic.IEnumerable<System.Collections.Generic.IDictionary<System.String,System.Object>> ResultRowsEx { get; set; }
 
         public override System.String ResultTitle => ResultTitleEx;
         public System.String ResultTitleEx { get; set; }

@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class SharingLinkDataMock
+    public class SharingLinkDataMock : SharingLinkData
     {
 
 

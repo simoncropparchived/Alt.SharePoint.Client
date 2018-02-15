@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ObjectSharingInformationMock
+    public class ObjectSharingInformationMock : ObjectSharingInformation
     {
 
 
@@ -44,8 +44,8 @@ namespace Microsoft.SharePoint.Client
         public override Microsoft.SharePoint.Client.ObjectSharingInformationUserCollection SharedWithUsersCollection => SharedWithUsersCollectionEx;
         public Microsoft.SharePoint.Client.ObjectSharingInformationUserCollection SharedWithUsersCollectionEx { get; set; }
 
-        public override System.Collections.Generic.IEnumerable`1<Microsoft.SharePoint.Client.SharingLinkInfo> SharingLinks => SharingLinksEx;
-        public System.Collections.Generic.IEnumerable`1<Microsoft.SharePoint.Client.SharingLinkInfo> SharingLinksEx { get; set; }
+        public override System.Collections.Generic.IEnumerable<Microsoft.SharePoint.Client.SharingLinkInfo> SharingLinks => SharingLinksEx;
+        public System.Collections.Generic.IEnumerable<Microsoft.SharePoint.Client.SharingLinkInfo> SharingLinksEx { get; set; }
 
     }
 }

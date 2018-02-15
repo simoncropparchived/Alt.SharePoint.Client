@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class StageCreationInformationMock
+    public class StageCreationInformationMock : StageCreationInformation
     {
 
 

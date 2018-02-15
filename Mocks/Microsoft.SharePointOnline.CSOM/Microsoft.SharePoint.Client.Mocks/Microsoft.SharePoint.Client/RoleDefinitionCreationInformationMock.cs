@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class RoleDefinitionCreationInformationMock
+    public class RoleDefinitionCreationInformationMock : RoleDefinitionCreationInformation
     {
 
 

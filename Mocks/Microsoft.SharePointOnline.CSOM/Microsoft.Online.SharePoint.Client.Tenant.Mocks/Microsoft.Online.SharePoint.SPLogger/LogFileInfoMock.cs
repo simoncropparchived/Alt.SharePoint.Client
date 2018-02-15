@@ -1,7 +1,7 @@
 
 namespace Microsoft.Online.SharePoint.SPLogger
 {
-    public class LogFileInfoMock
+    public class LogFileInfoMock : LogFileInfo
     {
 
 

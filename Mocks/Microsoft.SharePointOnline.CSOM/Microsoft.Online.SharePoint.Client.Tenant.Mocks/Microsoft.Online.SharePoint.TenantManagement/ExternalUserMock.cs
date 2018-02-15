@@ -1,7 +1,7 @@
 
 namespace Microsoft.Online.SharePoint.TenantManagement
 {
-    public class ExternalUserMock
+    public class ExternalUserMock : ExternalUser
     {
 
 

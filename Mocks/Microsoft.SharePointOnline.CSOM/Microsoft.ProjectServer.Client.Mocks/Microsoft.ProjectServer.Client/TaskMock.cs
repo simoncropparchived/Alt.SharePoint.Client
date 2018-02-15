@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class TaskMock
+    public class TaskMock : Task
     {
 
 

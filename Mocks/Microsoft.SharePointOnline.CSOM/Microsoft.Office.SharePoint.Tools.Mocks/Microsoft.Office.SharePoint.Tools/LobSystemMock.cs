@@ -1,7 +1,7 @@
 
 namespace Microsoft.Office.SharePoint.Tools
 {
-    public class LobSystemMock
+    public class LobSystemMock : LobSystem
     {
 
 

@@ -1,7 +1,7 @@
 
 namespace Microsoft.Online.SharePoint.TenantAdministration
 {
-    public class UserMigrationPropertiesEnumerableMock
+    public class UserMigrationPropertiesEnumerableMock : UserMigrationPropertiesEnumerable
     {
 
 

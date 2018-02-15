@@ -1,7 +1,7 @@
 
 namespace Microsoft.Office.Client.Education
 {
-    public class AssignedAssignmentMock
+    public class AssignedAssignmentMock : AssignedAssignment
     {
 
 

@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class FieldCalculatedErrorValueMock
+    public class FieldCalculatedErrorValueMock : FieldCalculatedErrorValue
     {
 
 

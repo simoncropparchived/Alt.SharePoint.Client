@@ -1,7 +1,7 @@
 
 namespace Microsoft.Office.SharePoint.Tools
 {
-    public class RightMock
+    public class RightMock : Right
     {
 
 

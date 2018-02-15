@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class AlertCreationInformationMock
+    public class AlertCreationInformationMock : AlertCreationInformation
     {
 
 

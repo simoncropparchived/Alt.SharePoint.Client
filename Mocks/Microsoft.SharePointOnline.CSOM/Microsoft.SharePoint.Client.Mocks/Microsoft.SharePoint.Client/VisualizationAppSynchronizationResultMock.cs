@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class VisualizationAppSynchronizationResultMock
+    public class VisualizationAppSynchronizationResultMock : VisualizationAppSynchronizationResult
     {
 
 

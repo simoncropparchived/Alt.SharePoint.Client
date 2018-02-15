@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ExternalAppPrincipalCreationParametersMock
+    public class ExternalAppPrincipalCreationParametersMock : ExternalAppPrincipalCreationParameters
     {
 
 

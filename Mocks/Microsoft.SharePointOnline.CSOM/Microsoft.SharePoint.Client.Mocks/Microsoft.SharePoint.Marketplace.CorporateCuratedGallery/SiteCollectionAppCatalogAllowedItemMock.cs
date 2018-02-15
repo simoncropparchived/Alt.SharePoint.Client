@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Marketplace.CorporateCuratedGallery
 {
-    public class SiteCollectionAppCatalogAllowedItemMock
+    public class SiteCollectionAppCatalogAllowedItemMock : SiteCollectionAppCatalogAllowedItem
     {
 
 

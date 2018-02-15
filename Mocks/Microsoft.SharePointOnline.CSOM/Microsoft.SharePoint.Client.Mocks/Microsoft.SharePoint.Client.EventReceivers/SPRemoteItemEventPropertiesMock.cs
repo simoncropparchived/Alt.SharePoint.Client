@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.EventReceivers
 {
-    public class SPRemoteItemEventPropertiesMock
+    public class SPRemoteItemEventPropertiesMock : SPRemoteItemEventProperties
     {
 
 
@@ -41,11 +41,11 @@ namespace Microsoft.SharePoint.Client.EventReceivers
         public override System.Byte[] ExternalNotificationMessage => ExternalNotificationMessageEx;
         public System.Byte[] ExternalNotificationMessageEx { get; set; }
 
-        public override System.Collections.Generic.Dictionary`2<System.String,System.Object> BeforeProperties => BeforePropertiesEx;
-        public System.Collections.Generic.Dictionary`2<System.String,System.Object> BeforePropertiesEx { get; set; }
+        public override System.Collections.Generic.Dictionary<System.String,System.Object> BeforeProperties => BeforePropertiesEx;
+        public System.Collections.Generic.Dictionary<System.String,System.Object> BeforePropertiesEx { get; set; }
 
-        public override System.Collections.Generic.Dictionary`2<System.String,System.Object> AfterProperties => AfterPropertiesEx;
-        public System.Collections.Generic.Dictionary`2<System.String,System.Object> AfterPropertiesEx { get; set; }
+        public override System.Collections.Generic.Dictionary<System.String,System.Object> AfterProperties => AfterPropertiesEx;
+        public System.Collections.Generic.Dictionary<System.String,System.Object> AfterPropertiesEx { get; set; }
 
     }
 }

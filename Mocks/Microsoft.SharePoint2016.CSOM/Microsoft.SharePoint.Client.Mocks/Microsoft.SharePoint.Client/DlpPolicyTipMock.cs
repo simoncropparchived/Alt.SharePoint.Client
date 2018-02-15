@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class DlpPolicyTipMock
+    public class DlpPolicyTipMock : DlpPolicyTip
     {
 
 
@@ -17,8 +17,8 @@ namespace Microsoft.SharePoint.Client
         public override System.DateTime LastProcessedTime => LastProcessedTimeEx;
         public System.DateTime LastProcessedTimeEx { get; set; }
 
-        public override System.Collections.Generic.IEnumerable`1<System.String> MatchedConditionDescriptions => MatchedConditionDescriptionsEx;
-        public System.Collections.Generic.IEnumerable`1<System.String> MatchedConditionDescriptionsEx { get; set; }
+        public override System.Collections.Generic.IEnumerable<System.String> MatchedConditionDescriptions => MatchedConditionDescriptionsEx;
+        public System.Collections.Generic.IEnumerable<System.String> MatchedConditionDescriptionsEx { get; set; }
 
         public override Microsoft.SharePoint.Client.RuleOverrideOptions OverrideOptions => OverrideOptionsEx;
         public Microsoft.SharePoint.Client.RuleOverrideOptions OverrideOptionsEx { get; set; }

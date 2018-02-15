@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class UserCreationInformationMock
+    public class UserCreationInformationMock : UserCreationInformation
     {
 
 

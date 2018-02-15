@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class PseudoRemoteAttributeMock
+    public class PseudoRemoteAttributeMock : PseudoRemoteAttribute
     {
 
 

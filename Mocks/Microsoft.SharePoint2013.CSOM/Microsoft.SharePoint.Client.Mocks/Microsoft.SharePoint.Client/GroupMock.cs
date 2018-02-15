@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class GroupMock
+    public class GroupMock : Group
     {
 
 

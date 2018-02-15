@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class ResourcePlanMock
+    public class ResourcePlanMock : ResourcePlan
     {
 
 

@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class DocumentLibraryInformationMock
+    public class DocumentLibraryInformationMock : DocumentLibraryInformation
     {
 
 

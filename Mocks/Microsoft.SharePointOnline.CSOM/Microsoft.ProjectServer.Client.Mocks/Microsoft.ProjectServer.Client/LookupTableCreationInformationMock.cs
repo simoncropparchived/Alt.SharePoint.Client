@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class LookupTableCreationInformationMock
+    public class LookupTableCreationInformationMock : LookupTableCreationInformation
     {
 
 

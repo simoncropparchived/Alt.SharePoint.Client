@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class PhaseMock
+    public class PhaseMock : Phase
     {
 
 

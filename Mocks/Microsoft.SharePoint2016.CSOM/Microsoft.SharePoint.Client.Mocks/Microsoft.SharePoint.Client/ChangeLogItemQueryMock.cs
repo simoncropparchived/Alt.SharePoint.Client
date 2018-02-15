@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ChangeLogItemQueryMock
+    public class ChangeLogItemQueryMock : ChangeLogItemQuery
     {
 
 

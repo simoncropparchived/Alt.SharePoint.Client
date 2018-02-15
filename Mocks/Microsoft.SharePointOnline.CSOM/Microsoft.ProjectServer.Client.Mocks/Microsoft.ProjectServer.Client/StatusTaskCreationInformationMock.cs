@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class StatusTaskCreationInformationMock
+    public class StatusTaskCreationInformationMock : StatusTaskCreationInformation
     {
 
 

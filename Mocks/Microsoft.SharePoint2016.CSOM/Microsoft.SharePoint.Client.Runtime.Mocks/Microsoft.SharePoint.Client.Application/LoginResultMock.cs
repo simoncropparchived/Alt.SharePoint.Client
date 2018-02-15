@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Application
 {
-    public class LoginResultMock
+    public class LoginResultMock : LoginResult
     {
 
 

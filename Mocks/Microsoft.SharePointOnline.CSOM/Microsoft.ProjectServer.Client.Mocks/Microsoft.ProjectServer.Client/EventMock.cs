@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class EventMock
+    public class EventMock : Event
     {
 
 

@@ -1,7 +1,7 @@
 
 namespace Microsoft.Office.Client.Education
 {
-    public class EventScheduleMock
+    public class EventScheduleMock : EventSchedule
     {
 
 

@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Publishing
 {
-    public class SpotlightVideoMock
+    public class SpotlightVideoMock : SpotlightVideo
     {
 
 

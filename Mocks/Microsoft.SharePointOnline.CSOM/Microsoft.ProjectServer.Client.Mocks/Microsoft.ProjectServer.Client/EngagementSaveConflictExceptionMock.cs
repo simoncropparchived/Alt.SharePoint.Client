@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class EngagementSaveConflictExceptionMock
+    public class EngagementSaveConflictExceptionMock : EngagementSaveConflictException
     {
 
 

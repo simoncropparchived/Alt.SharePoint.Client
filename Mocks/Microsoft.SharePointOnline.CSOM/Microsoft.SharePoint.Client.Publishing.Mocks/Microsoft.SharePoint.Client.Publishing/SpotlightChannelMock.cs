@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Publishing
 {
-    public class SpotlightChannelMock
+    public class SpotlightChannelMock : SpotlightChannel
     {
 
 

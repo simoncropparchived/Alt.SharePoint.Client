@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ListMock
+    public class ListMock : List
     {
 
 

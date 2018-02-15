@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class EventHandlerCreationInformationMock
+    public class EventHandlerCreationInformationMock : EventHandlerCreationInformation
     {
 
 

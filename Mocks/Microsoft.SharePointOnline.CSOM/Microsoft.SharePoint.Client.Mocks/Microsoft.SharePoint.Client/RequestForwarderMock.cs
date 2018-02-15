@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class RequestForwarderMock
+    public class RequestForwarderMock : RequestForwarder
     {
 
 

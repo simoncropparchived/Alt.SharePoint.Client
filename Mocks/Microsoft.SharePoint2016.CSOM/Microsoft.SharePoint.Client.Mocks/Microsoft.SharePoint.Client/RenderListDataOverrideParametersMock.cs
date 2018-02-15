@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class RenderListDataOverrideParametersMock
+    public class RenderListDataOverrideParametersMock : RenderListDataOverrideParameters
     {
 
 

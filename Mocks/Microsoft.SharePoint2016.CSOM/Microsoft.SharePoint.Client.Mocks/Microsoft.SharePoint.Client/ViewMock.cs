@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ViewMock
+    public class ViewMock : View
     {
 
 

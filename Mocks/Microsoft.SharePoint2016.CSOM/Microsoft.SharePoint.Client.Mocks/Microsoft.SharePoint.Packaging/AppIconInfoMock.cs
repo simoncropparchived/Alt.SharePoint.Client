@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Packaging
 {
-    public class AppIconInfoMock
+    public class AppIconInfoMock : AppIconInfo
     {
 
 

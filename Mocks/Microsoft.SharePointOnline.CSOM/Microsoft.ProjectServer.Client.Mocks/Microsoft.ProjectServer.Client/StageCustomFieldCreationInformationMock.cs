@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class StageCustomFieldCreationInformationMock
+    public class StageCustomFieldCreationInformationMock : StageCustomFieldCreationInformation
     {
 
 

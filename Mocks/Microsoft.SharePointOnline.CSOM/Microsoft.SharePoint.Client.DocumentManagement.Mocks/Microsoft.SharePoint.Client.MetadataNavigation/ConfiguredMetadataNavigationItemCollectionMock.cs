@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.MetadataNavigation
 {
-    public class ConfiguredMetadataNavigationItemCollectionMock
+    public class ConfiguredMetadataNavigationItemCollectionMock : ConfiguredMetadataNavigationItemCollection
     {
 
 

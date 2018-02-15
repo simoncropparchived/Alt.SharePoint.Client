@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class VisualizationAppInfoMock
+    public class VisualizationAppInfoMock : VisualizationAppInfo
     {
 
 

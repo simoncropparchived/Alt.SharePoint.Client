@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class AuditMock
+    public class AuditMock : Audit
     {
 
 

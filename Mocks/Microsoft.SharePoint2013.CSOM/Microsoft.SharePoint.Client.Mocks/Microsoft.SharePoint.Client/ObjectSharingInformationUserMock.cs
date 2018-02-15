@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ObjectSharingInformationUserMock
+    public class ObjectSharingInformationUserMock : ObjectSharingInformationUser
     {
 
 

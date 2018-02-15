@@ -1,7 +1,7 @@
 
 namespace Microsoft.Online.SharePoint.TenantAdministration
 {
-    public class DeletedSitePropertiesMock
+    public class DeletedSitePropertiesMock : DeletedSiteProperties
     {
 
 

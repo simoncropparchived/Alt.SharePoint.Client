@@ -1,7 +1,7 @@
 
 namespace Microsoft.Online.SharePoint.TenantAdministration.Internal
 {
-    public class SPOWebAppServicePrincipalPermissionRequestMock
+    public class SPOWebAppServicePrincipalPermissionRequestMock : SPOWebAppServicePrincipalPermissionRequest
     {
 
 

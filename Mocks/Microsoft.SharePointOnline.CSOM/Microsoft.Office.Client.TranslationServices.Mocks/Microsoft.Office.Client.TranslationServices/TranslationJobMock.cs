@@ -1,7 +1,7 @@
 
 namespace Microsoft.Office.Client.TranslationServices
 {
-    public class TranslationJobMock
+    public class TranslationJobMock : TranslationJob
     {
 
 

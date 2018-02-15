@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class HubSiteCreationInformationMock
+    public class HubSiteCreationInformationMock : HubSiteCreationInformation
     {
 
 

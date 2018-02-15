@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.ClientSideComponent
 {
-    public class StorageEntityMock
+    public class StorageEntityMock : StorageEntity
     {
 
 

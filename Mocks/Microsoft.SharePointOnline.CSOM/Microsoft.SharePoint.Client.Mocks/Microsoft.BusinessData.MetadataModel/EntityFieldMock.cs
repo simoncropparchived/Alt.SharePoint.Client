@@ -1,7 +1,7 @@
 
 namespace Microsoft.BusinessData.MetadataModel
 {
-    public class EntityFieldMock
+    public class EntityFieldMock : EntityField
     {
 
 

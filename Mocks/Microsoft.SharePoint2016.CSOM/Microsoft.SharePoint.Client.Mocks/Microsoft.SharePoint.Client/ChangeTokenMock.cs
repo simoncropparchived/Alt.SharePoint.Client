@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ChangeTokenMock
+    public class ChangeTokenMock : ChangeToken
     {
 
 

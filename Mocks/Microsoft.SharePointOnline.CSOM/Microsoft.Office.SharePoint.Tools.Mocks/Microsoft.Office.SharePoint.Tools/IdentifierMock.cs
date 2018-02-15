@@ -1,7 +1,7 @@
 
 namespace Microsoft.Office.SharePoint.Tools
 {
-    public class IdentifierMock
+    public class IdentifierMock : Identifier
     {
 
 

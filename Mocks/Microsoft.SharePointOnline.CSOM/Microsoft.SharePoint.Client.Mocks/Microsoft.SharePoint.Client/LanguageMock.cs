@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class LanguageMock
+    public class LanguageMock : Language
     {
 
 

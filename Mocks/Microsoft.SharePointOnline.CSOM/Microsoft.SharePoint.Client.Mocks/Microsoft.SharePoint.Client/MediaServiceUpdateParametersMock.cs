@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class MediaServiceUpdateParametersMock
+    public class MediaServiceUpdateParametersMock : MediaServiceUpdateParameters
     {
 
 

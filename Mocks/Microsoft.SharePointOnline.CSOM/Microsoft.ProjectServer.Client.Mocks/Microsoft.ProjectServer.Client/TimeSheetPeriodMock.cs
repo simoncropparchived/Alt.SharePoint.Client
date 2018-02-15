@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class TimeSheetPeriodMock
+    public class TimeSheetPeriodMock : TimeSheetPeriod
     {
 
 

@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class GroupCreationInformationMock
+    public class GroupCreationInformationMock : GroupCreationInformation
     {
 
 

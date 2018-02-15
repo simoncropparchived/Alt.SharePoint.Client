@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Taxonomy
 {
-    public class TermStoreMock
+    public class TermStoreMock : TermStore
     {
 
 
@@ -26,8 +26,8 @@ namespace Microsoft.SharePoint.Client.Taxonomy
         public override Microsoft.SharePoint.Client.Taxonomy.TermSet KeywordsTermSet => KeywordsTermSetEx;
         public Microsoft.SharePoint.Client.Taxonomy.TermSet KeywordsTermSetEx { get; set; }
 
-        public override System.Collections.Generic.IEnumerable`1<System.Int32> Languages => LanguagesEx;
-        public System.Collections.Generic.IEnumerable`1<System.Int32> LanguagesEx { get; set; }
+        public override System.Collections.Generic.IEnumerable<System.Int32> Languages => LanguagesEx;
+        public System.Collections.Generic.IEnumerable<System.Int32> LanguagesEx { get; set; }
 
         public override System.String Name => NameEx;
         public System.String NameEx { get; set; }

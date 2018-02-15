@@ -1,7 +1,7 @@
 
 namespace Microsoft.Online.SharePoint.TenantAdministration.Internal
 {
-    public class SPOWebAppServicePrincipalMock
+    public class SPOWebAppServicePrincipalMock : SPOWebAppServicePrincipal
     {
 
 
@@ -17,8 +17,8 @@ namespace Microsoft.Online.SharePoint.TenantAdministration.Internal
         public override Microsoft.Online.SharePoint.TenantAdministration.Internal.SPOWebAppServicePrincipalPermissionRequestCollection PermissionRequests => PermissionRequestsEx;
         public Microsoft.Online.SharePoint.TenantAdministration.Internal.SPOWebAppServicePrincipalPermissionRequestCollection PermissionRequestsEx { get; set; }
 
-        public override System.Collections.Generic.IEnumerable`1<System.String> ReplyUrls => ReplyUrlsEx;
-        public System.Collections.Generic.IEnumerable`1<System.String> ReplyUrlsEx { get; set; }
+        public override System.Collections.Generic.IEnumerable<System.String> ReplyUrls => ReplyUrlsEx;
+        public System.Collections.Generic.IEnumerable<System.String> ReplyUrlsEx { get; set; }
 
     }
 }

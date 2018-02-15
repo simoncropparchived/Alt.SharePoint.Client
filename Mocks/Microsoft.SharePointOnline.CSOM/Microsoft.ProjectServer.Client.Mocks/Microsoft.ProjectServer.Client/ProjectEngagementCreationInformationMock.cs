@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class ProjectEngagementCreationInformationMock
+    public class ProjectEngagementCreationInformationMock : ProjectEngagementCreationInformation
     {
 
 

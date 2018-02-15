@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class FileMock
+    public class FileMock : File
     {
 
 

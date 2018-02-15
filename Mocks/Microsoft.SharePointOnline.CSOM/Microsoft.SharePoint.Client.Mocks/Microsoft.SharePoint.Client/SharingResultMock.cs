@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class SharingResultMock
+    public class SharingResultMock : SharingResult
     {
 
 
@@ -17,8 +17,8 @@ namespace Microsoft.SharePoint.Client
         public override System.String IconUrl => IconUrlEx;
         public System.String IconUrlEx { get; set; }
 
-        public override System.Collections.Generic.IList`1<Microsoft.SharePoint.Client.SPInvitationCreationResult> InvitedUsers => InvitedUsersEx;
-        public System.Collections.Generic.IList`1<Microsoft.SharePoint.Client.SPInvitationCreationResult> InvitedUsersEx { get; set; }
+        public override System.Collections.Generic.IList<Microsoft.SharePoint.Client.SPInvitationCreationResult> InvitedUsers => InvitedUsersEx;
+        public System.Collections.Generic.IList<Microsoft.SharePoint.Client.SPInvitationCreationResult> InvitedUsersEx { get; set; }
 
         public override System.String Name => NameEx;
         public System.String NameEx { get; set; }
@@ -29,14 +29,14 @@ namespace Microsoft.SharePoint.Client
         public override Microsoft.SharePoint.Client.SharingOperationStatusCode StatusCode => StatusCodeEx;
         public Microsoft.SharePoint.Client.SharingOperationStatusCode StatusCodeEx { get; set; }
 
-        public override System.Collections.Generic.IList`1<Microsoft.SharePoint.Client.Sharing.UserSharingResult> UniquelyPermissionedUsers => UniquelyPermissionedUsersEx;
-        public System.Collections.Generic.IList`1<Microsoft.SharePoint.Client.Sharing.UserSharingResult> UniquelyPermissionedUsersEx { get; set; }
+        public override System.Collections.Generic.IList<Microsoft.SharePoint.Client.Sharing.UserSharingResult> UniquelyPermissionedUsers => UniquelyPermissionedUsersEx;
+        public System.Collections.Generic.IList<Microsoft.SharePoint.Client.Sharing.UserSharingResult> UniquelyPermissionedUsersEx { get; set; }
 
         public override System.String Url => UrlEx;
         public System.String UrlEx { get; set; }
 
-        public override System.Collections.Generic.IList`1<Microsoft.SharePoint.Client.Sharing.UserSharingResult> UsersAddedToGroup => UsersAddedToGroupEx;
-        public System.Collections.Generic.IList`1<Microsoft.SharePoint.Client.Sharing.UserSharingResult> UsersAddedToGroupEx { get; set; }
+        public override System.Collections.Generic.IList<Microsoft.SharePoint.Client.Sharing.UserSharingResult> UsersAddedToGroup => UsersAddedToGroupEx;
+        public System.Collections.Generic.IList<Microsoft.SharePoint.Client.Sharing.UserSharingResult> UsersAddedToGroupEx { get; set; }
 
         public override Microsoft.SharePoint.Client.SharingUserCollection UsersWithAccessRequests => UsersWithAccessRequestsEx;
         public Microsoft.SharePoint.Client.SharingUserCollection UsersWithAccessRequestsEx { get; set; }

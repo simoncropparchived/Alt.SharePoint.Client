@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Search.Query
 {
-    public class PopularQueryMock
+    public class PopularQueryMock : PopularQuery
     {
 
 

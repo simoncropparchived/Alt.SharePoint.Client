@@ -1,7 +1,7 @@
 
 namespace Microsoft.BusinessData.MetadataModel
 {
-    public class EntityIdentifierMock
+    public class EntityIdentifierMock : EntityIdentifier
     {
 
 

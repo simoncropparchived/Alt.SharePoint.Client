@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class MoveCopyOptionsMock
+    public class MoveCopyOptionsMock : MoveCopyOptions
     {
 
 

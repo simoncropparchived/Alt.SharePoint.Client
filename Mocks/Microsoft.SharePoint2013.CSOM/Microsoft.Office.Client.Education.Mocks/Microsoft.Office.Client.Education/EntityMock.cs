@@ -1,7 +1,7 @@
 
 namespace Microsoft.Office.Client.Education
 {
-    public class EntityMock
+    public class EntityMock : Entity
     {
 
 

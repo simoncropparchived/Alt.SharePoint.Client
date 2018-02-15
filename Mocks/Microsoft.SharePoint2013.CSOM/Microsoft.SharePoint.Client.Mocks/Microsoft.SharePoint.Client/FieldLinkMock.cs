@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class FieldLinkMock
+    public class FieldLinkMock : FieldLink
     {
 
 

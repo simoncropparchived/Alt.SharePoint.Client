@@ -1,7 +1,7 @@
 
 namespace Microsoft.Online.SharePoint.TenantManagement
 {
-    public class Office365TenantMock
+    public class Office365TenantMock : Office365Tenant
     {
 
 
@@ -143,8 +143,8 @@ namespace Microsoft.Online.SharePoint.TenantManagement
         public override System.Boolean PublicCdnEnabled => PublicCdnEnabledEx;
         public System.Boolean PublicCdnEnabledEx { get; set; }
 
-        public override System.Collections.Generic.IList`1<System.String> PublicCdnOrigins => PublicCdnOriginsEx;
-        public System.Collections.Generic.IList`1<System.String> PublicCdnOriginsEx { get; set; }
+        public override System.Collections.Generic.IList<System.String> PublicCdnOrigins => PublicCdnOriginsEx;
+        public System.Collections.Generic.IList<System.String> PublicCdnOriginsEx { get; set; }
 
         public override System.Boolean RequireAcceptingAccountMatchInvitedAccount => RequireAcceptingAccountMatchInvitedAccountEx;
         public System.Boolean RequireAcceptingAccountMatchInvitedAccountEx { get; set; }

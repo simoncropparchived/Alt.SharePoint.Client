@@ -1,7 +1,7 @@
 
 namespace Microsoft.Office.SharePoint.Tools
 {
-    public class ActionMock
+    public class ActionMock : Action
     {
 
 

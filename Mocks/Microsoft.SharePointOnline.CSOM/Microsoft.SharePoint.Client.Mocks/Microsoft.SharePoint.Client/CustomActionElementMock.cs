@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class CustomActionElementMock
+    public class CustomActionElementMock : CustomActionElement
     {
 
 

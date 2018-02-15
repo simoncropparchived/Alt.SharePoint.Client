@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class FileVersionMock
+    public class FileVersionMock : FileVersion
     {
 
 

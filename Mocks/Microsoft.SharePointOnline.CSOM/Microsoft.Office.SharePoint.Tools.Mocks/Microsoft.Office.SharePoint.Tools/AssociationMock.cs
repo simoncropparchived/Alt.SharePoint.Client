@@ -1,7 +1,7 @@
 
 namespace Microsoft.Office.SharePoint.Tools
 {
-    public class AssociationMock
+    public class AssociationMock : Association
     {
 
 

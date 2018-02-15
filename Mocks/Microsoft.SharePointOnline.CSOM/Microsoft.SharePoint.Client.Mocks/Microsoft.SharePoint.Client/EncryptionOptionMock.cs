@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class EncryptionOptionMock
+    public class EncryptionOptionMock : EncryptionOption
     {
 
 

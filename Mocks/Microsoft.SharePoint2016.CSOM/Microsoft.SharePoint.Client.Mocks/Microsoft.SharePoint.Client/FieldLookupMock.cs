@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class FieldLookupMock
+    public class FieldLookupMock : FieldLookup
     {
 
 

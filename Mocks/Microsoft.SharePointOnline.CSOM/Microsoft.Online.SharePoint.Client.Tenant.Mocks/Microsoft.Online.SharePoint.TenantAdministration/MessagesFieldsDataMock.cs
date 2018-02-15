@@ -1,7 +1,7 @@
 
 namespace Microsoft.Online.SharePoint.TenantAdministration
 {
-    public class MessagesFieldsDataMock
+    public class MessagesFieldsDataMock : MessagesFieldsData
     {
 
 

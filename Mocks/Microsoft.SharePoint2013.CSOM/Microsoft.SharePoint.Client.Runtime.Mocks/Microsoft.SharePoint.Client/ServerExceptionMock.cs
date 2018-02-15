@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ServerExceptionMock
+    public class ServerExceptionMock : ServerException
     {
 
 

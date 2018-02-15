@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ExceptionHandlingScopeMock
+    public class ExceptionHandlingScopeMock : ExceptionHandlingScope
     {
 
 

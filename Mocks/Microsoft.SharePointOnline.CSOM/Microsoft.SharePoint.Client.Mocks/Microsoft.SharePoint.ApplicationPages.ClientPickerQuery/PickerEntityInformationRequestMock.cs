@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.ApplicationPages.ClientPickerQuery
 {
-    public class PickerEntityInformationRequestMock
+    public class PickerEntityInformationRequestMock : PickerEntityInformationRequest
     {
 
 

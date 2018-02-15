@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ClientContextMock
+    public class ClientContextMock : ClientContext
     {
 
 

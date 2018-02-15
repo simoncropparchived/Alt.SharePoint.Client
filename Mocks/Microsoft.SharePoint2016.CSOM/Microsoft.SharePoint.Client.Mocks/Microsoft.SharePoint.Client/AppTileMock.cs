@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class AppTileMock
+    public class AppTileMock : AppTile
     {
 
 

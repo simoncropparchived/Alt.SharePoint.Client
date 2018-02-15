@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Microfeed
 {
-    public class MicrofeedPostMock
+    public class MicrofeedPostMock : MicrofeedPost
     {
 
 
@@ -44,8 +44,8 @@ namespace Microsoft.SharePoint.Client.Microfeed
         public override System.Boolean ILikeIt => ILikeItEx;
         public System.Boolean ILikeItEx { get; set; }
 
-        public override System.Collections.Generic.IList`1<System.Int32> LikersList => LikersListEx;
-        public System.Collections.Generic.IList`1<System.Int32> LikersListEx { get; set; }
+        public override System.Collections.Generic.IList<System.Int32> LikersList => LikersListEx;
+        public System.Collections.Generic.IList<System.Int32> LikersListEx { get; set; }
 
         public override System.Boolean Locked => LockedEx;
         public System.Boolean LockedEx { get; set; }

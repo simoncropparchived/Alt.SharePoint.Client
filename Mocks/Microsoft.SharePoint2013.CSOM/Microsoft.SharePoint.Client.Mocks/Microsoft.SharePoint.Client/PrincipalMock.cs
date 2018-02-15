@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class PrincipalMock
+    public class PrincipalMock : Principal
     {
 
 

@@ -1,7 +1,7 @@
 
 namespace Microsoft.Office.SharePoint.Tools
 {
-    public class IndividuallySecurableMetadataObjectMock
+    public class IndividuallySecurableMetadataObjectMock : IndividuallySecurableMetadataObject
     {
 
 

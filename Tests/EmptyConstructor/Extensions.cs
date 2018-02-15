@@ -30,6 +30,14 @@ static class Extensions
         return !typeDefinition.Methods.Any(x => x.IsConstructor && !x.IsStatic);
     }
 
+    public static string CSharpName(this TypeReference typeDefinition)
+    {
+        return typeDefinition.ToString()
+            .Replace("`1", "")
+            .Replace("`2", "");
+
+    }
+
 
     public static bool IsStatic(this PropertyDefinition propertyDefinition)
     {

@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Taxonomy
 {
-    public class TermMock
+    public class TermMock : Term
     {
 
 
@@ -32,11 +32,11 @@ namespace Microsoft.SharePoint.Client.Taxonomy
         public override Microsoft.SharePoint.Client.Taxonomy.LabelCollection Labels => LabelsEx;
         public Microsoft.SharePoint.Client.Taxonomy.LabelCollection LabelsEx { get; set; }
 
-        public override System.Collections.Generic.IDictionary`2<System.String,System.String> LocalCustomProperties => LocalCustomPropertiesEx;
-        public System.Collections.Generic.IDictionary`2<System.String,System.String> LocalCustomPropertiesEx { get; set; }
+        public override System.Collections.Generic.IDictionary<System.String,System.String> LocalCustomProperties => LocalCustomPropertiesEx;
+        public System.Collections.Generic.IDictionary<System.String,System.String> LocalCustomPropertiesEx { get; set; }
 
-        public override System.Collections.Generic.IEnumerable`1<System.Guid> MergedTermIds => MergedTermIdsEx;
-        public System.Collections.Generic.IEnumerable`1<System.Guid> MergedTermIdsEx { get; set; }
+        public override System.Collections.Generic.IEnumerable<System.Guid> MergedTermIds => MergedTermIdsEx;
+        public System.Collections.Generic.IEnumerable<System.Guid> MergedTermIdsEx { get; set; }
 
         public override Microsoft.SharePoint.Client.Taxonomy.Term Parent => ParentEx;
         public Microsoft.SharePoint.Client.Taxonomy.Term ParentEx { get; set; }

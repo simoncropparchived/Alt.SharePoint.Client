@@ -1,7 +1,7 @@
 
 namespace Microsoft.Online.SharePoint.TenantAdministration
 {
-    public class TenantMock
+    public class TenantMock : Tenant
     {
 
 
@@ -173,8 +173,8 @@ namespace Microsoft.Online.SharePoint.TenantAdministration
         public override System.Boolean PublicCdnEnabled => PublicCdnEnabledEx;
         public System.Boolean PublicCdnEnabledEx { get; set; }
 
-        public override System.Collections.Generic.IList`1<System.String> PublicCdnOrigins => PublicCdnOriginsEx;
-        public System.Collections.Generic.IList`1<System.String> PublicCdnOriginsEx { get; set; }
+        public override System.Collections.Generic.IList<System.String> PublicCdnOrigins => PublicCdnOriginsEx;
+        public System.Collections.Generic.IList<System.String> PublicCdnOriginsEx { get; set; }
 
         public override System.Boolean RequireAcceptingAccountMatchInvitedAccount => RequireAcceptingAccountMatchInvitedAccountEx;
         public System.Boolean RequireAcceptingAccountMatchInvitedAccountEx { get; set; }

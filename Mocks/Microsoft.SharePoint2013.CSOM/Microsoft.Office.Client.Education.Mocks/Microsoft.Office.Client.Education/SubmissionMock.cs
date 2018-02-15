@@ -1,7 +1,7 @@
 
 namespace Microsoft.Office.Client.Education
 {
-    public class SubmissionMock
+    public class SubmissionMock : Submission
     {
 
 

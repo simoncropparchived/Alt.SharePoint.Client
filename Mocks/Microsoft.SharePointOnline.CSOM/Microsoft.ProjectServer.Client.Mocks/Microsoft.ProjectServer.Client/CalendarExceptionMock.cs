@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class CalendarExceptionMock
+    public class CalendarExceptionMock : CalendarException
     {
 
 

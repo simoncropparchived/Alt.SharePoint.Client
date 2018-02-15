@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class FieldMultiChoiceMock
+    public class FieldMultiChoiceMock : FieldMultiChoice
     {
 
 

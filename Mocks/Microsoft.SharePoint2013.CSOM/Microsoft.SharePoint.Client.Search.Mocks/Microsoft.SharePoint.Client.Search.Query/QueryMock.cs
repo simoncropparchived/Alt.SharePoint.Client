@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Search.Query
 {
-    public class QueryMock
+    public class QueryMock : Query
     {
 
 
@@ -71,8 +71,8 @@ namespace Microsoft.SharePoint.Client.Search.Query
         public override System.String QueryTemplate => QueryTemplateEx;
         public System.String QueryTemplateEx { get; set; }
 
-        public override System.Collections.Generic.IDictionary`2<System.String,System.Boolean> QueryTemplateParameters => QueryTemplateParametersEx;
-        public System.Collections.Generic.IDictionary`2<System.String,System.Boolean> QueryTemplateParametersEx { get; set; }
+        public override System.Collections.Generic.IDictionary<System.String,System.Boolean> QueryTemplateParameters => QueryTemplateParametersEx;
+        public System.Collections.Generic.IDictionary<System.String,System.Boolean> QueryTemplateParametersEx { get; set; }
 
         public override System.String QueryText => QueryTextEx;
         public System.String QueryTextEx { get; set; }

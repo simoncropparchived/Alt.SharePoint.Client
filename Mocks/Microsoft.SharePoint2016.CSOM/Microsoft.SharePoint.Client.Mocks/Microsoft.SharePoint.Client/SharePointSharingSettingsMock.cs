@@ -1,18 +1,18 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class SharePointSharingSettingsMock
+    public class SharePointSharingSettingsMock : SharePointSharingSettings
     {
 
 
         public override System.String AddToGroupModeName => AddToGroupModeNameEx;
         public System.String AddToGroupModeNameEx { get; set; }
 
-        public override System.Collections.Generic.IEnumerable`1<System.String> GroupNameLines => GroupNameLinesEx;
-        public System.Collections.Generic.IEnumerable`1<System.String> GroupNameLinesEx { get; set; }
+        public override System.Collections.Generic.IEnumerable<System.String> GroupNameLines => GroupNameLinesEx;
+        public System.Collections.Generic.IEnumerable<System.String> GroupNameLinesEx { get; set; }
 
-        public override System.Collections.Generic.IEnumerable`1<System.String> GroupRoleDefinitionNamesLines => GroupRoleDefinitionNamesLinesEx;
-        public System.Collections.Generic.IEnumerable`1<System.String> GroupRoleDefinitionNamesLinesEx { get; set; }
+        public override System.Collections.Generic.IEnumerable<System.String> GroupRoleDefinitionNamesLines => GroupRoleDefinitionNamesLinesEx;
+        public System.Collections.Generic.IEnumerable<System.String> GroupRoleDefinitionNamesLinesEx { get; set; }
 
         public override System.Boolean IsMobileView => IsMobileViewEx;
         public System.Boolean IsMobileViewEx { get; set; }
@@ -29,11 +29,11 @@ namespace Microsoft.SharePoint.Client
         public override Microsoft.SharePoint.Client.PickerSettings PickerProperties => PickerPropertiesEx;
         public Microsoft.SharePoint.Client.PickerSettings PickerPropertiesEx { get; set; }
 
-        public override System.Collections.Generic.IEnumerable`1<System.String> RequiredScriptFileLinks => RequiredScriptFileLinksEx;
-        public System.Collections.Generic.IEnumerable`1<System.String> RequiredScriptFileLinksEx { get; set; }
+        public override System.Collections.Generic.IEnumerable<System.String> RequiredScriptFileLinks => RequiredScriptFileLinksEx;
+        public System.Collections.Generic.IEnumerable<System.String> RequiredScriptFileLinksEx { get; set; }
 
-        public override System.Collections.Generic.IEnumerable`1<System.String> RoleDefinitionNameLines => RoleDefinitionNameLinesEx;
-        public System.Collections.Generic.IEnumerable`1<System.String> RoleDefinitionNameLinesEx { get; set; }
+        public override System.Collections.Generic.IEnumerable<System.String> RoleDefinitionNameLines => RoleDefinitionNameLinesEx;
+        public System.Collections.Generic.IEnumerable<System.String> RoleDefinitionNameLinesEx { get; set; }
 
         public override System.String SelectedGroup => SelectedGroupEx;
         public System.String SelectedGroupEx { get; set; }

@@ -103,7 +103,7 @@ public class Converter
             $@"
 namespace {type.Namespace}
 {{
-    public class {type.Name}Mock
+    public class {type.Name}Mock : {type.Name}
     {{
 ");
         foreach (var property in type.Properties)
@@ -131,13 +131,14 @@ namespace {type.Namespace}
         var getMethod = property.GetMethod;
         var setMethod = property.SetMethod;
 
+        //TODO: public virtual object this[string fieldName] { get; set; }
         if (setMethod == null)
         {
             if (getMethod.IsPublic)
             {
                 builder.AppendLine($@"
-        public override {property.PropertyType} {property.Name} => {property.Name}Ex;
-        public {property.PropertyType} {property.Name}Ex {{ get; set; }}");
+        public override {property.PropertyType.CSharpName()} {property.Name} => {property.Name}Ex;
+        public {property.PropertyType.CSharpName()} {property.Name}Ex {{ get; set; }}");
             }
 
             return;

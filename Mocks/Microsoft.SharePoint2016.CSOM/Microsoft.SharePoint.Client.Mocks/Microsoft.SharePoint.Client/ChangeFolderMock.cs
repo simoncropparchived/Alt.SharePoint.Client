@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ChangeFolderMock
+    public class ChangeFolderMock : ChangeFolder
     {
 
 

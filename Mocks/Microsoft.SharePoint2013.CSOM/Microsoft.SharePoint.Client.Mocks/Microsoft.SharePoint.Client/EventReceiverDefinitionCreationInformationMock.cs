@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class EventReceiverDefinitionCreationInformationMock
+    public class EventReceiverDefinitionCreationInformationMock : EventReceiverDefinitionCreationInformation
     {
 
 

@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class FormDigestInfoMock
+    public class FormDigestInfoMock : FormDigestInfo
     {
 
 

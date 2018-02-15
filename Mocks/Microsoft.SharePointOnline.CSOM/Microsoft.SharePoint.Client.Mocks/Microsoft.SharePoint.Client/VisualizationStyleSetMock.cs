@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class VisualizationStyleSetMock
+    public class VisualizationStyleSetMock : VisualizationStyleSet
     {
 
 

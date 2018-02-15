@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Publishing.Navigation
 {
-    public class NavigationTermMock
+    public class NavigationTermMock : NavigationTerm
     {
 
 

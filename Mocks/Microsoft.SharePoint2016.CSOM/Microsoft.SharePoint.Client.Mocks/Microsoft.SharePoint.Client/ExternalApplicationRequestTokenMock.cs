@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ExternalApplicationRequestTokenMock
+    public class ExternalApplicationRequestTokenMock : ExternalApplicationRequestToken
     {
 
 

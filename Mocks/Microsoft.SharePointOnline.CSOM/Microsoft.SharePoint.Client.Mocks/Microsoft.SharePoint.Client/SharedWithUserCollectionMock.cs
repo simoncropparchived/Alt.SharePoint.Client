@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class SharedWithUserCollectionMock
+    public class SharedWithUserCollectionMock : SharedWithUserCollection
     {
 
 

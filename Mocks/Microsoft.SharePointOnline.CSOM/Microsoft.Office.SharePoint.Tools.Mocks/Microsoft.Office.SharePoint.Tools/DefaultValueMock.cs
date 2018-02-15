@@ -1,7 +1,7 @@
 
 namespace Microsoft.Office.SharePoint.Tools
 {
-    public class DefaultValueMock
+    public class DefaultValueMock : DefaultValue
     {
 
 

@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Social
 {
-    public class SocialPostCreationDataMock
+    public class SocialPostCreationDataMock : SocialPostCreationData
     {
 
 

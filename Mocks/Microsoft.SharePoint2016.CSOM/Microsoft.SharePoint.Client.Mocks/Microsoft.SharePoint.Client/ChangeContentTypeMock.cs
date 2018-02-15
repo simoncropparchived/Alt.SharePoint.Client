@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ChangeContentTypeMock
+    public class ChangeContentTypeMock : ChangeContentType
     {
 
 

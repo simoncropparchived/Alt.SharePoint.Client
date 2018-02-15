@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ListCreationInformationMock
+    public class ListCreationInformationMock : ListCreationInformation
     {
 
 

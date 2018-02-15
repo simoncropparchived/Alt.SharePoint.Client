@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Workflow
 {
-    public class WorkflowAssociationCreationInformationMock
+    public class WorkflowAssociationCreationInformationMock : WorkflowAssociationCreationInformation
     {
 
 

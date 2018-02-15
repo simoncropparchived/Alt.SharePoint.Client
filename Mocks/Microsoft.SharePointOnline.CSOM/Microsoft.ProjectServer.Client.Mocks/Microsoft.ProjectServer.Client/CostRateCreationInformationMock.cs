@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class CostRateCreationInformationMock
+    public class CostRateCreationInformationMock : CostRateCreationInformation
     {
 
 

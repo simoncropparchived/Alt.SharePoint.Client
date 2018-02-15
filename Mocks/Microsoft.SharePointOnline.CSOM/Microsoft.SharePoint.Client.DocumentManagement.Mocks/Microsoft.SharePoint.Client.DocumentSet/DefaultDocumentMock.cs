@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.DocumentSet
 {
-    public class DefaultDocumentMock
+    public class DefaultDocumentMock : DefaultDocument
     {
 
 

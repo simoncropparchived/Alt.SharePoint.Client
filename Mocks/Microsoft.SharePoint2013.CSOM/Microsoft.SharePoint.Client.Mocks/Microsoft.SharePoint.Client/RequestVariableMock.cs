@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class RequestVariableMock
+    public class RequestVariableMock : RequestVariable
     {
 
 

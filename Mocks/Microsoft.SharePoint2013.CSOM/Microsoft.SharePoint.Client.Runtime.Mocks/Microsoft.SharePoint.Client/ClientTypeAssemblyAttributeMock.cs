@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ClientTypeAssemblyAttributeMock
+    public class ClientTypeAssemblyAttributeMock : ClientTypeAssemblyAttribute
     {
 
 

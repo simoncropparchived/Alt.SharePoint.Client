@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class FormMock
+    public class FormMock : Form
     {
 
 

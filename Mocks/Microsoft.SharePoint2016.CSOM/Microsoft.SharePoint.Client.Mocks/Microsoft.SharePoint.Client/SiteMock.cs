@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class SiteMock
+    public class SiteMock : Site
     {
 
 

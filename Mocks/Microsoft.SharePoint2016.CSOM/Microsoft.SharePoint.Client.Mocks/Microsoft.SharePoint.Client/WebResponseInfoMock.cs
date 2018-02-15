@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class WebResponseInfoMock
+    public class WebResponseInfoMock : WebResponseInfo
     {
 
 

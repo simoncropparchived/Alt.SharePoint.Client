@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ClientRuntimeContextMock
+    public class ClientRuntimeContextMock : ClientRuntimeContext
     {
 
 
@@ -41,8 +41,8 @@ namespace Microsoft.SharePoint.Client
         public override System.Int32 RequestTimeout => RequestTimeoutEx;
         public System.Int32 RequestTimeoutEx { get; set; }
 
-        public override System.Collections.Generic.Dictionary`2<System.String,System.Object> StaticObjects => StaticObjectsEx;
-        public System.Collections.Generic.Dictionary`2<System.String,System.Object> StaticObjectsEx { get; set; }
+        public override System.Collections.Generic.Dictionary<System.String,System.Object> StaticObjects => StaticObjectsEx;
+        public System.Collections.Generic.Dictionary<System.String,System.Object> StaticObjectsEx { get; set; }
 
         public override System.Version ServerSchemaVersion => ServerSchemaVersionEx;
         public System.Version ServerSchemaVersionEx { get; set; }

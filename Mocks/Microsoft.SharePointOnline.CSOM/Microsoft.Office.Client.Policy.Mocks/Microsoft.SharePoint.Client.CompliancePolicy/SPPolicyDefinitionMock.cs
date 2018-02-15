@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.CompliancePolicy
 {
-    public class SPPolicyDefinitionMock
+    public class SPPolicyDefinitionMock : SPPolicyDefinition
     {
 
 

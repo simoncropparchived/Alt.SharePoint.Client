@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Search.Query
 {
-    public class QuerySuggestionQueryMock
+    public class QuerySuggestionQueryMock : QuerySuggestionQuery
     {
 
 

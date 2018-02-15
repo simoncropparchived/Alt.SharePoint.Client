@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.WorkflowServices
 {
-    public class WorkflowServicesManagerMock
+    public class WorkflowServicesManagerMock : WorkflowServicesManager
     {
 
 

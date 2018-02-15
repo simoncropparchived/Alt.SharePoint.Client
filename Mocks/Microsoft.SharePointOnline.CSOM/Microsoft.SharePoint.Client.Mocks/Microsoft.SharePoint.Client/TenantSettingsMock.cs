@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class TenantSettingsMock
+    public class TenantSettingsMock : TenantSettings
     {
 
 

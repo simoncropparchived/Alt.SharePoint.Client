@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class EffectiveInformationRightsManagementSettingsMock
+    public class EffectiveInformationRightsManagementSettingsMock : EffectiveInformationRightsManagementSettings
     {
 
 

@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class AppInstanceErrorDetailsMock
+    public class AppInstanceErrorDetailsMock : AppInstanceErrorDetails
     {
 
 

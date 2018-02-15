@@ -1,7 +1,7 @@
 
 namespace Microsoft.BusinessData.Runtime
 {
-    public class NotificationCallbackMock
+    public class NotificationCallbackMock : NotificationCallback
     {
 
 

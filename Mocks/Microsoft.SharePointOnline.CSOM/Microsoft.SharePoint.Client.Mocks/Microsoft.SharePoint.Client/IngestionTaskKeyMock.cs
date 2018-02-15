@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class IngestionTaskKeyMock
+    public class IngestionTaskKeyMock : IngestionTaskKey
     {
 
 

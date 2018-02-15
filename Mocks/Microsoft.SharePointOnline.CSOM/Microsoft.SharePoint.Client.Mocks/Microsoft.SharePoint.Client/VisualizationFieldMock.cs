@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class VisualizationFieldMock
+    public class VisualizationFieldMock : VisualizationField
     {
 
 

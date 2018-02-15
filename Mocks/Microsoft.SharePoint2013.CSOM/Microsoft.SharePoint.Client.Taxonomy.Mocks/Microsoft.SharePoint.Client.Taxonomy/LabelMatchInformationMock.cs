@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Taxonomy
 {
-    public class LabelMatchInformationMock
+    public class LabelMatchInformationMock : LabelMatchInformation
     {
 
 

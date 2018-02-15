@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Publishing.Navigation
 {
-    public class WebNavigationSettingsMock
+    public class WebNavigationSettingsMock : WebNavigationSettings
     {
 
 

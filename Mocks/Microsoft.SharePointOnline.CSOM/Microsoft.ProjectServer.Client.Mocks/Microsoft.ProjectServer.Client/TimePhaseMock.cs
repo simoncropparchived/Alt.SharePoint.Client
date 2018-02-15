@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class TimePhaseMock
+    public class TimePhaseMock : TimePhase
     {
 
 

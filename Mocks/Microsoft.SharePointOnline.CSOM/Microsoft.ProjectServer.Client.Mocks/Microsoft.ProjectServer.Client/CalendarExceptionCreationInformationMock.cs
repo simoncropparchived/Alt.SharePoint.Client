@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class CalendarExceptionCreationInformationMock
+    public class CalendarExceptionCreationInformationMock : CalendarExceptionCreationInformation
     {
 
 

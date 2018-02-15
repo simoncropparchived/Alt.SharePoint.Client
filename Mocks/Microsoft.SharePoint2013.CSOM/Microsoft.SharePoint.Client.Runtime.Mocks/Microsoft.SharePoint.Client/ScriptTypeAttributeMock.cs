@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ScriptTypeAttributeMock
+    public class ScriptTypeAttributeMock : ScriptTypeAttribute
     {
 
 

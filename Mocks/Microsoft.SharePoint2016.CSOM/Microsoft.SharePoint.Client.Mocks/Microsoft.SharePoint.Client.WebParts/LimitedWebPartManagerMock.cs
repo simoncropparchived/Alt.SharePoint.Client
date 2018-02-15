@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.WebParts
 {
-    public class LimitedWebPartManagerMock
+    public class LimitedWebPartManagerMock : LimitedWebPartManager
     {
 
 

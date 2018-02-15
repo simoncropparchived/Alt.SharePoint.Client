@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Search.Analytics
 {
-    public class AnalyticsItemDataMock
+    public class AnalyticsItemDataMock : AnalyticsItemData
     {
 
 

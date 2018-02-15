@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Microfeed
 {
-    public class MicrofeedPostDefinitionNameCollectionMock
+    public class MicrofeedPostDefinitionNameCollectionMock : MicrofeedPostDefinitionNameCollection
     {
 
 

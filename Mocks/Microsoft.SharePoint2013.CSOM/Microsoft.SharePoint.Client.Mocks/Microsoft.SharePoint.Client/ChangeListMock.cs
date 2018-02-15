@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ChangeListMock
+    public class ChangeListMock : ChangeList
     {
 
 

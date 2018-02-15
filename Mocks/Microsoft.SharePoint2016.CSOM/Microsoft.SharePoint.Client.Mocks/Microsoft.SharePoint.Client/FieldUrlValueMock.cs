@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class FieldUrlValueMock
+    public class FieldUrlValueMock : FieldUrlValue
     {
 
 

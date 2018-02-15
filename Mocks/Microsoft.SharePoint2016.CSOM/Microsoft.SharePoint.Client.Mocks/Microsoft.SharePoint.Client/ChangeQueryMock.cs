@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ChangeQueryMock
+    public class ChangeQueryMock : ChangeQuery
     {
 
 

@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class FieldDateTimeMock
+    public class FieldDateTimeMock : FieldDateTime
     {
 
 

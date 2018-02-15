@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class MountPointInfoMock
+    public class MountPointInfoMock : MountPointInfo
     {
 
 

@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Taxonomy
 {
-    public class TermGroupMock
+    public class TermGroupMock : TermGroup
     {
 
 

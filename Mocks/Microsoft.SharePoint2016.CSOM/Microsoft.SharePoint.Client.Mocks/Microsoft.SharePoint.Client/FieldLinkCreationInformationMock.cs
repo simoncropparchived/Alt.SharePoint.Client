@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class FieldLinkCreationInformationMock
+    public class FieldLinkCreationInformationMock : FieldLinkCreationInformation
     {
 
 

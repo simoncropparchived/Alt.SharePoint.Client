@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class StageMock
+    public class StageMock : Stage
     {
 
 

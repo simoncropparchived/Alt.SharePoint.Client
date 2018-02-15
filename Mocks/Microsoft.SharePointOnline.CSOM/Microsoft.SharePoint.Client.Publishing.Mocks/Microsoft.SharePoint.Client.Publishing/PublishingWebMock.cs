@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Publishing
 {
-    public class PublishingWebMock
+    public class PublishingWebMock : PublishingWeb
     {
 
 

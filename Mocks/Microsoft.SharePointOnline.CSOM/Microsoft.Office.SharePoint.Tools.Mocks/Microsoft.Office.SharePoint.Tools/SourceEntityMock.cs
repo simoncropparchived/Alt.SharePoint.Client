@@ -1,7 +1,7 @@
 
 namespace Microsoft.Office.SharePoint.Tools
 {
-    public class SourceEntityMock
+    public class SourceEntityMock : SourceEntity
     {
 
 

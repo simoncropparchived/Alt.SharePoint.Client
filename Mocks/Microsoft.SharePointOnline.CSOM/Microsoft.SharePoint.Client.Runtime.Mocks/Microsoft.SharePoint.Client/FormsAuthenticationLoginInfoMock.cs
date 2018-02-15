@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class FormsAuthenticationLoginInfoMock
+    public class FormsAuthenticationLoginInfoMock : FormsAuthenticationLoginInfo
     {
 
 

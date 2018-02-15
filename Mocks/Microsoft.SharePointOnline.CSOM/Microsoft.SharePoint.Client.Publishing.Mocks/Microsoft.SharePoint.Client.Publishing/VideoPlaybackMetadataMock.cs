@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Publishing
 {
-    public class VideoPlaybackMetadataMock
+    public class VideoPlaybackMetadataMock : VideoPlaybackMetadata
     {
 
 

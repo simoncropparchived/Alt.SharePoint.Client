@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ListDataValidationFailureMock
+    public class ListDataValidationFailureMock : ListDataValidationFailure
     {
 
 

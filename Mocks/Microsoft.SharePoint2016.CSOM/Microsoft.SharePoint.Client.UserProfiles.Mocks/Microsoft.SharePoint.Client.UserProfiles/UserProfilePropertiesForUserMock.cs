@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.UserProfiles
 {
-    public class UserProfilePropertiesForUserMock
+    public class UserProfilePropertiesForUserMock : UserProfilePropertiesForUser
     {
 
 

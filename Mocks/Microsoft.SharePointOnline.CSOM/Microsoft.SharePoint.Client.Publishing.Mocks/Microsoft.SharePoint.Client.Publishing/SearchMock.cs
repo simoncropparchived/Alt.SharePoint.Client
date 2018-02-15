@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Publishing
 {
-    public class SearchMock
+    public class SearchMock : Search
     {
 
 

@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class StorageMetricsMock
+    public class StorageMetricsMock : StorageMetrics
     {
 
 

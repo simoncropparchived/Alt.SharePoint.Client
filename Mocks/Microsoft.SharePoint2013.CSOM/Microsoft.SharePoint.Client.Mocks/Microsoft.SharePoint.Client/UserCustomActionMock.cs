@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class UserCustomActionMock
+    public class UserCustomActionMock : UserCustomAction
     {
 
 

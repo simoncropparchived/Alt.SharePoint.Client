@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class AppPrincipalCredentialReferenceMock
+    public class AppPrincipalCredentialReferenceMock : AppPrincipalCredentialReference
     {
 
 

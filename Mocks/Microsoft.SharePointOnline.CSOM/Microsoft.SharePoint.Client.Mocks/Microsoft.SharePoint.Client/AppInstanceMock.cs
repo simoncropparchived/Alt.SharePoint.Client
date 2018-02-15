@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class AppInstanceMock
+    public class AppInstanceMock : AppInstance
     {
 
 

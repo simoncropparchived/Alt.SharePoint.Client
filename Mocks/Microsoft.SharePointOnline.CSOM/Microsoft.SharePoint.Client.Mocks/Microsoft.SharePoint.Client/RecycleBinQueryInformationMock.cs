@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class RecycleBinQueryInformationMock
+    public class RecycleBinQueryInformationMock : RecycleBinQueryInformation
     {
 
 

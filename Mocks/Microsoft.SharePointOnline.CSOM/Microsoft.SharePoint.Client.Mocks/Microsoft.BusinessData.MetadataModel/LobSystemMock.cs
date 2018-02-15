@@ -1,7 +1,7 @@
 
 namespace Microsoft.BusinessData.MetadataModel
 {
-    public class LobSystemMock
+    public class LobSystemMock : LobSystem
     {
 
 

@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class EnterpriseProjectTypeMock
+    public class EnterpriseProjectTypeMock : EnterpriseProjectType
     {
 
 

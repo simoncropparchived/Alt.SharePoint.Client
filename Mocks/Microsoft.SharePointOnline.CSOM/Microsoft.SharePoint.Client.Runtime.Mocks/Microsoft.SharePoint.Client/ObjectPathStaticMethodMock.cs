@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ObjectPathStaticMethodMock
+    public class ObjectPathStaticMethodMock : ObjectPathStaticMethod
     {
 
 

@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class SPDataLeakagePreventionStatusInfoMock
+    public class SPDataLeakagePreventionStatusInfoMock : SPDataLeakagePreventionStatusInfo
     {
 
 

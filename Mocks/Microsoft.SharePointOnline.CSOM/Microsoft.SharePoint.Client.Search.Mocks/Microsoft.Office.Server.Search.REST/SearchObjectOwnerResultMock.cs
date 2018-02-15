@@ -1,7 +1,7 @@
 
 namespace Microsoft.Office.Server.Search.REST
 {
-    public class SearchObjectOwnerResultMock
+    public class SearchObjectOwnerResultMock : SearchObjectOwnerResult
     {
 
 

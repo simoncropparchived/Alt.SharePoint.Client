@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Taxonomy
 {
-    public class TermSetMock
+    public class TermSetMock : TermSet
     {
 
 
@@ -17,11 +17,11 @@ namespace Microsoft.SharePoint.Client.Taxonomy
         public override System.Boolean IsOpenForTermCreation => IsOpenForTermCreationEx;
         public System.Boolean IsOpenForTermCreationEx { get; set; }
 
-        public override System.Collections.Generic.IDictionary`2<System.String,System.String> Names => NamesEx;
-        public System.Collections.Generic.IDictionary`2<System.String,System.String> NamesEx { get; set; }
+        public override System.Collections.Generic.IDictionary<System.String,System.String> Names => NamesEx;
+        public System.Collections.Generic.IDictionary<System.String,System.String> NamesEx { get; set; }
 
-        public override System.Collections.Generic.IEnumerable`1<System.String> Stakeholders => StakeholdersEx;
-        public System.Collections.Generic.IEnumerable`1<System.String> StakeholdersEx { get; set; }
+        public override System.Collections.Generic.IEnumerable<System.String> Stakeholders => StakeholdersEx;
+        public System.Collections.Generic.IEnumerable<System.String> StakeholdersEx { get; set; }
 
     }
 }

@@ -1,7 +1,7 @@
 
 namespace Microsoft.Office.Server.Search.REST
 {
-    public class ExpandedQueryParametersMock
+    public class ExpandedQueryParametersMock : ExpandedQueryParameters
     {
 
 

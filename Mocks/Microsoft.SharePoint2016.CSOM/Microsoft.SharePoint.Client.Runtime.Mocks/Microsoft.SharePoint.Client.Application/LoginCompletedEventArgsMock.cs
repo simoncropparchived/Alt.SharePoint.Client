@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Application
 {
-    public class LoginCompletedEventArgsMock
+    public class LoginCompletedEventArgsMock : LoginCompletedEventArgs
     {
 
 

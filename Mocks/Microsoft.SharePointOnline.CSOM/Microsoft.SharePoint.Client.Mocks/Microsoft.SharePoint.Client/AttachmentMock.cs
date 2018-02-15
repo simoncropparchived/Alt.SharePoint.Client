@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class AttachmentMock
+    public class AttachmentMock : Attachment
     {
 
 

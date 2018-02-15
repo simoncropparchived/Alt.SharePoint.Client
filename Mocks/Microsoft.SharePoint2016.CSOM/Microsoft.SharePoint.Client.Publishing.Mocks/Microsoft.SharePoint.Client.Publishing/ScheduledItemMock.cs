@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Publishing
 {
-    public class ScheduledItemMock
+    public class ScheduledItemMock : ScheduledItem
     {
 
 

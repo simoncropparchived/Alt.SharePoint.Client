@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.WebParts
 {
-    public class WebPartDefinitionMock
+    public class WebPartDefinitionMock : WebPartDefinition
     {
 
 

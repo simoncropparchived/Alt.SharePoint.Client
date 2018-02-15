@@ -1,7 +1,7 @@
 
 namespace Microsoft.Online.SharePoint.TenantAdministration
 {
-    public class SPOTenantCdnPolicyMock
+    public class SPOTenantCdnPolicyMock : SPOTenantCdnPolicy
     {
 
 

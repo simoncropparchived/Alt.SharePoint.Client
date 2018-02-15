@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class SerializationContextMock
+    public class SerializationContextMock : SerializationContext
     {
 
 

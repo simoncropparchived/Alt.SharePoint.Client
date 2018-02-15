@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.WebParts
 {
-    public class TileDataMock
+    public class TileDataMock : TileData
     {
 
 

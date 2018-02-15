@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.EventReceivers
 {
-    public class SPRemoteEntityInstanceEventPropertiesMock
+    public class SPRemoteEntityInstanceEventPropertiesMock : SPRemoteEntityInstanceEventProperties
     {
 
 

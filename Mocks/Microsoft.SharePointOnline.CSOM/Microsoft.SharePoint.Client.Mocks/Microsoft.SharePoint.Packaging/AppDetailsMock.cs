@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Packaging
 {
-    public class AppDetailsMock
+    public class AppDetailsMock : AppDetails
     {
 
 

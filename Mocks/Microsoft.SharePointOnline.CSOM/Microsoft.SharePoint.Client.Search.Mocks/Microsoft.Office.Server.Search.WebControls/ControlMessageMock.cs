@@ -1,7 +1,7 @@
 
 namespace Microsoft.Office.Server.Search.WebControls
 {
-    public class ControlMessageMock
+    public class ControlMessageMock : ControlMessage
     {
 
 

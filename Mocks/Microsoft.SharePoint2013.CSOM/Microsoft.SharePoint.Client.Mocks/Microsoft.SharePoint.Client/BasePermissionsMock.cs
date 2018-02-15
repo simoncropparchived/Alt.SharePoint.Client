@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class BasePermissionsMock
+    public class BasePermissionsMock : BasePermissions
     {
 
 

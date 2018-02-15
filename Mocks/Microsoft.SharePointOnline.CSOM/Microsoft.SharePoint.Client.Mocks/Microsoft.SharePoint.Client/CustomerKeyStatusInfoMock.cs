@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class CustomerKeyStatusInfoMock
+    public class CustomerKeyStatusInfoMock : CustomerKeyStatusInfo
     {
 
 

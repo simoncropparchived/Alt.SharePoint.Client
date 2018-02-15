@@ -1,7 +1,7 @@
 
 namespace Microsoft.Online.SharePoint.TenantAdministration
 {
-    public class ContactAdminsByEmailFieldsDataMock
+    public class ContactAdminsByEmailFieldsDataMock : ContactAdminsByEmailFieldsData
     {
 
 

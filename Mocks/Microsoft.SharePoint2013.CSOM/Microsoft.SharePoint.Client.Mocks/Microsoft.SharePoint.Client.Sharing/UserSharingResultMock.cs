@@ -1,12 +1,12 @@
 
 namespace Microsoft.SharePoint.Client.Sharing
 {
-    public class UserSharingResultMock
+    public class UserSharingResultMock : UserSharingResult
     {
 
 
-        public override System.Collections.Generic.IEnumerable`1<Microsoft.SharePoint.Client.Sharing.Role> AllowedRoles => AllowedRolesEx;
-        public System.Collections.Generic.IEnumerable`1<Microsoft.SharePoint.Client.Sharing.Role> AllowedRolesEx { get; set; }
+        public override System.Collections.Generic.IEnumerable<Microsoft.SharePoint.Client.Sharing.Role> AllowedRoles => AllowedRolesEx;
+        public System.Collections.Generic.IEnumerable<Microsoft.SharePoint.Client.Sharing.Role> AllowedRolesEx { get; set; }
 
         public override Microsoft.SharePoint.Client.Sharing.Role CurrentRole => CurrentRoleEx;
         public Microsoft.SharePoint.Client.Sharing.Role CurrentRoleEx { get; set; }

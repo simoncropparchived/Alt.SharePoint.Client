@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.TenantCdn
 {
-    public class TenantCdnUrlMock
+    public class TenantCdnUrlMock : TenantCdnUrl
     {
 
 

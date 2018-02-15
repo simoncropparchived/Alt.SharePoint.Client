@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class RoleAssignmentCollectionMock
+    public class RoleAssignmentCollectionMock : RoleAssignmentCollection
     {
 
 

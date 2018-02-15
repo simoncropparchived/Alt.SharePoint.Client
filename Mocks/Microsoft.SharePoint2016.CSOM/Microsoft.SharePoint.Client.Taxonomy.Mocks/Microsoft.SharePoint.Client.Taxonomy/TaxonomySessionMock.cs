@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Taxonomy
 {
-    public class TaxonomySessionMock
+    public class TaxonomySessionMock : TaxonomySession
     {
 
 

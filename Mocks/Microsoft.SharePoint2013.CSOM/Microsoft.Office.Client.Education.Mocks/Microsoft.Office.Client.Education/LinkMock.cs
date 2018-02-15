@@ -1,7 +1,7 @@
 
 namespace Microsoft.Office.Client.Education
 {
-    public class LinkMock
+    public class LinkMock : Link
     {
 
 

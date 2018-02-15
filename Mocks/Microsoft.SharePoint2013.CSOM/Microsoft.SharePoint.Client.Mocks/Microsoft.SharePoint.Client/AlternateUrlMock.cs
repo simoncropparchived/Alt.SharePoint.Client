@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class AlternateUrlMock
+    public class AlternateUrlMock : AlternateUrl
     {
 
 

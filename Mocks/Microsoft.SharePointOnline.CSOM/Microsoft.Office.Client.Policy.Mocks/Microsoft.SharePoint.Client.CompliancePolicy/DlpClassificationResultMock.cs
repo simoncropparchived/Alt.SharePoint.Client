@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.CompliancePolicy
 {
-    public class DlpClassificationResultMock
+    public class DlpClassificationResultMock : DlpClassificationResult
     {
 
 

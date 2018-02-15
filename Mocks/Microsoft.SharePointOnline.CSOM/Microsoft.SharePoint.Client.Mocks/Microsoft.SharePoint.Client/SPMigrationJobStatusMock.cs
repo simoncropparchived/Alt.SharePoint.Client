@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class SPMigrationJobStatusMock
+    public class SPMigrationJobStatusMock : SPMigrationJobStatus
     {
 
 

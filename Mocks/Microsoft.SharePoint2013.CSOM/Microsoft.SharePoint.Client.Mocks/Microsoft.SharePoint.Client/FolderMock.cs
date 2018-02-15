@@ -1,12 +1,12 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class FolderMock
+    public class FolderMock : Folder
     {
 
 
-        public override System.Collections.Generic.IList`1<Microsoft.SharePoint.Client.ContentTypeId> ContentTypeOrder => ContentTypeOrderEx;
-        public System.Collections.Generic.IList`1<Microsoft.SharePoint.Client.ContentTypeId> ContentTypeOrderEx { get; set; }
+        public override System.Collections.Generic.IList<Microsoft.SharePoint.Client.ContentTypeId> ContentTypeOrder => ContentTypeOrderEx;
+        public System.Collections.Generic.IList<Microsoft.SharePoint.Client.ContentTypeId> ContentTypeOrderEx { get; set; }
 
         public override Microsoft.SharePoint.Client.FileCollection Files => FilesEx;
         public Microsoft.SharePoint.Client.FileCollection FilesEx { get; set; }

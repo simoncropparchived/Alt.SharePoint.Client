@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class PickerSettingsMock
+    public class PickerSettingsMock : PickerSettings
     {
 
 

@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class AlertMock
+    public class AlertMock : Alert
     {
 
 
@@ -50,8 +50,8 @@ namespace Microsoft.SharePoint.Client
         public override System.String ListUrl => ListUrlEx;
         public System.String ListUrlEx { get; set; }
 
-        public override System.Collections.Generic.IDictionary`2<System.String,System.String> Properties => PropertiesEx;
-        public System.Collections.Generic.IDictionary`2<System.String,System.String> PropertiesEx { get; set; }
+        public override System.Collections.Generic.IDictionary<System.String,System.String> Properties => PropertiesEx;
+        public System.Collections.Generic.IDictionary<System.String,System.String> PropertiesEx { get; set; }
 
         public override Microsoft.SharePoint.Client.AlertStatus Status => StatusEx;
         public Microsoft.SharePoint.Client.AlertStatus StatusEx { get; set; }

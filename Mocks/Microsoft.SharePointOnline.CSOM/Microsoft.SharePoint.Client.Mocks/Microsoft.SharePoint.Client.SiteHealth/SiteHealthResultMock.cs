@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.SiteHealth
 {
-    public class SiteHealthResultMock
+    public class SiteHealthResultMock : SiteHealthResult
     {
 
 

@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Discovery
 {
-    public class ExportMock
+    public class ExportMock : Export
     {
 
 

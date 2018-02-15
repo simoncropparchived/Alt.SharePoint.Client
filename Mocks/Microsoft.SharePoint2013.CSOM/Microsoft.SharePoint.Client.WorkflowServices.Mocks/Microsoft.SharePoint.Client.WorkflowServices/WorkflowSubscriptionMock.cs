@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.WorkflowServices
 {
-    public class WorkflowSubscriptionMock
+    public class WorkflowSubscriptionMock : WorkflowSubscription
     {
 
 
@@ -26,8 +26,8 @@ namespace Microsoft.SharePoint.Client.WorkflowServices
         public override System.String Name => NameEx;
         public System.String NameEx { get; set; }
 
-        public override System.Collections.Generic.IDictionary`2<System.String,System.String> PropertyDefinitions => PropertyDefinitionsEx;
-        public System.Collections.Generic.IDictionary`2<System.String,System.String> PropertyDefinitionsEx { get; set; }
+        public override System.Collections.Generic.IDictionary<System.String,System.String> PropertyDefinitions => PropertyDefinitionsEx;
+        public System.Collections.Generic.IDictionary<System.String,System.String> PropertyDefinitionsEx { get; set; }
 
         public override System.String StatusFieldName => StatusFieldNameEx;
         public System.String StatusFieldNameEx { get; set; }

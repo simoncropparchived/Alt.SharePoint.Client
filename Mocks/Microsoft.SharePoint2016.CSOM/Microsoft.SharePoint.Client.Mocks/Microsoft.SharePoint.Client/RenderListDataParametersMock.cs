@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class RenderListDataParametersMock
+    public class RenderListDataParametersMock : RenderListDataParameters
     {
 
 

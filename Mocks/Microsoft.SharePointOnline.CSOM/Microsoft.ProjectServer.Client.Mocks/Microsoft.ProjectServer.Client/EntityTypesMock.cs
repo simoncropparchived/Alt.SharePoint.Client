@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class EntityTypesMock
+    public class EntityTypesMock : EntityTypes
     {
 
 

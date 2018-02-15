@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.WorkflowServices
 {
-    public class WorkflowInstanceMock
+    public class WorkflowInstanceMock : WorkflowInstance
     {
 
 
@@ -17,8 +17,8 @@ namespace Microsoft.SharePoint.Client.WorkflowServices
         public override System.DateTime LastUpdated => LastUpdatedEx;
         public System.DateTime LastUpdatedEx { get; set; }
 
-        public override System.Collections.Generic.IDictionary`2<System.String,System.String> Properties => PropertiesEx;
-        public System.Collections.Generic.IDictionary`2<System.String,System.String> PropertiesEx { get; set; }
+        public override System.Collections.Generic.IDictionary<System.String,System.String> Properties => PropertiesEx;
+        public System.Collections.Generic.IDictionary<System.String,System.String> PropertiesEx { get; set; }
 
         public override Microsoft.SharePoint.Client.WorkflowServices.WorkflowStatus Status => StatusEx;
         public Microsoft.SharePoint.Client.WorkflowServices.WorkflowStatus StatusEx { get; set; }

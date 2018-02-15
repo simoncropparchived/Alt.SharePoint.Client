@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.InformationPolicy
 {
-    public class ProjectPolicyMock
+    public class ProjectPolicyMock : ProjectPolicy
     {
 
 

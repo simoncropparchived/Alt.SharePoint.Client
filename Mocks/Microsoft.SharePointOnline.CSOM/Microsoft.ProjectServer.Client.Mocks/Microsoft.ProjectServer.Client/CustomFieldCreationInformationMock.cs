@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class CustomFieldCreationInformationMock
+    public class CustomFieldCreationInformationMock : CustomFieldCreationInformation
     {
 
 

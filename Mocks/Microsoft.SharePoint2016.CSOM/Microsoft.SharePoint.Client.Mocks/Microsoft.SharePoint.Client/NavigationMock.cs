@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class NavigationMock
+    public class NavigationMock : Navigation
     {
 
 

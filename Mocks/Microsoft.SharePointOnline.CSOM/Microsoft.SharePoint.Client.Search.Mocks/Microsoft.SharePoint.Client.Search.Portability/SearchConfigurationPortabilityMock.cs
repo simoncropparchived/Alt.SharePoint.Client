@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Search.Portability
 {
-    public class SearchConfigurationPortabilityMock
+    public class SearchConfigurationPortabilityMock : SearchConfigurationPortability
     {
 
 

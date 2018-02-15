@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ListTemplateMock
+    public class ListTemplateMock : ListTemplate
     {
 
 

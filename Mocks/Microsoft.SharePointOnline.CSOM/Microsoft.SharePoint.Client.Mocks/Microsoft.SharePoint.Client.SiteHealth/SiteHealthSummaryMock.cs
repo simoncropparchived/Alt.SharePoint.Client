@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.SiteHealth
 {
-    public class SiteHealthSummaryMock
+    public class SiteHealthSummaryMock : SiteHealthSummary
     {
 
 
@@ -14,8 +14,8 @@ namespace Microsoft.SharePoint.Client.SiteHealth
         public override System.Int32 PassedCount => PassedCountEx;
         public System.Int32 PassedCountEx { get; set; }
 
-        public override System.Collections.Generic.IList`1<Microsoft.SharePoint.Client.SiteHealth.SiteHealthResult> Results => ResultsEx;
-        public System.Collections.Generic.IList`1<Microsoft.SharePoint.Client.SiteHealth.SiteHealthResult> ResultsEx { get; set; }
+        public override System.Collections.Generic.IList<Microsoft.SharePoint.Client.SiteHealth.SiteHealthResult> Results => ResultsEx;
+        public System.Collections.Generic.IList<Microsoft.SharePoint.Client.SiteHealth.SiteHealthResult> ResultsEx { get; set; }
 
     }
 }

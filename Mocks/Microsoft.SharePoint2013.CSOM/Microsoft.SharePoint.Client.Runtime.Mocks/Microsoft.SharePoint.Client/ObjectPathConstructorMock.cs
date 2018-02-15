@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ObjectPathConstructorMock
+    public class ObjectPathConstructorMock : ObjectPathConstructor
     {
 
 

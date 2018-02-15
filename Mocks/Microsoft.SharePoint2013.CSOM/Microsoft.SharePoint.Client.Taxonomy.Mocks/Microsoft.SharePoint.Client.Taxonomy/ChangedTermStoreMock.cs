@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Taxonomy
 {
-    public class ChangedTermStoreMock
+    public class ChangedTermStoreMock : ChangedTermStore
     {
 
 

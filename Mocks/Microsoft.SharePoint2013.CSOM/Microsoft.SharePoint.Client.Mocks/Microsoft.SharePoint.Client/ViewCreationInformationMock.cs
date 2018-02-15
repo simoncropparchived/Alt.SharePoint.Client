@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ViewCreationInformationMock
+    public class ViewCreationInformationMock : ViewCreationInformation
     {
 
 

@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Application
 {
-    public class ModeCompletedEventArgsMock
+    public class ModeCompletedEventArgsMock : ModeCompletedEventArgs
     {
 
 

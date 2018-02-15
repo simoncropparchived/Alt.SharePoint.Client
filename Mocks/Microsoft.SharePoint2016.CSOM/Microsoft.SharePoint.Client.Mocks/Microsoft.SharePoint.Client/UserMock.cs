@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class UserMock
+    public class UserMock : User
     {
 
 

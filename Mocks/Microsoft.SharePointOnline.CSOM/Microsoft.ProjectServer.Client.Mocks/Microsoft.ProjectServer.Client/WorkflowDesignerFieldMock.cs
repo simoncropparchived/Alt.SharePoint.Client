@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class WorkflowDesignerFieldMock
+    public class WorkflowDesignerFieldMock : WorkflowDesignerField
     {
 
 

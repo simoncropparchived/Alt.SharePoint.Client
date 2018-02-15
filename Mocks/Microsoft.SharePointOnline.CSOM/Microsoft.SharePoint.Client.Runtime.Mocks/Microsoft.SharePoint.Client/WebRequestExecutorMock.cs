@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class WebRequestExecutorMock
+    public class WebRequestExecutorMock : WebRequestExecutor
     {
 
 

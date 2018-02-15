@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ClientObjectMock
+    public class ClientObjectMock : ClientObject
     {
 
 
@@ -17,8 +17,8 @@ namespace Microsoft.SharePoint.Client
         public override System.String ObjectVersion => ObjectVersionEx;
         public System.String ObjectVersionEx { get; set; }
 
-        public override System.Nullable`1<System.Boolean> ServerObjectIsNull => ServerObjectIsNullEx;
-        public System.Nullable`1<System.Boolean> ServerObjectIsNullEx { get; set; }
+        public override System.Nullable<System.Boolean> ServerObjectIsNull => ServerObjectIsNullEx;
+        public System.Nullable<System.Boolean> ServerObjectIsNullEx { get; set; }
 
         public override Microsoft.SharePoint.Client.ClientObject TypedObject => TypedObjectEx;
         public Microsoft.SharePoint.Client.ClientObject TypedObjectEx { get; set; }

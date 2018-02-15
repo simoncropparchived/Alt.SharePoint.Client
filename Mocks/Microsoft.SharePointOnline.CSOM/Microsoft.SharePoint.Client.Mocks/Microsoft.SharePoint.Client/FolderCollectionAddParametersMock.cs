@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class FolderCollectionAddParametersMock
+    public class FolderCollectionAddParametersMock : FolderCollectionAddParameters
     {
 
 

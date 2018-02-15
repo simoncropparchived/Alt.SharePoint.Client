@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ResourcePathMock
+    public class ResourcePathMock : ResourcePath
     {
 
 

@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Microfeed
 {
-    public class MicrofeedThreadMock
+    public class MicrofeedThreadMock : MicrofeedThread
     {
 
 
@@ -17,8 +17,8 @@ namespace Microsoft.SharePoint.Client.Microfeed
         public override System.Boolean CanReply => CanReplyEx;
         public System.Boolean CanReplyEx { get; set; }
 
-        public override System.Collections.Generic.IList`1<Microsoft.SharePoint.Client.Microfeed.MicrofeedDataLink> DataLinks => DataLinksEx;
-        public System.Collections.Generic.IList`1<Microsoft.SharePoint.Client.Microfeed.MicrofeedDataLink> DataLinksEx { get; set; }
+        public override System.Collections.Generic.IList<Microsoft.SharePoint.Client.Microfeed.MicrofeedDataLink> DataLinks => DataLinksEx;
+        public System.Collections.Generic.IList<Microsoft.SharePoint.Client.Microfeed.MicrofeedDataLink> DataLinksEx { get; set; }
 
         public override System.Int64 DefinitionId => DefinitionIdEx;
         public System.Int64 DefinitionIdEx { get; set; }
@@ -32,8 +32,8 @@ namespace Microsoft.SharePoint.Client.Microfeed
         public override System.Boolean Locked => LockedEx;
         public System.Boolean LockedEx { get; set; }
 
-        public override System.Collections.Generic.IList`1<Microsoft.SharePoint.Client.Microfeed.MicroBlogEntity> MicrofeedEntities => MicrofeedEntitiesEx;
-        public System.Collections.Generic.IList`1<Microsoft.SharePoint.Client.Microfeed.MicroBlogEntity> MicrofeedEntitiesEx { get; set; }
+        public override System.Collections.Generic.IList<Microsoft.SharePoint.Client.Microfeed.MicroBlogEntity> MicrofeedEntities => MicrofeedEntitiesEx;
+        public System.Collections.Generic.IList<Microsoft.SharePoint.Client.Microfeed.MicroBlogEntity> MicrofeedEntitiesEx { get; set; }
 
         public override System.Int32 OwnerIndex => OwnerIndexEx;
         public System.Int32 OwnerIndexEx { get; set; }

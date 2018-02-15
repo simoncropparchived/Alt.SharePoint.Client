@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class AppPropertiesMock
+    public class AppPropertiesMock : AppProperties
     {
 
 

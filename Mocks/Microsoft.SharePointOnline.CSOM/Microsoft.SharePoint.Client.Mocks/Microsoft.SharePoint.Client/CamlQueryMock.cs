@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class CamlQueryMock
+    public class CamlQueryMock : CamlQuery
     {
 
 

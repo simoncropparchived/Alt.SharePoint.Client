@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ListItemFormUpdateValueMock
+    public class ListItemFormUpdateValueMock : ListItemFormUpdateValue
     {
 
 

@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class SecurableObjectMock
+    public class SecurableObjectMock : SecurableObject
     {
 
 

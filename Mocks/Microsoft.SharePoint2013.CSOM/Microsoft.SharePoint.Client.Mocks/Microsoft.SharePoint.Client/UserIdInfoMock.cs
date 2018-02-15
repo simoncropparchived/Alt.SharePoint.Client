@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class UserIdInfoMock
+    public class UserIdInfoMock : UserIdInfo
     {
 
 

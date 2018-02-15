@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.UserProfiles
 {
-    public class HashTagMock
+    public class HashTagMock : HashTag
     {
 
 

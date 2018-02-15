@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ChangeAlertMock
+    public class ChangeAlertMock : ChangeAlert
     {
 
 

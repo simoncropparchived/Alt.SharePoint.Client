@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ChangeViewMock
+    public class ChangeViewMock : ChangeView
     {
 
 

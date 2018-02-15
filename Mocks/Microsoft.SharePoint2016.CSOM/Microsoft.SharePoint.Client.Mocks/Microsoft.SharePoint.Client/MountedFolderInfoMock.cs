@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class MountedFolderInfoMock
+    public class MountedFolderInfoMock : MountedFolderInfo
     {
 
 

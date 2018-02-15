@@ -1,15 +1,15 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class FieldLookupMock
+    public class FieldLookupMock : FieldLookup
     {
 
 
         public override System.Boolean AllowMultipleValues => AllowMultipleValuesEx;
         public System.Boolean AllowMultipleValuesEx { get; set; }
 
-        public override System.Collections.Generic.IList`1<System.String> DependentLookupInternalNames => DependentLookupInternalNamesEx;
-        public System.Collections.Generic.IList`1<System.String> DependentLookupInternalNamesEx { get; set; }
+        public override System.Collections.Generic.IList<System.String> DependentLookupInternalNames => DependentLookupInternalNamesEx;
+        public System.Collections.Generic.IList<System.String> DependentLookupInternalNamesEx { get; set; }
 
         public override System.Boolean IsDependentLookup => IsDependentLookupEx;
         public System.Boolean IsDependentLookupEx { get; set; }

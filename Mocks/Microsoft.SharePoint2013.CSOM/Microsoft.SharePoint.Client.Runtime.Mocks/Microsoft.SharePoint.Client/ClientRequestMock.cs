@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ClientRequestMock
+    public class ClientRequestMock : ClientRequest
     {
 
 

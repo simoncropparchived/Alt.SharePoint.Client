@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class WebRequestEventArgsMock
+    public class WebRequestEventArgsMock : WebRequestEventArgs
     {
 
 

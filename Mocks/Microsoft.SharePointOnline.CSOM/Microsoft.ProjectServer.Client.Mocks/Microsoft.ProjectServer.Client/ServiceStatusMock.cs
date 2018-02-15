@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class ServiceStatusMock
+    public class ServiceStatusMock : ServiceStatus
     {
 
 

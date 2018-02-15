@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class RemoteWebMock
+    public class RemoteWebMock : RemoteWeb
     {
 
 

@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class UsageInfoMock
+    public class UsageInfoMock : UsageInfo
     {
 
 

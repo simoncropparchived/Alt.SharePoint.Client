@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net46</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="../Binaries/Converted/Microsoft.SharePoint2013.CSOM/Microsoft.SharePoint.Client.dll" PackagePath="lib/net46" />
+    <Content Include="../Binaries/Converted/Microsoft.SharePoint2013.CSOM/Microsoft.SharePoint.Client.Runtime.dll" PackagePath="lib/net46" />
+  </ItemGroup>
+</Project>

@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.DocumentSet
 {
-    public class DocumentSetTemplateMock
+    public class DocumentSetTemplateMock : DocumentSetTemplate
     {
 
 

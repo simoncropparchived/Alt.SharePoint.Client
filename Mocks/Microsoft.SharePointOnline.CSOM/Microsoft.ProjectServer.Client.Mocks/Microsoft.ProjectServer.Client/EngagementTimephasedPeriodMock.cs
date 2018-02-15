@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class EngagementTimephasedPeriodMock
+    public class EngagementTimephasedPeriodMock : EngagementTimephasedPeriod
     {
 
 

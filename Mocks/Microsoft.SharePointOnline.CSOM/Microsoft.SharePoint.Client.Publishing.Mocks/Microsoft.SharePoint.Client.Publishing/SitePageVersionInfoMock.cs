@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Publishing
 {
-    public class SitePageVersionInfoMock
+    public class SitePageVersionInfoMock : SitePageVersionInfo
     {
 
 

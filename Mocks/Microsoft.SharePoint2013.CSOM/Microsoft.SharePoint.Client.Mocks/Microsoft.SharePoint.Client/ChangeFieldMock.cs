@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ChangeFieldMock
+    public class ChangeFieldMock : ChangeField
     {
 
 

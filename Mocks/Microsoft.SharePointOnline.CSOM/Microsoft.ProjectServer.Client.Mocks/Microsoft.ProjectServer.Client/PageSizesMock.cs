@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class PageSizesMock
+    public class PageSizesMock : PageSizes
     {
 
 

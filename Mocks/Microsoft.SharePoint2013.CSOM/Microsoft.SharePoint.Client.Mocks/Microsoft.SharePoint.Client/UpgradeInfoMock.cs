@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class UpgradeInfoMock
+    public class UpgradeInfoMock : UpgradeInfo
     {
 
 

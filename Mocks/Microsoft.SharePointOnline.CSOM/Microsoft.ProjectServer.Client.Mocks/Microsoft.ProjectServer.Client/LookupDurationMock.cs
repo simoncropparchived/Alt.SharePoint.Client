@@ -1,7 +1,7 @@
 
 namespace Microsoft.ProjectServer.Client
 {
-    public class LookupDurationMock
+    public class LookupDurationMock : LookupDuration
     {
 
 

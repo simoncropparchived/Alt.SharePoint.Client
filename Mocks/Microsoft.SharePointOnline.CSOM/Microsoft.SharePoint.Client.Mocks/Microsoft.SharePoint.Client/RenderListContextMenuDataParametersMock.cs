@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class RenderListContextMenuDataParametersMock
+    public class RenderListContextMenuDataParametersMock : RenderListContextMenuDataParameters
     {
 
 

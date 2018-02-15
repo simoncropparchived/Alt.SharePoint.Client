@@ -1,7 +1,7 @@
 
 namespace Microsoft.Online.SharePoint.TenantManagement
 {
-    public class Office365TenantMock
+    public class Office365TenantMock : Office365Tenant
     {
 
 

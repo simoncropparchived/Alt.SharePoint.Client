@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Sharing
 {
-    public class SharedWithMeViewItemRemovalResultMock
+    public class SharedWithMeViewItemRemovalResultMock : SharedWithMeViewItemRemovalResult
     {
 
 

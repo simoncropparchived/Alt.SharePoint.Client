@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class ClientValueObjectCollection`1Mock
+    public class ClientValueObjectCollection`1Mock : ClientValueObjectCollection`1
     {
 
 

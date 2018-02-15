@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client
 {
-    public class FileSaveBinaryInformationMock
+    public class FileSaveBinaryInformationMock : FileSaveBinaryInformation
     {
 
 

@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.Video
 {
-    public class EmbedCodeConfigurationMock
+    public class EmbedCodeConfigurationMock : EmbedCodeConfiguration
     {
 
 

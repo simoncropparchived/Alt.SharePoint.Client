@@ -1,7 +1,7 @@
 
 namespace Microsoft.SharePoint.Client.CompliancePolicy
 {
-    public class SPScsTenantEndPointInfoMock
+    public class SPScsTenantEndPointInfoMock : SPScsTenantEndPointInfo
     {
 
 

@@ -1,7 +1,7 @@
 
 namespace Microsoft.Office.SharePoint.Tools
 {
-    public class NormalizeDateTimeMock
+    public class NormalizeDateTimeMock : NormalizeDateTime
     {
 
 

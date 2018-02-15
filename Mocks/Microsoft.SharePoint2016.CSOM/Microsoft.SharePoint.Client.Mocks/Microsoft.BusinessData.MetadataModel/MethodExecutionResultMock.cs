@@ -1,7 +1,7 @@
 
 namespace Microsoft.BusinessData.MetadataModel
 {
-    public class MethodExecutionResultMock
+    public class MethodExecutionResultMock : MethodExecutionResult
     {
 
 
