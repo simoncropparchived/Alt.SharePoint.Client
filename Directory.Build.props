@@ -4,14 +4,15 @@
     <Version>1.0.2</Version>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <LangVersion>latest</LangVersion>
-    <IncludeBuildOutput>false</IncludeBuildOutput>
     <NoPackageAnalysis>true</NoPackageAnalysis>
     <PackageLicenseUrl>http://go.microsoft.com/fwlink/?LinkId=280198</PackageLicenseUrl>
     <PackageRequireLicenseAcceptance>yes</PackageRequireLicenseAcceptance>
     <PackageOutputPath>$(SolutionDir)nugets</PackageOutputPath>
     <Authors>Simon Cropp</Authors>
     <PackageProjectUrl>https://github.com/SimonCropp/Alt.SharePoint.Client</PackageProjectUrl>
-    <PackageIconUrl>https://github.com/SimonCropp/Alt.SharePoint.Client/master/package_icon.png</PackageIconUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/SimonCropp/Alt.SharePoint.Client/master/package_icon.png</PackageIconUrl>
     <PackageTags>SharePoint</PackageTags>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(SolutionDir)key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 </Project>

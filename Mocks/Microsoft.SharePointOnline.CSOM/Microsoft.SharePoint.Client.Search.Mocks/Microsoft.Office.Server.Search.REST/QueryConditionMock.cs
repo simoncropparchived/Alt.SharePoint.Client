@@ -17,8 +17,8 @@ namespace Microsoft.Office.Server.Search.REST
         public override System.String SubjectTermsOrigin => SubjectTermsOriginEx;
         public System.String SubjectTermsOriginEx { get; set; }
 
-        public override System.Collections.Generic.IList`1<System.String> Terms => TermsEx;
-        public System.Collections.Generic.IList`1<System.String> TermsEx { get; set; }
+        public override System.Collections.Generic.IList<System.String> Terms => TermsEx;
+        public System.Collections.Generic.IList<System.String> TermsEx { get; set; }
 
         public override System.String TypeId => TypeIdEx;
         public System.String TypeIdEx { get; set; }

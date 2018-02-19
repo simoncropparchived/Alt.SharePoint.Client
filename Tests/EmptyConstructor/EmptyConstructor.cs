@@ -35,7 +35,10 @@ public class EmptyConstructor
             }
 
             var typeEmptyConstructor = type.GetEmptyConstructor();
-
+            if (type.Name == "FormDigestInfo")
+            {
+                Debug.WriteLine("sds");
+            }
             if (typeEmptyConstructor != null)
             {
                 MakeConstructorVisible(typeEmptyConstructor);
@@ -103,17 +106,9 @@ public class EmptyConstructor
             return;
         }
 
-        if (typeEmptyConstructor.IsFamily)
-        {
-            typeEmptyConstructor.IsFamily = false;
-            typeEmptyConstructor.IsPublic = true;
-            return;
-        }
-
-        if (typeEmptyConstructor.IsPrivate)
-        {
-            typeEmptyConstructor.IsPrivate = false;
-            typeEmptyConstructor.Attributes = typeEmptyConstructor.Attributes | MethodAttributes.Public;
-        }
+        typeEmptyConstructor.IsAssembly = false;
+        typeEmptyConstructor.IsPrivate = false;
+        typeEmptyConstructor.IsFamily = false;
+        typeEmptyConstructor.IsPublic = true;
     }
 }

@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>net46</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="../Binaries/Converted/Microsoft.SharePointOnline.CSOM/Microsoft.SharePoint.Client.dll" PackagePath="lib/net46" />

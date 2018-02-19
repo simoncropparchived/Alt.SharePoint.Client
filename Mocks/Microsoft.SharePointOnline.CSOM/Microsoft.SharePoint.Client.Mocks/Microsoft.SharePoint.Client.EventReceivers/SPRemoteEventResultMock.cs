@@ -11,9 +11,6 @@ namespace Microsoft.SharePoint.Client.EventReceivers
         public override System.String ErrorMessage => ErrorMessageEx;
         public System.String ErrorMessageEx { get; set; }
 
-        public override System.String RedirectUrl => RedirectUrlEx;
-        public System.String RedirectUrlEx { get; set; }
-
         public override System.Collections.Generic.Dictionary<System.String,System.Object> ChangedItemProperties => ChangedItemPropertiesEx;
         public System.Collections.Generic.Dictionary<System.String,System.Object> ChangedItemPropertiesEx { get; set; }
 

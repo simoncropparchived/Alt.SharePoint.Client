@@ -5,8 +5,8 @@ namespace Microsoft.SharePoint.Client.UserProfiles
     {
 
 
-        public override System.Collections.Generic.IDictionary`2<System.String,System.Object> Data => DataEx;
-        public System.Collections.Generic.IDictionary`2<System.String,System.Object> DataEx { get; set; }
+        public override System.Collections.Generic.IDictionary<System.String,System.Object> Data => DataEx;
+        public System.Collections.Generic.IDictionary<System.String,System.Object> DataEx { get; set; }
 
         public override System.String FileType => FileTypeEx;
         public System.String FileTypeEx { get; set; }

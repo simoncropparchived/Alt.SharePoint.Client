@@ -5,8 +5,8 @@ namespace Microsoft.SharePoint.Client.WebParts
     {
 
 
-        public override System.Collections.Generic.IEnumerable`1<System.String> BackgroundCollageImageLocations => BackgroundCollageImageLocationsEx;
-        public System.Collections.Generic.IEnumerable`1<System.String> BackgroundCollageImageLocationsEx { get; set; }
+        public override System.Collections.Generic.IEnumerable<System.String> BackgroundCollageImageLocations => BackgroundCollageImageLocationsEx;
+        public System.Collections.Generic.IEnumerable<System.String> BackgroundCollageImageLocationsEx { get; set; }
 
         public override System.String BackgroundImageLocation => BackgroundImageLocationEx;
         public System.String BackgroundImageLocationEx { get; set; }

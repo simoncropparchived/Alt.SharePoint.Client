@@ -29,8 +29,8 @@ namespace Microsoft.ProjectServer.Client
         public override System.Boolean PermissionSyncEnable => PermissionSyncEnableEx;
         public System.Boolean PermissionSyncEnableEx { get; set; }
 
-        public override System.Collections.Generic.IEnumerable`1<Microsoft.ProjectServer.Client.ProjectDetailPageCreationInformation> ProjectDetailPages => ProjectDetailPagesEx;
-        public System.Collections.Generic.IEnumerable`1<Microsoft.ProjectServer.Client.ProjectDetailPageCreationInformation> ProjectDetailPagesEx { get; set; }
+        public override System.Collections.Generic.IEnumerable<Microsoft.ProjectServer.Client.ProjectDetailPageCreationInformation> ProjectDetailPages => ProjectDetailPagesEx;
+        public System.Collections.Generic.IEnumerable<Microsoft.ProjectServer.Client.ProjectDetailPageCreationInformation> ProjectDetailPagesEx { get; set; }
 
         public override System.Guid ProjectPlanTemplateId => ProjectPlanTemplateIdEx;
         public System.Guid ProjectPlanTemplateIdEx { get; set; }

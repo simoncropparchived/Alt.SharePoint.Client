@@ -23,8 +23,8 @@ namespace Microsoft.SharePoint.Client.Publishing
         public override System.Guid Id => IdEx;
         public System.Guid IdEx { get; set; }
 
-        public override System.Collections.Generic.IDictionary`2<System.String,System.String> MetaTagPagePropertyMappings => MetaTagPagePropertyMappingsEx;
-        public System.Collections.Generic.IDictionary`2<System.String,System.String> MetaTagPagePropertyMappingsEx { get; set; }
+        public override System.Collections.Generic.IDictionary<System.String,System.String> MetaTagPagePropertyMappings => MetaTagPagePropertyMappingsEx;
+        public System.Collections.Generic.IDictionary<System.String,System.String> MetaTagPagePropertyMappingsEx { get; set; }
 
         public override System.String Namespace => NamespaceEx;
         public System.String NamespaceEx { get; set; }

@@ -32,8 +32,8 @@ namespace Microsoft.SharePoint.Client
         public override Microsoft.SharePoint.Client.FolderCollection Folders => FoldersEx;
         public Microsoft.SharePoint.Client.FolderCollection FoldersEx { get; set; }
 
-        public override System.Collections.Generic.IList`1<Microsoft.SharePoint.Client.ContentTypeId> UniqueContentTypeOrder => UniqueContentTypeOrderEx;
-        public System.Collections.Generic.IList`1<Microsoft.SharePoint.Client.ContentTypeId> UniqueContentTypeOrderEx { get; set; }
+        public override System.Collections.Generic.IList<Microsoft.SharePoint.Client.ContentTypeId> UniqueContentTypeOrder => UniqueContentTypeOrderEx;
+        public System.Collections.Generic.IList<Microsoft.SharePoint.Client.ContentTypeId> UniqueContentTypeOrderEx { get; set; }
 
         public override System.String WelcomePage => WelcomePageEx;
         public System.String WelcomePageEx { get; set; }

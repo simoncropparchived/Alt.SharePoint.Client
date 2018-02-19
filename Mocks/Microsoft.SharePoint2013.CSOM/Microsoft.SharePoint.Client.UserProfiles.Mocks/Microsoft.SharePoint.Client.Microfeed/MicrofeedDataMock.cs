@@ -8,8 +8,8 @@ namespace Microsoft.SharePoint.Client.Microfeed
         public override System.DateTime Created => CreatedEx;
         public System.DateTime CreatedEx { get; set; }
 
-        public override System.Collections.Generic.IDictionary`2<System.String,System.Object> Data => DataEx;
-        public System.Collections.Generic.IDictionary`2<System.String,System.Object> DataEx { get; set; }
+        public override System.Collections.Generic.IDictionary<System.String,System.Object> Data => DataEx;
+        public System.Collections.Generic.IDictionary<System.String,System.Object> DataEx { get; set; }
 
         public override System.Int32 DefinitionId => DefinitionIdEx;
         public System.Int32 DefinitionIdEx { get; set; }

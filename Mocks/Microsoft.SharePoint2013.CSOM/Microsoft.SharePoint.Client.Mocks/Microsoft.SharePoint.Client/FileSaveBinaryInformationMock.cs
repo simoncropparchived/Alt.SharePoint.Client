@@ -17,8 +17,8 @@ namespace Microsoft.SharePoint.Client
         public override System.String ETag => ETagEx;
         public System.String ETagEx { get; set; }
 
-        public override System.Collections.Generic.IDictionary`2<System.String,System.Object> FieldValues => FieldValuesEx;
-        public System.Collections.Generic.IDictionary`2<System.String,System.Object> FieldValuesEx { get; set; }
+        public override System.Collections.Generic.IDictionary<System.String,System.Object> FieldValues => FieldValuesEx;
+        public System.Collections.Generic.IDictionary<System.String,System.Object> FieldValuesEx { get; set; }
 
         public override System.String TypeId => TypeIdEx;
         public System.String TypeIdEx { get; set; }

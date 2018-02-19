@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -93,6 +94,9 @@ public class Converter
         if (!type.IsPublic ||
             !type.IsClass ||
             type.IsStatic() ||
+            type.IsAbstract ||
+            type.HasGenericParameters ||
+            type.CustomAttributes.ContainsAttribute(nameof(ObsoleteAttribute)) ||
             type.Properties.Count == 0)
         {
             return;
@@ -124,7 +128,16 @@ namespace {type.Namespace}
 
     static void AddProperty(PropertyDefinition property, StringBuilder builder)
     {
+        if (property.CustomAttributes.ContainsAttribute(nameof(ObsoleteAttribute)))
+        {
+            return;
+        }
         if (property.IsStatic())
+        {
+            return;
+        }
+        //todo: support indexors
+        if (property.Name== "Item")
         {
             return;
         }
@@ -132,13 +145,14 @@ namespace {type.Namespace}
         var setMethod = property.SetMethod;
 
         //TODO: public virtual object this[string fieldName] { get; set; }
+        var cSharpName = property.PropertyType.CSharpName();
         if (setMethod == null)
         {
             if (getMethod.IsPublic)
             {
                 builder.AppendLine($@"
-        public override {property.PropertyType.CSharpName()} {property.Name} => {property.Name}Ex;
-        public {property.PropertyType.CSharpName()} {property.Name}Ex {{ get; set; }}");
+        public override {cSharpName} {property.Name} => {property.Name}Ex;
+        public {cSharpName} {property.Name}Ex {{ get; set; }}");
             }
 
             return;
@@ -148,8 +162,8 @@ namespace {type.Namespace}
             if (setMethod.IsPublic)
             {
                 builder.AppendLine($@"
-        public override {property.PropertyType} {property.Name} {{ set {{ {property.Name}Ex = value; }} }};
-        public {property.PropertyType} {property.Name}Ex {{ get; set; }}");
+        public override {cSharpName} {property.Name} {{ set {{ {property.Name}Ex = value; }} }};
+        public {cSharpName} {property.Name}Ex {{ get; set; }}");
             }
             return;
         }
@@ -162,14 +176,14 @@ namespace {type.Namespace}
         if (getMethod.IsPublic)
         {
             builder.AppendLine($@"
-        public override {property.PropertyType} {property.Name} => {property.Name}Ex;
-        public {property.PropertyType} {property.Name}Ex {{ get; set; }}");
+        public override {cSharpName} {property.Name} => {property.Name}Ex;
+        public {cSharpName} {property.Name}Ex {{ get; set; }}");
             return;
         }
 
         builder.AppendLine($@"
-        public override {property.PropertyType} {property.Name} {{ set {{ {property.Name}Ex = value; }} }};
-        public {property.PropertyType} {property.Name}Ex {{ get; set;}}");
+        public override {cSharpName} {property.Name} {{ set {{ {property.Name}Ex = value; }} }};
+        public {cSharpName} {property.Name}Ex {{ get; set;}}");
     }
 
     static IEnumerable<AssemblyNameReference> SharePointRefs(ModuleDefinition x)

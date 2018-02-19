@@ -8,9 +8,6 @@ namespace Microsoft.ProjectServer.Client
         public override System.Collections.Generic.Dictionary<System.String,System.Object> FieldValues => FieldValuesEx;
         public System.Collections.Generic.Dictionary<System.String,System.Object> FieldValuesEx { get; set; }
 
-        public override System.Object Item => ItemEx;
-        public System.Object ItemEx { get; set; }
-
         public override Microsoft.ProjectServer.Client.PublishedAssignmentCollection Assignments => AssignmentsEx;
         public Microsoft.ProjectServer.Client.PublishedAssignmentCollection AssignmentsEx { get; set; }
 

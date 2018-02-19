@@ -8,8 +8,8 @@ namespace Microsoft.Online.SharePoint.TenantManagement
         public override System.Boolean AllowDownloadingNonWebViewableFiles => AllowDownloadingNonWebViewableFilesEx;
         public System.Boolean AllowDownloadingNonWebViewableFilesEx { get; set; }
 
-        public override System.Collections.Generic.IList`1<System.Guid> AllowedDomainListForSyncClient => AllowedDomainListForSyncClientEx;
-        public System.Collections.Generic.IList`1<System.Guid> AllowedDomainListForSyncClientEx { get; set; }
+        public override System.Collections.Generic.IList<System.Guid> AllowedDomainListForSyncClient => AllowedDomainListForSyncClientEx;
+        public System.Collections.Generic.IList<System.Guid> AllowedDomainListForSyncClientEx { get; set; }
 
         public override System.Boolean AllowEditing => AllowEditingEx;
         public System.Boolean AllowEditingEx { get; set; }
@@ -65,8 +65,8 @@ namespace Microsoft.Online.SharePoint.TenantManagement
         public override System.Boolean EnableGuestSignInAcceleration => EnableGuestSignInAccelerationEx;
         public System.Boolean EnableGuestSignInAccelerationEx { get; set; }
 
-        public override System.Collections.Generic.IList`1<System.String> ExcludedFileExtensionsForSyncClient => ExcludedFileExtensionsForSyncClientEx;
-        public System.Collections.Generic.IList`1<System.String> ExcludedFileExtensionsForSyncClientEx { get; set; }
+        public override System.Collections.Generic.IList<System.String> ExcludedFileExtensionsForSyncClient => ExcludedFileExtensionsForSyncClientEx;
+        public System.Collections.Generic.IList<System.String> ExcludedFileExtensionsForSyncClientEx { get; set; }
 
         public override System.Boolean ExternalServicesEnabled => ExternalServicesEnabledEx;
         public System.Boolean ExternalServicesEnabledEx { get; set; }

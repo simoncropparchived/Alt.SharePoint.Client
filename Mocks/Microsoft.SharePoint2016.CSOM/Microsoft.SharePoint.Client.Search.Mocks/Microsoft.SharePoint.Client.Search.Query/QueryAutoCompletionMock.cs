@@ -5,8 +5,8 @@ namespace Microsoft.SharePoint.Client.Search.Query
     {
 
 
-        public override System.Collections.Generic.IEnumerable`1<Microsoft.SharePoint.Client.Search.Query.QueryAutoCompletionMatch> Matches => MatchesEx;
-        public System.Collections.Generic.IEnumerable`1<Microsoft.SharePoint.Client.Search.Query.QueryAutoCompletionMatch> MatchesEx { get; set; }
+        public override System.Collections.Generic.IEnumerable<Microsoft.SharePoint.Client.Search.Query.QueryAutoCompletionMatch> Matches => MatchesEx;
+        public System.Collections.Generic.IEnumerable<Microsoft.SharePoint.Client.Search.Query.QueryAutoCompletionMatch> MatchesEx { get; set; }
 
         public override System.String Query => QueryEx;
         public System.String QueryEx { get; set; }

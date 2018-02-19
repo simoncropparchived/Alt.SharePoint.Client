@@ -5,9 +5,6 @@ namespace Microsoft.SharePoint.Client.Search.Query
     {
 
 
-        public override System.Object Item { set { ItemEx = value; } };
-        public System.Object ItemEx { get; set; }
-
     }
 }
 

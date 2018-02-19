@@ -14,8 +14,8 @@ namespace Microsoft.SharePoint.Client.WorkflowServices
         public override System.Guid EventSourceId => EventSourceIdEx;
         public System.Guid EventSourceIdEx { get; set; }
 
-        public override System.Collections.Generic.IList`1<System.String> EventTypes => EventTypesEx;
-        public System.Collections.Generic.IList`1<System.String> EventTypesEx { get; set; }
+        public override System.Collections.Generic.IList<System.String> EventTypes => EventTypesEx;
+        public System.Collections.Generic.IList<System.String> EventTypesEx { get; set; }
 
         public override System.Guid Id => IdEx;
         public System.Guid IdEx { get; set; }

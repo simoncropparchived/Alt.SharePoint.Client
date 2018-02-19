@@ -53,8 +53,8 @@ namespace Microsoft.SharePoint.Client
         public override System.DateTime TimeLastModified => TimeLastModifiedEx;
         public System.DateTime TimeLastModifiedEx { get; set; }
 
-        public override System.Collections.Generic.IList`1<Microsoft.SharePoint.Client.ContentTypeId> UniqueContentTypeOrder => UniqueContentTypeOrderEx;
-        public System.Collections.Generic.IList`1<Microsoft.SharePoint.Client.ContentTypeId> UniqueContentTypeOrderEx { get; set; }
+        public override System.Collections.Generic.IList<Microsoft.SharePoint.Client.ContentTypeId> UniqueContentTypeOrder => UniqueContentTypeOrderEx;
+        public System.Collections.Generic.IList<Microsoft.SharePoint.Client.ContentTypeId> UniqueContentTypeOrderEx { get; set; }
 
         public override System.Guid UniqueId => UniqueIdEx;
         public System.Guid UniqueIdEx { get; set; }

@@ -20,8 +20,8 @@ namespace Microsoft.ProjectServer.Client
         public override System.DateTime Start => StartEx;
         public System.DateTime StartEx { get; set; }
 
-        public override System.Collections.Generic.IEnumerable`1<Microsoft.ProjectServer.Client.EngagementTimephasedPeriodCreationInformation> TimephasedPeriodData => TimephasedPeriodDataEx;
-        public System.Collections.Generic.IEnumerable`1<Microsoft.ProjectServer.Client.EngagementTimephasedPeriodCreationInformation> TimephasedPeriodDataEx { get; set; }
+        public override System.Collections.Generic.IEnumerable<Microsoft.ProjectServer.Client.EngagementTimephasedPeriodCreationInformation> TimephasedPeriodData => TimephasedPeriodDataEx;
+        public System.Collections.Generic.IEnumerable<Microsoft.ProjectServer.Client.EngagementTimephasedPeriodCreationInformation> TimephasedPeriodDataEx { get; set; }
 
         public override System.String Work => WorkEx;
         public System.String WorkEx { get; set; }

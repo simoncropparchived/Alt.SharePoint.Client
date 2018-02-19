@@ -11,8 +11,8 @@ namespace Microsoft.ProjectServer.Client
         public override System.Guid Id => IdEx;
         public System.Guid IdEx { get; set; }
 
-        public override System.Collections.Generic.IEnumerable`1<Microsoft.ProjectServer.Client.PlanAssignmentIntervalCreationInformation> Intervals => IntervalsEx;
-        public System.Collections.Generic.IEnumerable`1<Microsoft.ProjectServer.Client.PlanAssignmentIntervalCreationInformation> IntervalsEx { get; set; }
+        public override System.Collections.Generic.IEnumerable<Microsoft.ProjectServer.Client.PlanAssignmentIntervalCreationInformation> Intervals => IntervalsEx;
+        public System.Collections.Generic.IEnumerable<Microsoft.ProjectServer.Client.PlanAssignmentIntervalCreationInformation> IntervalsEx { get; set; }
 
         public override System.Guid ResourceId => ResourceIdEx;
         public System.Guid ResourceIdEx { get; set; }

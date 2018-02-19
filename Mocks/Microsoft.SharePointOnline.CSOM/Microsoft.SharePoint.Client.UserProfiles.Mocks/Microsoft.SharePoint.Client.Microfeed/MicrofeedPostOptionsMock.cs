@@ -20,8 +20,8 @@ namespace Microsoft.SharePoint.Client.Microfeed
         public override Microsoft.SharePoint.Client.Microfeed.MicrofeedLink MediaLink => MediaLinkEx;
         public Microsoft.SharePoint.Client.Microfeed.MicrofeedLink MediaLinkEx { get; set; }
 
-        public override System.Collections.Generic.IList`1<System.String> PeopleList => PeopleListEx;
-        public System.Collections.Generic.IList`1<System.String> PeopleListEx { get; set; }
+        public override System.Collections.Generic.IList<System.String> PeopleList => PeopleListEx;
+        public System.Collections.Generic.IList<System.String> PeopleListEx { get; set; }
 
         public override System.String PostSource => PostSourceEx;
         public System.String PostSourceEx { get; set; }

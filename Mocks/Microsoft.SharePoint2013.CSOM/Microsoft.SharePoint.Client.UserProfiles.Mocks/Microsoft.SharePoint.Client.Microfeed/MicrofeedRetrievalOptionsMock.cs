@@ -26,8 +26,8 @@ namespace Microsoft.SharePoint.Client.Microfeed
         public override System.DateTime OlderThan => OlderThanEx;
         public System.DateTime OlderThanEx { get; set; }
 
-        public override System.Collections.Generic.IList`1<System.String> PostDefinitionFilter => PostDefinitionFilterEx;
-        public System.Collections.Generic.IList`1<System.String> PostDefinitionFilterEx { get; set; }
+        public override System.Collections.Generic.IList<System.String> PostDefinitionFilter => PostDefinitionFilterEx;
+        public System.Collections.Generic.IList<System.String> PostDefinitionFilterEx { get; set; }
 
         public override Microsoft.SharePoint.Client.Microfeed.MicrofeedSortOrder ResultSortOrder => ResultSortOrderEx;
         public Microsoft.SharePoint.Client.Microfeed.MicrofeedSortOrder ResultSortOrderEx { get; set; }

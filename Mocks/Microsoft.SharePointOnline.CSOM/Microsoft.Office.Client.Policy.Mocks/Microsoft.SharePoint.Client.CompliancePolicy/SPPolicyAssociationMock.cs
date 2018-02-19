@@ -26,8 +26,8 @@ namespace Microsoft.SharePoint.Client.CompliancePolicy
         public override System.Int32 PolicyApplyStatus => PolicyApplyStatusEx;
         public System.Int32 PolicyApplyStatusEx { get; set; }
 
-        public override System.Collections.Generic.IEnumerable`1<System.Guid> PolicyDefinitionConfigIds => PolicyDefinitionConfigIdsEx;
-        public System.Collections.Generic.IEnumerable`1<System.Guid> PolicyDefinitionConfigIdsEx { get; set; }
+        public override System.Collections.Generic.IEnumerable<System.Guid> PolicyDefinitionConfigIds => PolicyDefinitionConfigIdsEx;
+        public System.Collections.Generic.IEnumerable<System.Guid> PolicyDefinitionConfigIdsEx { get; set; }
 
         public override System.String Scope => ScopeEx;
         public System.String ScopeEx { get; set; }

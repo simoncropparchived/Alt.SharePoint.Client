@@ -8,8 +8,8 @@ namespace Microsoft.SharePoint.Client
         public override System.String CustomSchemaXml => CustomSchemaXmlEx;
         public System.String CustomSchemaXmlEx { get; set; }
 
-        public override System.Collections.Generic.IDictionary`2<System.String,System.String> DataSourceProperties => DataSourcePropertiesEx;
-        public System.Collections.Generic.IDictionary`2<System.String,System.String> DataSourcePropertiesEx { get; set; }
+        public override System.Collections.Generic.IDictionary<System.String,System.String> DataSourceProperties => DataSourcePropertiesEx;
+        public System.Collections.Generic.IDictionary<System.String,System.String> DataSourcePropertiesEx { get; set; }
 
         public override System.String Description => DescriptionEx;
         public System.String DescriptionEx { get; set; }
