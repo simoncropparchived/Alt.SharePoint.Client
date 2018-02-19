@@ -35,6 +35,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alt.SharePointOnline.CSOM.M
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alt.SharePointOnline.CSOM.Mocks", "Alt.SharePointOnline.CSOM.Mocks\Alt.SharePointOnline.CSOM.Mocks.csproj", "{FCCA1B6A-1F5F-4CDE-994C-95EFD2DCB125}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples", "Samples\Samples.csproj", "{9FD1BAA5-E9F6-4754-82D2-0A162CD4EC0C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		ConvertOnly|Any CPU = ConvertOnly|Any CPU
@@ -108,6 +110,11 @@ Global
 		{FCCA1B6A-1F5F-4CDE-994C-95EFD2DCB125}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCCA1B6A-1F5F-4CDE-994C-95EFD2DCB125}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCCA1B6A-1F5F-4CDE-994C-95EFD2DCB125}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FD1BAA5-E9F6-4754-82D2-0A162CD4EC0C}.ConvertOnly|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FD1BAA5-E9F6-4754-82D2-0A162CD4EC0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FD1BAA5-E9F6-4754-82D2-0A162CD4EC0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FD1BAA5-E9F6-4754-82D2-0A162CD4EC0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FD1BAA5-E9F6-4754-82D2-0A162CD4EC0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
