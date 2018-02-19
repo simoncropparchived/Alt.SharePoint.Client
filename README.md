@@ -61,11 +61,27 @@ public void FakeItEasy()
 ## Produce NuGets
  
  * [Alt.SharePoint2013.CSOM](https://www.nuget.org/packages/Alt.SharePoint2013.CSOM/)
+ * [Alt.SharePoint2013.CSOM.Mocks](https://www.nuget.org/packages/Alt.SharePoint2013.CSOM.Mocks/)
  * [Alt.SharePoint2013.CSOM.Min](https://www.nuget.org/packages/Alt.SharePoint2013.CSOM.Min/)
+ * [Alt.SharePoint2013.CSOM.Min.Mocks](https://www.nuget.org/packages/Alt.SharePoint2013.CSOM.Min.Mocks/)
  * [Alt.SharePoint2016.CSOM](https://www.nuget.org/packages/Alt.SharePoint2016.CSOM/)
+ * [Alt.SharePoint2016.CSOM.Mocks](https://www.nuget.org/packages/Alt.SharePoint2016.CSOM.Mocks/)
  * [Alt.SharePoint2016.CSOM.Min](https://www.nuget.org/packages/Alt.SharePoint2016.CSOM.Min/)
+ * [Alt.SharePoint2016.CSOM.Min.Mocks](https://www.nuget.org/packages/Alt.SharePoint2016.CSOM.Min.Mocks/)
  * [Alt.SharePointOnline.CSOM](https://www.nuget.org/packages/Alt.SharePointOnline.CSOM/)
+ * [Alt.SharePointOnline.CSOM.Mocks](https://www.nuget.org/packages/Alt.SharePointOnline.CSOM.Mocks/)
  * [Alt.SharePointOnline.CSOM.Min](https://www.nuget.org/packages/Alt.SharePointOnline.CSOM.Min/)
+ * [Alt.SharePointOnline.CSOM.Min.Mocks](https://www.nuget.org/packages/Alt.SharePointOnline.CSOM.Min.Mocks/)
 
-The *.Min* variants contain  only `Microsoft.SharePoint.Client.dll` and `Microsoft.SharePoint.Client.Runtime.dll`.
+
+### Min variants
+
+The *.Min* variants contain only `Microsoft.SharePoint.Client.dll` and `Microsoft.SharePoint.Client.Runtime.dll`.
+
+
+### Mocks
+
+The *.Mocks* variants contain mock implementations of each class of the form *ClassName*Mock. 
+
+
 
