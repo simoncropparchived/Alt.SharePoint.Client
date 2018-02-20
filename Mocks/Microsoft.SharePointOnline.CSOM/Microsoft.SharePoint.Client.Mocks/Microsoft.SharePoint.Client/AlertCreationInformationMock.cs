@@ -32,6 +32,9 @@ namespace Microsoft.SharePoint.Client
         public override System.String Filter => FilterEx;
         public System.String FilterEx { get; set; }
 
+        public override Microsoft.SharePoint.Client.ListItem Item => ItemEx;
+        public Microsoft.SharePoint.Client.ListItem ItemEx { get; set; }
+
         public override Microsoft.SharePoint.Client.List List => ListEx;
         public Microsoft.SharePoint.Client.List ListEx { get; set; }
 

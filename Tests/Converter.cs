@@ -132,19 +132,87 @@ namespace {type.Namespace}
         {
             return;
         }
+
         if (property.IsStatic())
         {
             return;
         }
-        //todo: support indexors
-        if (property.Name== "Item")
+
+        if (IsIndexer(property))
         {
+            GenerateIndexProperty(property, builder);
             return;
         }
+
+        GenerateNormalProperty(property, builder);
+    }
+
+    private static bool IsIndexer(PropertyDefinition property)
+    {
+        return property.Name == "Item" && (property.GetMethod?.Parameters.Count==1 || property.SetMethod?.Parameters.Count == 2);
+    }
+
+    static void GenerateIndexProperty(PropertyDefinition property, StringBuilder builder)
+    {
         var getMethod = property.GetMethod;
         var setMethod = property.SetMethod;
 
-        //TODO: public virtual object this[string fieldName] { get; set; }
+        var returnTypeName = property.PropertyType.CSharpName();
+        if (setMethod == null)
+        {
+            if (getMethod.IsPublic)
+            {
+                var getIndexTypeName = getMethod.Parameters.Single().ParameterType.CSharpName();
+                builder.AppendLine($@"
+        public override {returnTypeName} this[{getIndexTypeName} fieldName] => ItemEx[fieldName];
+        public System.Collections.Generic.Dictionary<{getIndexTypeName}, {returnTypeName}> ItemEx {{ get; set; }}
+");
+            }
+
+            return;
+        }
+
+        if (getMethod == null)
+        {
+            if (setMethod.IsPublic)
+            {
+                var setIndexTypeName = setMethod.Parameters.First().ParameterType.CSharpName();
+                builder.AppendLine($@"
+        public override {returnTypeName} this[{setIndexTypeName} fieldName] {{ set => ItemEx[fieldName] = value;}}
+        public System.Collections.Generic.Dictionary<{setIndexTypeName}, {returnTypeName}> ItemEx {{ get; set; }}
+");
+            }
+
+            return;
+        }
+
+        if (!getMethod.IsPublic && !setMethod.IsPublic)
+        {
+            return;
+        }
+
+        var indexTypeName = setMethod.Parameters.First().ParameterType.CSharpName();
+        if (getMethod.IsPublic)
+        {
+            builder.AppendLine($@"
+        public override {returnTypeName} this[{indexTypeName} fieldName] => ItemEx[fieldName];
+        public System.Collections.Generic.Dictionary<{indexTypeName}, {returnTypeName}> ItemEx {{ get; set; }}
+");
+
+            return;
+        }
+
+        builder.AppendLine($@"
+        public override {returnTypeName} this[{indexTypeName} fieldName] {{ set => ItemEx[fieldName] = value;}}
+        public System.Collections.Generic.Dictionary<{indexTypeName}, {returnTypeName}> ItemEx {{ get; set; }}
+");
+    }
+
+    static void GenerateNormalProperty(PropertyDefinition property, StringBuilder builder)
+    {
+        var getMethod = property.GetMethod;
+        var setMethod = property.SetMethod;
+
         var cSharpName = property.PropertyType.CSharpName();
         if (setMethod == null)
         {
@@ -157,6 +225,7 @@ namespace {type.Namespace}
 
             return;
         }
+
         if (getMethod == null)
         {
             if (setMethod.IsPublic)
@@ -165,6 +234,7 @@ namespace {type.Namespace}
         public override {cSharpName} {property.Name} {{ set {{ {property.Name}Ex = value; }} }};
         public {cSharpName} {property.Name}Ex {{ get; set; }}");
             }
+
             return;
         }
 

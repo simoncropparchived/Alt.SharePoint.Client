@@ -35,6 +35,9 @@ namespace Microsoft.SharePoint.Client
         public override System.Guid ID => IDEx;
         public System.Guid IDEx { get; set; }
 
+        public override Microsoft.SharePoint.Client.ListItem Item => ItemEx;
+        public Microsoft.SharePoint.Client.ListItem ItemEx { get; set; }
+
         public override System.Int32 ItemID => ItemIDEx;
         public System.Int32 ItemIDEx { get; set; }
 

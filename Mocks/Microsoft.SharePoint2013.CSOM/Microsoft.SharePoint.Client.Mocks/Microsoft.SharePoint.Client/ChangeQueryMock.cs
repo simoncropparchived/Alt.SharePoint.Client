@@ -41,6 +41,9 @@ namespace Microsoft.SharePoint.Client
         public override System.Boolean GroupMembershipDelete => GroupMembershipDeleteEx;
         public System.Boolean GroupMembershipDeleteEx { get; set; }
 
+        public override System.Boolean Item => ItemEx;
+        public System.Boolean ItemEx { get; set; }
+
         public override System.Boolean List => ListEx;
         public System.Boolean ListEx { get; set; }
 
