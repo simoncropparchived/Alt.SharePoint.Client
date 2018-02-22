@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client.Publishing
 {
     public class ScheduledItemMock : ScheduledItem
@@ -13,6 +14,10 @@ namespace Microsoft.SharePoint.Client.Publishing
 
         public override System.DateTime StartDate => StartDateEx;
         public System.DateTime StartDateEx { get; set; }
+
+        public override void Schedule(System.String @approvalComment)
+        {
+        }
 
     }
 }

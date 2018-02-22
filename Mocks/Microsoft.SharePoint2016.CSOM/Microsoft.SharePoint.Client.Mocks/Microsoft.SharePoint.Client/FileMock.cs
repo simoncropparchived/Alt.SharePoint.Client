@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class FileMock : File
@@ -91,6 +92,118 @@ namespace Microsoft.SharePoint.Client
 
         public override Microsoft.SharePoint.Client.FileVersionCollection Versions => VersionsEx;
         public Microsoft.SharePoint.Client.FileVersionCollection VersionsEx { get; set; }
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> GetImagePreviewUrl(System.Int32 @width, System.Int32 @height, System.String @clientType)
+        {
+            return GetImagePreviewUrlEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> GetImagePreviewUrlEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Int64> StartUpload(System.Guid @uploadId, System.IO.Stream @stream)
+        {
+            return StartUploadEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Int64> StartUploadEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Int64> ContinueUpload(System.Guid @uploadId, System.Int64 @fileOffset, System.IO.Stream @stream)
+        {
+            return ContinueUploadEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Int64> ContinueUploadEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.File FinishUpload(System.Guid @uploadId, System.Int64 @fileOffset, System.IO.Stream @stream)
+        {
+            return FinishUploadEx;
+        }
+        public Microsoft.SharePoint.Client.File FinishUploadEx { get; set;}
+
+        public override void CancelUpload(System.Guid @uploadId)
+        {
+        }
+
+        public override void DeleteObject()
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Guid> Recycle()
+        {
+            return RecycleEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Guid> RecycleEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.IO.Stream> ExecuteCobaltRequest(System.IO.Stream @inputStream)
+        {
+            return ExecuteCobaltRequestEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.IO.Stream> ExecuteCobaltRequestEx { get; set;}
+
+        public override void CheckOut()
+        {
+        }
+
+        public override void UndoCheckOut()
+        {
+        }
+
+        public override void CheckIn(System.String @comment, Microsoft.SharePoint.Client.CheckinType @checkInType)
+        {
+        }
+
+        public override void Publish(System.String @comment)
+        {
+        }
+
+        public override void UnPublish(System.String @comment)
+        {
+        }
+
+        public override void Approve(System.String @comment)
+        {
+        }
+
+        public override void Deny(System.String @comment)
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.WebParts.LimitedWebPartManager GetLimitedWebPartManager(Microsoft.SharePoint.Client.WebParts.PersonalizationScope @scope)
+        {
+            return GetLimitedWebPartManagerEx;
+        }
+        public Microsoft.SharePoint.Client.WebParts.LimitedWebPartManager GetLimitedWebPartManagerEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> GetPreAuthorizedAccessUrl(System.Int32 @expirationHours)
+        {
+            return GetPreAuthorizedAccessUrlEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> GetPreAuthorizedAccessUrlEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> GetWOPIFrameUrl(Microsoft.SharePoint.Client.Utilities.SPWOPIFrameAction @action)
+        {
+            return GetWOPIFrameUrlEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> GetWOPIFrameUrlEx { get; set;}
+
+        public override void Update()
+        {
+        }
+
+        public override void MoveTo(System.String @newUrl, Microsoft.SharePoint.Client.MoveOperations @flags)
+        {
+        }
+
+        public override void CopyTo(System.String @strNewUrl, System.Boolean @bOverWrite)
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.IO.Stream> OpenBinaryStream()
+        {
+            return OpenBinaryStreamEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.IO.Stream> OpenBinaryStreamEx { get; set;}
+
+        public override void SaveBinary(Microsoft.SharePoint.Client.FileSaveBinaryInformation @parameters)
+        {
+        }
 
     }
 }

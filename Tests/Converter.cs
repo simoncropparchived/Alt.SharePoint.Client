@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
 using Mono.Cecil;
+using Mono.Collections.Generic;
 using Xunit;
 #pragma warning disable 618
 
@@ -95,9 +95,12 @@ public class Converter
             !type.IsClass ||
             type.IsStatic() ||
             type.IsAbstract ||
+            //TODO: support generics
             type.HasGenericParameters ||
-            type.CustomAttributes.ContainsAttribute(nameof(ObsoleteAttribute)) ||
-            type.Properties.Count == 0)
+            type.IsEnum ||
+            type.IsValueType ||
+            type.IsDelegate() ||
+            type.IsObsolete())
         {
             return;
         }
@@ -105,6 +108,7 @@ public class Converter
         var builder = new StringBuilder();
         builder.AppendLine(
             $@"
+// ReSharper disable IdentifierTypo
 namespace {type.Namespace}
 {{
     public class {type.Name}Mock : {type.Name}
@@ -113,6 +117,12 @@ namespace {type.Namespace}
         foreach (var property in type.Properties)
         {
             AddProperty(property, builder);
+        }
+
+        var groupBy = GetMethodsToProcess(type).GroupBy(x=>x.Name);
+        foreach (var method in groupBy)
+        {
+            AddMethod(builder, method.ToList());
         }
 
         builder.AppendLine(
@@ -126,19 +136,99 @@ namespace {type.Namespace}
         File.WriteAllText(filePath, builder.ToString());
     }
 
+    static void AddMethod(StringBuilder builder, List<MethodDefinition> methods)
+    {
+        if (methods.Count == 1)
+        {
+            AddMethod(methods.Single(), builder, false);
+            return;
+        }
+        foreach (var method in methods)
+        {
+            AddMethod(method, builder, true);
+        }
+    }
+
+    static void AddMethod(MethodDefinition method, StringBuilder builder, bool addParamTypeToMethod)
+    {
+        var returnType = method.ReturnType;
+        if (returnType.Name == "Void")
+        {
+            builder.Append($@"
+        public override void {method.Name}(");
+            var parameters = method.Parameters;
+            AddParams(builder, parameters);
+            builder.AppendLine($@")
+        {{
+        }}");
+            return;
+        }
+
+        var returnTypeName = returnType.CSharpName();
+        builder.Append($@"
+        public override {returnTypeName} {method.Name}(");
+        var parameters1 = method.Parameters;
+        AddParams(builder, parameters1);
+        string exName;
+        if (addParamTypeToMethod)
+        {
+            exName = $"{method.Name}{string.Concat(method.Parameters.Select(x=>x.ParameterType.Name))}Ex";
+        }
+        else
+        {
+            exName = $"{method.Name}Ex";
+        }
+
+        builder.AppendLine($@")
+        {{
+            return {exName};
+        }}
+        public {returnTypeName} {exName} {{ get; set;}}");
+    }
+
+    static void AddParams(StringBuilder builder, Collection<ParameterDefinition> parameters)
+    {
+        foreach (var parameter in parameters)
+        {
+            var paramType = parameter.ParameterType.CSharpName();
+
+            if (parameter.IsIn)
+            {
+                builder.Append(@"ref ");
+            }
+
+            builder.Append($@"{paramType} @{parameter.Name}");
+            if (parameters.Last() != parameter)
+            {
+                builder.Append(", ");
+            }
+        }
+    }
+
+    static IEnumerable<MethodDefinition> GetMethodsToProcess(TypeDefinition type)
+    {
+        return type.Methods
+            .Where(method => !method.IsProperty() &&
+                             //TODO: support generics
+                             !method.HasGenericParameters &&
+                             !method.IsStatic &&
+                             !method.IsEvent() &&
+                             method.IsPublic &&
+                             !method.IsConstructor &&
+                             !method.IsObsolete() &&
+                             //TODO: support out
+                             !method.Parameters.Any(x=>x.IsOut));
+    }
+
     static void AddProperty(PropertyDefinition property, StringBuilder builder)
     {
-        if (property.CustomAttributes.ContainsAttribute(nameof(ObsoleteAttribute)))
+        if (property.IsObsolete() ||
+            property.IsStatic())
         {
             return;
         }
 
-        if (property.IsStatic())
-        {
-            return;
-        }
-
-        if (IsIndexer(property))
+        if (property.IsIndexer())
         {
             GenerateIndexProperty(property, builder);
             return;
@@ -146,12 +236,6 @@ namespace {type.Namespace}
 
         GenerateNormalProperty(property, builder);
     }
-
-    private static bool IsIndexer(PropertyDefinition property)
-    {
-        return property.Name == "Item" && (property.GetMethod?.Parameters.Count==1 || property.SetMethod?.Parameters.Count == 2);
-    }
-
     static void GenerateIndexProperty(PropertyDefinition property, StringBuilder builder)
     {
         var getMethod = property.GetMethod;
@@ -285,32 +369,5 @@ namespace {type.Namespace}
     static string GetSolutionPath([CallerFilePath] string sourceFilePath = "")
     {
         return Path.GetFullPath(Path.Combine(Path.GetDirectoryName(sourceFilePath), "../"));
-    }
-
-    public class AssemblyResolver : DefaultAssemblyResolver
-    {
-        string converted;
-        Dictionary<string, AssemblyDefinition> refs = new Dictionary<string, AssemblyDefinition>();
-
-        public AssemblyResolver(string converted)
-        {
-            this.converted = converted;
-        }
-
-        public override AssemblyDefinition Resolve(AssemblyNameReference name, ReaderParameters parameters)
-        {
-            if (name.Name.StartsWith("Microsoft.SharePoint"))
-            {
-                if (!refs.TryGetValue(name.Name, out var reference))
-                {
-                    reference = AssemblyDefinition.ReadAssembly(Path.Combine(converted, name.Name + ".dll"));
-                    refs[name.Name] = reference;
-                }
-
-                return reference;
-            }
-
-            return base.Resolve(name, parameters);
-        }
     }
 }

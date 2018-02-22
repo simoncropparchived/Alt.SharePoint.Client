@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.ProjectServer.Client
 {
     public class PublishedProjectResourceMock : PublishedProjectResource
@@ -68,6 +69,10 @@ namespace Microsoft.ProjectServer.Client
 
         public override Microsoft.ProjectServer.Client.StandardRateFormat StandardRateUnits => StandardRateUnitsEx;
         public Microsoft.ProjectServer.Client.StandardRateFormat StandardRateUnitsEx { get; set; }
+
+        public override void RefreshLoad()
+        {
+        }
 
     }
 }

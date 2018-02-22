@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client.DocumentSet
 {
     public class DocumentSetTemplateMock : DocumentSetTemplate
@@ -16,6 +17,10 @@ namespace Microsoft.SharePoint.Client.DocumentSet
 
         public override Microsoft.SharePoint.Client.DocumentSet.WelcomePageFieldCollection WelcomePageFields => WelcomePageFieldsEx;
         public Microsoft.SharePoint.Client.DocumentSet.WelcomePageFieldCollection WelcomePageFieldsEx { get; set; }
+
+        public override void Update(System.Boolean @bPushDown)
+        {
+        }
 
     }
 }

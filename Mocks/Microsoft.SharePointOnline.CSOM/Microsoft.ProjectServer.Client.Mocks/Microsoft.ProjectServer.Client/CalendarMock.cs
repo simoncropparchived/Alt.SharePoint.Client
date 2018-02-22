@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.ProjectServer.Client
 {
     public class CalendarMock : Calendar
@@ -22,6 +23,16 @@ namespace Microsoft.ProjectServer.Client
 
         public override System.String Name => NameEx;
         public System.String NameEx { get; set; }
+
+        public override Microsoft.ProjectServer.Client.Calendar CopyTo(System.String @name)
+        {
+            return CopyToEx;
+        }
+        public Microsoft.ProjectServer.Client.Calendar CopyToEx { get; set;}
+
+        public override void DeleteObject()
+        {
+        }
 
     }
 }

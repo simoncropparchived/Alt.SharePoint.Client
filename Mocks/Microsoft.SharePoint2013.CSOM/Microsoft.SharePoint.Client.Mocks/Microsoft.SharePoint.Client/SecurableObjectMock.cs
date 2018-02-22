@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class SecurableObjectMock : SecurableObject
@@ -13,6 +14,14 @@ namespace Microsoft.SharePoint.Client
 
         public override Microsoft.SharePoint.Client.RoleAssignmentCollection RoleAssignments => RoleAssignmentsEx;
         public Microsoft.SharePoint.Client.RoleAssignmentCollection RoleAssignmentsEx { get; set; }
+
+        public override void ResetRoleInheritance()
+        {
+        }
+
+        public override void BreakRoleInheritance(System.Boolean @copyRoleAssignments, System.Boolean @clearSubscopes)
+        {
+        }
 
     }
 }

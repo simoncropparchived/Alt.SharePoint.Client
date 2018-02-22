@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.ProjectServer.Client
 {
     public class TimeSheetWorkMock : TimeSheetWork
@@ -46,6 +47,10 @@ namespace Microsoft.ProjectServer.Client
 
         public override System.DateTime Start => StartEx;
         public System.DateTime StartEx { get; set; }
+
+        public override void DeleteObject()
+        {
+        }
 
     }
 }

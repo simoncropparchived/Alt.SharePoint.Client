@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.ProjectServer.Client
 {
     public class ServiceStatusMock : ServiceStatus
@@ -10,6 +11,10 @@ namespace Microsoft.ProjectServer.Client
 
         public override System.Boolean IsReadOnly => IsReadOnlyEx;
         public System.Boolean IsReadOnlyEx { get; set; }
+
+        public override void StopDelegation()
+        {
+        }
 
     }
 }

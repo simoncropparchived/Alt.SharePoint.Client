@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class RequestForwarderMock : RequestForwarder
@@ -13,6 +14,10 @@ namespace Microsoft.SharePoint.Client
 
         public override System.Net.HttpWebRequest WebRequest => WebRequestEx;
         public System.Net.HttpWebRequest WebRequestEx { get; set; }
+
+        public override void ProcessRequest()
+        {
+        }
 
     }
 }

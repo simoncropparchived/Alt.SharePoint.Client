@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.ProjectServer.Client
 {
     public class TimeSheetPeriodMock : TimeSheetPeriod
@@ -19,6 +20,12 @@ namespace Microsoft.ProjectServer.Client
 
         public override Microsoft.ProjectServer.Client.TimeSheet TimeSheet => TimeSheetEx;
         public Microsoft.ProjectServer.Client.TimeSheet TimeSheetEx { get; set; }
+
+        public override Microsoft.ProjectServer.Client.TimeSheet CreateTimeSheet()
+        {
+            return CreateTimeSheetEx;
+        }
+        public Microsoft.ProjectServer.Client.TimeSheet CreateTimeSheetEx { get; set;}
 
     }
 }

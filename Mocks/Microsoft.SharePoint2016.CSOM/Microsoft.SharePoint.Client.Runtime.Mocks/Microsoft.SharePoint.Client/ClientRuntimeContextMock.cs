@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class ClientRuntimeContextMock : ClientRuntimeContext
@@ -58,6 +59,28 @@ namespace Microsoft.SharePoint.Client
 
         public override System.String TraceCorrelationId => TraceCorrelationIdEx;
         public System.String TraceCorrelationIdEx { get; set; }
+
+        public override void ExecuteQuery()
+        {
+        }
+
+        public override void AddQuery(Microsoft.SharePoint.Client.ClientAction @query)
+        {
+        }
+
+        public override void AddQueryIdAndResultObject(System.Int64 @id, System.Object @obj)
+        {
+        }
+
+        public override System.Object ParseObjectFromJsonString(System.String @json)
+        {
+            return ParseObjectFromJsonStringEx;
+        }
+        public System.Object ParseObjectFromJsonStringEx { get; set;}
+
+        public override void Dispose()
+        {
+        }
 
     }
 }

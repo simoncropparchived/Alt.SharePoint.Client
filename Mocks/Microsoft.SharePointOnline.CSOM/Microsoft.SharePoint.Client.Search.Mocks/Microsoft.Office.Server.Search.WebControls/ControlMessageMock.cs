@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.Office.Server.Search.WebControls
 {
     public class ControlMessageMock : ControlMessage
@@ -43,6 +44,10 @@ namespace Microsoft.Office.Server.Search.WebControls
 
         public override System.String TypeId => TypeIdEx;
         public System.String TypeIdEx { get; set; }
+
+        public override void WriteToXml(System.Xml.XmlWriter @writer, Microsoft.SharePoint.Client.SerializationContext @serializationContext)
+        {
+        }
 
     }
 }

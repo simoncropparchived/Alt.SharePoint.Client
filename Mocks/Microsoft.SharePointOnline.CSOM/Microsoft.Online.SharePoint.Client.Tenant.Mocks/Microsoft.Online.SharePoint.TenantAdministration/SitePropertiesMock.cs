@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.Online.SharePoint.TenantAdministration
 {
     public class SitePropertiesMock : SiteProperties
@@ -127,6 +128,12 @@ namespace Microsoft.Online.SharePoint.TenantAdministration
 
         public override System.Int32 WebsCount => WebsCountEx;
         public System.Int32 WebsCountEx { get; set; }
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.SpoOperation Update()
+        {
+            return UpdateEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.SpoOperation UpdateEx { get; set;}
 
     }
 }

@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client.WorkflowServices
 {
     public class WorkflowDefinitionMock : WorkflowDefinition
@@ -46,6 +47,10 @@ namespace Microsoft.SharePoint.Client.WorkflowServices
 
         public override System.String Xaml => XamlEx;
         public System.String XamlEx { get; set; }
+
+        public override void SetProperty(System.String @propertyName, System.String @value)
+        {
+        }
 
     }
 }

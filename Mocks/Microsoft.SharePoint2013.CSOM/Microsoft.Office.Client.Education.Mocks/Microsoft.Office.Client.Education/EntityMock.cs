@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.Office.Client.Education
 {
     public class EntityMock : Entity
@@ -28,6 +29,14 @@ namespace Microsoft.Office.Client.Education
 
         public override System.String Name => NameEx;
         public System.String NameEx { get; set; }
+
+        public override void UpdateEntity()
+        {
+        }
+
+        public override void DeleteEntity()
+        {
+        }
 
     }
 }

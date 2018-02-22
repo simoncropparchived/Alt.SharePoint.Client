@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class ContentTypeMock : ContentType
@@ -91,6 +92,14 @@ namespace Microsoft.SharePoint.Client
 
         public override Microsoft.SharePoint.Client.Workflow.WorkflowAssociationCollection WorkflowAssociations => WorkflowAssociationsEx;
         public Microsoft.SharePoint.Client.Workflow.WorkflowAssociationCollection WorkflowAssociationsEx { get; set; }
+
+        public override void Update(System.Boolean @updateChildren)
+        {
+        }
+
+        public override void DeleteObject()
+        {
+        }
 
     }
 }

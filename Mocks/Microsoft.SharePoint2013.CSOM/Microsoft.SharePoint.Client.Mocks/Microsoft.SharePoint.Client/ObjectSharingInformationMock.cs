@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class ObjectSharingInformationMock : ObjectSharingInformation
@@ -34,6 +35,12 @@ namespace Microsoft.SharePoint.Client
 
         public override System.String PendingAccessRequestsLink => PendingAccessRequestsLinkEx;
         public System.String PendingAccessRequestsLinkEx { get; set; }
+
+        public override Microsoft.SharePoint.Client.ClientObjectList<Microsoft.SharePoint.Client.ObjectSharingInformationUser> GetSharedWithUsers()
+        {
+            return GetSharedWithUsersEx;
+        }
+        public Microsoft.SharePoint.Client.ClientObjectList<Microsoft.SharePoint.Client.ObjectSharingInformationUser> GetSharedWithUsersEx { get; set;}
 
     }
 }

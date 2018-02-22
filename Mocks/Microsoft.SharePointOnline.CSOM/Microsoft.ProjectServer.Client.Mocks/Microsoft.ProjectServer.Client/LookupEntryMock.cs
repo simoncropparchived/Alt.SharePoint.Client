@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.ProjectServer.Client
 {
     public class LookupEntryMock : LookupEntry
@@ -22,6 +23,10 @@ namespace Microsoft.ProjectServer.Client
 
         public override System.Decimal SortIndex => SortIndexEx;
         public System.Decimal SortIndexEx { get; set; }
+
+        public override void DeleteObject()
+        {
+        }
 
     }
 }

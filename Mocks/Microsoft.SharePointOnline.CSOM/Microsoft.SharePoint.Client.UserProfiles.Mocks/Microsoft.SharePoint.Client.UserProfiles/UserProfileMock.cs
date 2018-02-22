@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client.UserProfiles
 {
     public class UserProfileMock : UserProfile
@@ -76,6 +77,36 @@ namespace Microsoft.SharePoint.Client.UserProfiles
 
         public override System.String UrlToCreatePersonalSite => UrlToCreatePersonalSiteEx;
         public System.String UrlToCreatePersonalSiteEx { get; set; }
+
+        public override void CreatePersonalSite()
+        {
+        }
+
+        public override void CreatePersonalSite(System.Int32 @lcid)
+        {
+        }
+
+        public override void CreatePersonalSiteEnque()
+        {
+        }
+
+        public override void CreatePersonalSiteEnque(System.Boolean @isInteractive)
+        {
+        }
+
+        public override void ShareAllSocialData(System.Boolean @shareAll)
+        {
+        }
+
+        public override void SetMySiteFirstRunExperience(System.Int32 @value)
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Int32> CreatePersonalSiteFromWorkItem(System.Guid @workItemType)
+        {
+            return CreatePersonalSiteFromWorkItemEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Int32> CreatePersonalSiteFromWorkItemEx { get; set;}
 
     }
 }

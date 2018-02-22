@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.ProjectServer.Client
 {
     public class EnterpriseResourceMock : EnterpriseResource
@@ -110,6 +111,18 @@ namespace Microsoft.ProjectServer.Client
 
         public override Microsoft.SharePoint.Client.User User => UserEx;
         public Microsoft.SharePoint.Client.User UserEx { get; set; }
+
+        public override void RefreshLoad()
+        {
+        }
+
+        public override void DeleteObject()
+        {
+        }
+
+        public override void ForceCheckIn()
+        {
+        }
 
     }
 }

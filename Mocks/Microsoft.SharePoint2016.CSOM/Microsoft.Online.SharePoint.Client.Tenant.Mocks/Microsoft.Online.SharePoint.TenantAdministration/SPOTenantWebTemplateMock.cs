@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.Online.SharePoint.TenantAdministration
 {
     public class SPOTenantWebTemplateMock : SPOTenantWebTemplate
@@ -25,6 +26,10 @@ namespace Microsoft.Online.SharePoint.TenantAdministration
 
         public override System.String TypeId => TypeIdEx;
         public System.String TypeIdEx { get; set; }
+
+        public override void WriteToXml(System.Xml.XmlWriter @writer, Microsoft.SharePoint.Client.SerializationContext @serializationContext)
+        {
+        }
 
     }
 }

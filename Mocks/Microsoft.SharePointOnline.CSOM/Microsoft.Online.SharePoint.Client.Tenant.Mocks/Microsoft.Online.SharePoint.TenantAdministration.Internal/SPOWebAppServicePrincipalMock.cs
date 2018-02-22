@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.Online.SharePoint.TenantAdministration.Internal
 {
     public class SPOWebAppServicePrincipalMock : SPOWebAppServicePrincipal
@@ -19,6 +20,10 @@ namespace Microsoft.Online.SharePoint.TenantAdministration.Internal
 
         public override System.Collections.Generic.IEnumerable<System.String> ReplyUrls => ReplyUrlsEx;
         public System.Collections.Generic.IEnumerable<System.String> ReplyUrlsEx { get; set; }
+
+        public override void Update()
+        {
+        }
 
     }
 }

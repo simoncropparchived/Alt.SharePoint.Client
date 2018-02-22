@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class PropertyValuesMock : PropertyValues
@@ -11,6 +12,10 @@ namespace Microsoft.SharePoint.Client
         public override System.Object this[System.String fieldName] => ItemEx[fieldName];
         public System.Collections.Generic.Dictionary<System.String, System.Object> ItemEx { get; set; }
 
+
+        public override void RefreshLoad()
+        {
+        }
 
     }
 }

@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client.SiteHealth
 {
     public class SiteHealthSummaryMock : SiteHealthSummary

@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class RecycleBinItemMock : RecycleBinItem
@@ -34,6 +35,14 @@ namespace Microsoft.SharePoint.Client
 
         public override System.String Title => TitleEx;
         public System.String TitleEx { get; set; }
+
+        public override void DeleteObject()
+        {
+        }
+
+        public override void Restore()
+        {
+        }
 
     }
 }

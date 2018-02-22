@@ -20,5 +20,6 @@
     </Reference>
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
   </ItemGroup>
 </Project>

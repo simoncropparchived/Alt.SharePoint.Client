@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class InformationRightsManagementSettingsMock : InformationRightsManagementSettings
@@ -49,6 +50,14 @@ namespace Microsoft.SharePoint.Client
 
         public override System.String TemplateId => TemplateIdEx;
         public System.String TemplateIdEx { get; set; }
+
+        public override void Reset()
+        {
+        }
+
+        public override void Update()
+        {
+        }
 
     }
 }

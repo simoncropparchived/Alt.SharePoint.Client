@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.ProjectServer.Client
 {
     public class CustomFieldMock : CustomField
@@ -58,6 +59,10 @@ namespace Microsoft.ProjectServer.Client
 
         public override Microsoft.ProjectServer.Client.CustomFieldRollupType RollupType => RollupTypeEx;
         public Microsoft.ProjectServer.Client.CustomFieldRollupType RollupTypeEx { get; set; }
+
+        public override void DeleteObject()
+        {
+        }
 
     }
 }

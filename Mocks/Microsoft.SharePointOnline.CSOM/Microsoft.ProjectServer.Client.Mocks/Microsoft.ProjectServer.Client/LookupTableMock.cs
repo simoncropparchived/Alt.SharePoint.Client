@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.ProjectServer.Client
 {
     public class LookupTableMock : LookupTable
@@ -25,6 +26,10 @@ namespace Microsoft.ProjectServer.Client
 
         public override Microsoft.ProjectServer.Client.LookupTableSortOrder SortOrder => SortOrderEx;
         public Microsoft.ProjectServer.Client.LookupTableSortOrder SortOrderEx { get; set; }
+
+        public override void DeleteObject()
+        {
+        }
 
     }
 }

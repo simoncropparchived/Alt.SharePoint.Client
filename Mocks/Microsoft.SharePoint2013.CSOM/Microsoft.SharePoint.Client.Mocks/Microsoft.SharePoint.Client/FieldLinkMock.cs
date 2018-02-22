@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class FieldLinkMock : FieldLink
@@ -16,6 +17,10 @@ namespace Microsoft.SharePoint.Client
 
         public override System.Boolean Required => RequiredEx;
         public System.Boolean RequiredEx { get; set; }
+
+        public override void DeleteObject()
+        {
+        }
 
     }
 }

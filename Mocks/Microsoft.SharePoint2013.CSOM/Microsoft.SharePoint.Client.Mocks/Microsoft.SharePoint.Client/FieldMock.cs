@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class FieldMock : Field
@@ -91,6 +92,34 @@ namespace Microsoft.SharePoint.Client
 
         public override System.String ValidationMessage => ValidationMessageEx;
         public System.String ValidationMessageEx { get; set; }
+
+        public override void ValidateSetValue(Microsoft.SharePoint.Client.ListItem @item, System.String @value)
+        {
+        }
+
+        public override void UpdateAndPushChanges(System.Boolean @pushChangesToLists)
+        {
+        }
+
+        public override void Update()
+        {
+        }
+
+        public override void DeleteObject()
+        {
+        }
+
+        public override void SetShowInDisplayForm(System.Boolean @value)
+        {
+        }
+
+        public override void SetShowInEditForm(System.Boolean @value)
+        {
+        }
+
+        public override void SetShowInNewForm(System.Boolean @value)
+        {
+        }
 
     }
 }

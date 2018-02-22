@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class FolderMock : Folder
@@ -58,6 +59,30 @@ namespace Microsoft.SharePoint.Client
 
         public override System.String WelcomePage => WelcomePageEx;
         public System.String WelcomePageEx { get; set; }
+
+        public override Microsoft.SharePoint.Client.ChangeCollection GetListItemChanges(Microsoft.SharePoint.Client.ChangeQuery @query)
+        {
+            return GetListItemChangesEx;
+        }
+        public Microsoft.SharePoint.Client.ChangeCollection GetListItemChangesEx { get; set;}
+
+        public override void Update()
+        {
+        }
+
+        public override void MoveTo(System.String @newUrl)
+        {
+        }
+
+        public override void DeleteObject()
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Guid> Recycle()
+        {
+            return RecycleEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Guid> RecycleEx { get; set;}
 
     }
 }

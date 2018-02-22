@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class AppInstanceMock : AppInstance
@@ -49,6 +50,56 @@ namespace Microsoft.SharePoint.Client
 
         public override System.Guid WebId => WebIdEx;
         public System.Guid WebIdEx { get; set; }
+
+        public override Microsoft.SharePoint.Client.ClientObjectList<Microsoft.SharePoint.Client.AppInstanceErrorDetails> GetErrorDetails()
+        {
+            return GetErrorDetailsEx;
+        }
+        public Microsoft.SharePoint.Client.ClientObjectList<Microsoft.SharePoint.Client.AppInstanceErrorDetails> GetErrorDetailsEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Guid> Uninstall()
+        {
+            return UninstallEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Guid> UninstallEx { get; set;}
+
+        public override void Upgrade(System.IO.Stream @appPackageStream)
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Boolean> CancelAllJobs()
+        {
+            return CancelAllJobsEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Boolean> CancelAllJobsEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Guid> Install()
+        {
+            return InstallEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Guid> InstallEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Guid> Recycle()
+        {
+            return RecycleEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Guid> RecycleEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Guid> Restore()
+        {
+            return RestoreEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Guid> RestoreEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.App GetPreviousAppVersion()
+        {
+            return GetPreviousAppVersionEx;
+        }
+        public Microsoft.SharePoint.Client.App GetPreviousAppVersionEx { get; set;}
+
+        public override void RetryAllJobs()
+        {
+        }
 
     }
 }

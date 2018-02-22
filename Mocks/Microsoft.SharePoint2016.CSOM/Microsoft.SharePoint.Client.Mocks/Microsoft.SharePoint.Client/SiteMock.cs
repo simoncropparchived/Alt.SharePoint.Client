@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class SiteMock : Site
@@ -130,6 +131,104 @@ namespace Microsoft.SharePoint.Client
 
         public override Microsoft.SharePoint.Client.UserCustomActionCollection UserCustomActions => UserCustomActionsEx;
         public Microsoft.SharePoint.Client.UserCustomActionCollection UserCustomActionsEx { get; set; }
+
+        public override void UpdateClientObjectModelUseRemoteAPIsPermissionSetting(System.Boolean @requireUseRemoteAPIs)
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Boolean> NeedsUpgradeByType(System.Boolean @versionUpgrade, System.Boolean @recursive)
+        {
+            return NeedsUpgradeByTypeEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Boolean> NeedsUpgradeByTypeEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.SiteHealth.SiteHealthSummary RunHealthCheck(System.Guid @ruleId, System.Boolean @bRepair, System.Boolean @bRunAlways)
+        {
+            return RunHealthCheckEx;
+        }
+        public Microsoft.SharePoint.Client.SiteHealth.SiteHealthSummary RunHealthCheckEx { get; set;}
+
+        public override void CreatePreviewSPSite(System.Boolean @upgrade, System.Boolean @sendemail)
+        {
+        }
+
+        public override void RunUpgradeSiteSession(System.Boolean @versionUpgrade, System.Boolean @queueOnly, System.Boolean @sendEmail)
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Boolean> DeleteMigrationJob(System.Guid @id)
+        {
+            return DeleteMigrationJobEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Boolean> DeleteMigrationJobEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.SPMigrationJobStatusCollection GetMigrationStatus()
+        {
+            return GetMigrationStatusEx;
+        }
+        public Microsoft.SharePoint.Client.SPMigrationJobStatusCollection GetMigrationStatusEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<Microsoft.SharePoint.Client.MigrationJobState> GetMigrationJobStatus(System.Guid @id)
+        {
+            return GetMigrationJobStatusEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<Microsoft.SharePoint.Client.MigrationJobState> GetMigrationJobStatusEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Guid> CreateMigrationJob(System.Guid @gWebId, System.String @azureContainerSourceUri, System.String @azureContainerManifestUri, System.String @azureQueueReportUri)
+        {
+            return CreateMigrationJobEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Guid> CreateMigrationJobEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Guid> CreateMigrationIngestionJob(System.Guid @gWebId, System.String @azureContainerSourceUri, System.String @azureContainerManifestUri, System.String @azureQueueReportUri, Microsoft.SharePoint.Client.IngestionTaskKey @ingestionTaskKey)
+        {
+            return CreateMigrationIngestionJobEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Guid> CreateMigrationIngestionJobEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ChangeCollection GetChanges(Microsoft.SharePoint.Client.ChangeQuery @query)
+        {
+            return GetChangesEx;
+        }
+        public Microsoft.SharePoint.Client.ChangeCollection GetChangesEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.Web OpenWeb(System.String @strUrl)
+        {
+            return OpenWebEx;
+        }
+        public Microsoft.SharePoint.Client.Web OpenWebEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.Web OpenWebById(System.Guid @gWebId)
+        {
+            return OpenWebByIdEx;
+        }
+        public Microsoft.SharePoint.Client.Web OpenWebByIdEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.WebTemplateCollection GetWebTemplates(System.UInt32 @LCID, System.Int32 @overrideCompatLevel)
+        {
+            return GetWebTemplatesEx;
+        }
+        public Microsoft.SharePoint.Client.WebTemplateCollection GetWebTemplatesEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ListTemplateCollection GetCustomListTemplates(Microsoft.SharePoint.Client.Web @web)
+        {
+            return GetCustomListTemplatesEx;
+        }
+        public Microsoft.SharePoint.Client.ListTemplateCollection GetCustomListTemplatesEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.List GetCatalog(System.Int32 @typeCatalog)
+        {
+            return GetCatalogEx;
+        }
+        public Microsoft.SharePoint.Client.List GetCatalogEx { get; set;}
+
+        public override void ExtendUpgradeReminderDate()
+        {
+        }
+
+        public override void Invalidate()
+        {
+        }
 
     }
 }

@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.ProjectServer.Client
 {
     public class ProjectContextMock : ProjectContext
@@ -55,6 +56,18 @@ namespace Microsoft.ProjectServer.Client
 
         public override Microsoft.ProjectServer.Client.PageSizes PageSizes => PageSizesEx;
         public Microsoft.ProjectServer.Client.PageSizes PageSizesEx { get; set; }
+
+        public override Microsoft.ProjectServer.Client.DeletedPublishedAssignmentCollection GetDeletedPublishedAssignments(System.DateTime @deletedDate)
+        {
+            return GetDeletedPublishedAssignmentsEx;
+        }
+        public Microsoft.ProjectServer.Client.DeletedPublishedAssignmentCollection GetDeletedPublishedAssignmentsEx { get; set;}
+
+        public override Microsoft.ProjectServer.Client.JobState WaitForQueue(Microsoft.ProjectServer.Client.QueueJob @job, System.Int32 @timeoutSeconds)
+        {
+            return WaitForQueueEx;
+        }
+        public Microsoft.ProjectServer.Client.JobState WaitForQueueEx { get; set;}
 
     }
 }

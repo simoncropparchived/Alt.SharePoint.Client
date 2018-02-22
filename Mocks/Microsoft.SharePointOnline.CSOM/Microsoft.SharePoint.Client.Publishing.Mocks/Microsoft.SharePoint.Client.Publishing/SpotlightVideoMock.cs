@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client.Publishing
 {
     public class SpotlightVideoMock : SpotlightVideo
@@ -16,6 +17,14 @@ namespace Microsoft.SharePoint.Client.Publishing
 
         public override Microsoft.SharePoint.Client.Publishing.VideoItem Video => VideoEx;
         public Microsoft.SharePoint.Client.Publishing.VideoItem VideoEx { get; set; }
+
+        public override void Update()
+        {
+        }
+
+        public override void DeleteObject()
+        {
+        }
 
     }
 }

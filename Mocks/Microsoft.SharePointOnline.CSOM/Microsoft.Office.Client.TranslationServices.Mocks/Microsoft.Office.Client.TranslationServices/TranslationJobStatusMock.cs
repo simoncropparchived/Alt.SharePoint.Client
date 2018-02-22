@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.Office.Client.TranslationServices
 {
     public class TranslationJobStatusMock : TranslationJobStatus
@@ -25,6 +26,22 @@ namespace Microsoft.Office.Client.TranslationServices
 
         public override System.Int32 Succeeded => SucceededEx;
         public System.Int32 SucceededEx { get; set; }
+
+        public override System.Collections.Generic.IEnumerable<Microsoft.Office.Client.TranslationServices.TranslationItemInfo> GetItems(Microsoft.Office.Client.TranslationServices.ItemTypes @types)
+        {
+            return GetItemsEx;
+        }
+        public System.Collections.Generic.IEnumerable<Microsoft.Office.Client.TranslationServices.TranslationItemInfo> GetItemsEx { get; set;}
+
+        public override System.Collections.Generic.IEnumerable<Microsoft.Office.Client.TranslationServices.TranslationItemInfo> GetAllItems()
+        {
+            return GetAllItemsEx;
+        }
+        public System.Collections.Generic.IEnumerable<Microsoft.Office.Client.TranslationServices.TranslationItemInfo> GetAllItemsEx { get; set;}
+
+        public override void Refresh()
+        {
+        }
 
     }
 }

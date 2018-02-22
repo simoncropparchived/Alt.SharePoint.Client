@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class ObjectSharingInformationMock : ObjectSharingInformation
@@ -46,6 +47,12 @@ namespace Microsoft.SharePoint.Client
 
         public override System.Collections.Generic.IEnumerable<Microsoft.SharePoint.Client.SharingLinkInfo> SharingLinks => SharingLinksEx;
         public System.Collections.Generic.IEnumerable<Microsoft.SharePoint.Client.SharingLinkInfo> SharingLinksEx { get; set; }
+
+        public override Microsoft.SharePoint.Client.ClientObjectList<Microsoft.SharePoint.Client.ObjectSharingInformationUser> GetSharedWithUsers()
+        {
+            return GetSharedWithUsersEx;
+        }
+        public Microsoft.SharePoint.Client.ClientObjectList<Microsoft.SharePoint.Client.ObjectSharingInformationUser> GetSharedWithUsersEx { get; set;}
 
     }
 }

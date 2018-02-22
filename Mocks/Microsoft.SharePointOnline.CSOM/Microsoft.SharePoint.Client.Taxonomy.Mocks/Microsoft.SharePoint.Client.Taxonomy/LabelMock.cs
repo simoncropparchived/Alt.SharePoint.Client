@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client.Taxonomy
 {
     public class LabelMock : Label
@@ -16,6 +17,14 @@ namespace Microsoft.SharePoint.Client.Taxonomy
 
         public override System.String Value => ValueEx;
         public System.String ValueEx { get; set; }
+
+        public override void DeleteObject()
+        {
+        }
+
+        public override void SetAsDefaultForLanguage()
+        {
+        }
 
     }
 }

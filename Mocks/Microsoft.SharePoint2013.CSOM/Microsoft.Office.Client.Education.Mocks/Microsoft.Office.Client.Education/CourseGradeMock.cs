@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.Office.Client.Education
 {
     public class CourseGradeMock : CourseGrade

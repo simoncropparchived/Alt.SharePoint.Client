@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.ApplicationPages.ClientPickerQuery
 {
     public class PickerEntityInformationMock : PickerEntityInformation

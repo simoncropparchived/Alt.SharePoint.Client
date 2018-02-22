@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client.Publishing.Navigation
 {
     public class NavigationTermSetItemMock : NavigationTermSetItem
@@ -31,6 +32,24 @@ namespace Microsoft.SharePoint.Client.Publishing.Navigation
 
         public override Microsoft.SharePoint.Client.Publishing.Navigation.NavigationTermSetView View => ViewEx;
         public Microsoft.SharePoint.Client.Publishing.Navigation.NavigationTermSetView ViewEx { get; set; }
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> GetResolvedDisplayUrl(System.String @browserQueryString)
+        {
+            return GetResolvedDisplayUrlEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> GetResolvedDisplayUrlEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.Taxonomy.TermStore GetTaxonomyTermStore()
+        {
+            return GetTaxonomyTermStoreEx;
+        }
+        public Microsoft.SharePoint.Client.Taxonomy.TermStore GetTaxonomyTermStoreEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.Publishing.Navigation.NavigationTerm CreateTerm(System.String @termName, Microsoft.SharePoint.Client.Publishing.Navigation.NavigationLinkType @linkType, System.Guid @termId)
+        {
+            return CreateTermEx;
+        }
+        public Microsoft.SharePoint.Client.Publishing.Navigation.NavigationTerm CreateTermEx { get; set;}
 
     }
 }

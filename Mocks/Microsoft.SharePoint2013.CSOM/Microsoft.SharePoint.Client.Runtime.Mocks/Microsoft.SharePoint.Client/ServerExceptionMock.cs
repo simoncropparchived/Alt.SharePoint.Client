@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class ServerExceptionMock : ServerException
@@ -22,6 +23,12 @@ namespace Microsoft.SharePoint.Client
 
         public override System.String ServerErrorTraceCorrelationId => ServerErrorTraceCorrelationIdEx;
         public System.String ServerErrorTraceCorrelationIdEx { get; set; }
+
+        public override System.String ToString()
+        {
+            return ToStringEx;
+        }
+        public System.String ToStringEx { get; set;}
 
     }
 }

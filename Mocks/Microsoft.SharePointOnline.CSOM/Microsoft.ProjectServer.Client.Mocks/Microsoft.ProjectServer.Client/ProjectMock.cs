@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.ProjectServer.Client
 {
     public class ProjectMock : Project
@@ -133,6 +134,38 @@ namespace Microsoft.ProjectServer.Client
 
         public override System.Guid TaskListId => TaskListIdEx;
         public System.Guid TaskListIdEx { get; set; }
+
+        public override void SetCustomFieldValue(System.String @fieldName, System.Object @value)
+        {
+        }
+
+        public override void UpdateIdeaListItemStatus(System.String @status)
+        {
+        }
+
+        public override void UpdateProjectStageStatus(Microsoft.ProjectServer.Client.Stage @stage, System.String @statusInformation, Microsoft.ProjectServer.Client.UpdateProjectStageStatusFieldValue @stageStatusValue, System.Boolean @append)
+        {
+        }
+
+        public override void EnterProjectStage(Microsoft.ProjectServer.Client.Stage @stage)
+        {
+        }
+
+        public override void LeaveProjectStage()
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.ClientResult<Microsoft.ProjectServer.Client.ReadyToLeaveProjectStageValue> ReadyToLeaveProjectStage()
+        {
+            return ReadyToLeaveProjectStageEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<Microsoft.ProjectServer.Client.ReadyToLeaveProjectStageValue> ReadyToLeaveProjectStageEx { get; set;}
+
+        public override Microsoft.ProjectServer.Client.ResourcePlan GetResourcePlan(System.DateTime @start, System.DateTime @end, Microsoft.ProjectServer.Client.TimeScale @timeScale)
+        {
+            return GetResourcePlanEx;
+        }
+        public Microsoft.ProjectServer.Client.ResourcePlan GetResourcePlanEx { get; set;}
 
     }
 }

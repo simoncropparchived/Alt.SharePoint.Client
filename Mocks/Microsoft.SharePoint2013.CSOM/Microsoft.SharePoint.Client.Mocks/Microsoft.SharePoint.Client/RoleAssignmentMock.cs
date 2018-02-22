@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class RoleAssignmentMock : RoleAssignment
@@ -13,6 +14,18 @@ namespace Microsoft.SharePoint.Client
 
         public override Microsoft.SharePoint.Client.RoleDefinitionBindingCollection RoleDefinitionBindings => RoleDefinitionBindingsEx;
         public Microsoft.SharePoint.Client.RoleDefinitionBindingCollection RoleDefinitionBindingsEx { get; set; }
+
+        public override void ImportRoleDefinitionBindings(Microsoft.SharePoint.Client.RoleDefinitionBindingCollection @roleDefinitionBindings)
+        {
+        }
+
+        public override void Update()
+        {
+        }
+
+        public override void DeleteObject()
+        {
+        }
 
     }
 }

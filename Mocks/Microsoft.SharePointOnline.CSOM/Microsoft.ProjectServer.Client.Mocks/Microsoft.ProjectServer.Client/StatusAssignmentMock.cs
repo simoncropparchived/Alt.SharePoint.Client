@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.ProjectServer.Client
 {
     public class StatusAssignmentMock : StatusAssignment
@@ -101,6 +102,18 @@ namespace Microsoft.ProjectServer.Client
 
         public override System.TimeSpan WorkTimeSpan => WorkTimeSpanEx;
         public System.TimeSpan WorkTimeSpanEx { get; set; }
+
+        public override void RefreshLoad()
+        {
+        }
+
+        public override void SubmitStatusUpdates(System.String @comment)
+        {
+        }
+
+        public override void DeleteObject()
+        {
+        }
 
     }
 }

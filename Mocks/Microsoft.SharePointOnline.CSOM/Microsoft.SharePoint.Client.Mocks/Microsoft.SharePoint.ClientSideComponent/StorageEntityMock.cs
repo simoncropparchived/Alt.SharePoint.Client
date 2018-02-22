@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.ClientSideComponent
 {
     public class StorageEntityMock : StorageEntity

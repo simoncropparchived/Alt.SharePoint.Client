@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.ProjectServer.Client
 {
     public class StageCustomFieldMock : StageCustomField
@@ -19,6 +20,10 @@ namespace Microsoft.ProjectServer.Client
 
         public override Microsoft.ProjectServer.Client.Stage Stage => StageEx;
         public Microsoft.ProjectServer.Client.Stage StageEx { get; set; }
+
+        public override void DeleteObject()
+        {
+        }
 
     }
 }

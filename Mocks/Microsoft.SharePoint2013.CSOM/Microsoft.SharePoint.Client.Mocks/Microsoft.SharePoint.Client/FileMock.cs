@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class FileMock : File
@@ -73,6 +74,68 @@ namespace Microsoft.SharePoint.Client
 
         public override Microsoft.SharePoint.Client.FileVersionCollection Versions => VersionsEx;
         public Microsoft.SharePoint.Client.FileVersionCollection VersionsEx { get; set; }
+
+        public override void UndoCheckOut()
+        {
+        }
+
+        public override void CheckIn(System.String @comment, Microsoft.SharePoint.Client.CheckinType @checkInType)
+        {
+        }
+
+        public override void Publish(System.String @comment)
+        {
+        }
+
+        public override void UnPublish(System.String @comment)
+        {
+        }
+
+        public override void Approve(System.String @comment)
+        {
+        }
+
+        public override void Deny(System.String @comment)
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.WebParts.LimitedWebPartManager GetLimitedWebPartManager(Microsoft.SharePoint.Client.WebParts.PersonalizationScope @scope)
+        {
+            return GetLimitedWebPartManagerEx;
+        }
+        public Microsoft.SharePoint.Client.WebParts.LimitedWebPartManager GetLimitedWebPartManagerEx { get; set;}
+
+        public override void MoveTo(System.String @newUrl, Microsoft.SharePoint.Client.MoveOperations @flags)
+        {
+        }
+
+        public override void CopyTo(System.String @strNewUrl, System.Boolean @bOverWrite)
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.IO.Stream> OpenBinaryStream()
+        {
+            return OpenBinaryStreamEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.IO.Stream> OpenBinaryStreamEx { get; set;}
+
+        public override void SaveBinary(Microsoft.SharePoint.Client.FileSaveBinaryInformation @parameters)
+        {
+        }
+
+        public override void DeleteObject()
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Guid> Recycle()
+        {
+            return RecycleEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Guid> RecycleEx { get; set;}
+
+        public override void CheckOut()
+        {
+        }
 
     }
 }

@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class PushNotificationSubscriberMock : PushNotificationSubscriber
@@ -25,6 +26,10 @@ namespace Microsoft.SharePoint.Client
 
         public override Microsoft.SharePoint.Client.User User => UserEx;
         public Microsoft.SharePoint.Client.User UserEx { get; set; }
+
+        public override void Update()
+        {
+        }
 
     }
 }

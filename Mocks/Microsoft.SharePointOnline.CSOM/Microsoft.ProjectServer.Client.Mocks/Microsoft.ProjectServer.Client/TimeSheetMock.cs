@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.ProjectServer.Client
 {
     public class TimeSheetMock : TimeSheet
@@ -70,6 +71,22 @@ namespace Microsoft.ProjectServer.Client
 
         public override System.Byte WeekStartsOn => WeekStartsOnEx;
         public System.Byte WeekStartsOnEx { get; set; }
+
+        public override void Update()
+        {
+        }
+
+        public override void DeleteObject()
+        {
+        }
+
+        public override void Submit(System.String @comment)
+        {
+        }
+
+        public override void Recall()
+        {
+        }
 
     }
 }

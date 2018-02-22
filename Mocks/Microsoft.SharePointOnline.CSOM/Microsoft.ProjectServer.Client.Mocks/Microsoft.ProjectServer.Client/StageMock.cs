@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.ProjectServer.Client
 {
     public class StageMock : Stage
@@ -34,6 +35,10 @@ namespace Microsoft.ProjectServer.Client
 
         public override Microsoft.ProjectServer.Client.ProjectDetailPage WorkflowStatusPage => WorkflowStatusPageEx;
         public Microsoft.ProjectServer.Client.ProjectDetailPage WorkflowStatusPageEx { get; set; }
+
+        public override void DeleteObject()
+        {
+        }
 
     }
 }

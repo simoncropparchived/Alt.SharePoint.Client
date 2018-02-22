@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client.Publishing
 {
     public class VideoItemMock : VideoItem
@@ -70,6 +71,32 @@ namespace Microsoft.SharePoint.Client.Publishing
 
         public override System.String YammerObjectUrl => YammerObjectUrlEx;
         public System.String YammerObjectUrlEx { get; set; }
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> GetPlaybackUrl(Microsoft.SharePoint.Client.Publishing.VideoStreamingFormat @videoFormat)
+        {
+            return GetPlaybackUrlEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> GetPlaybackUrlEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> GetStreamingKeyAccessToken()
+        {
+            return GetStreamingKeyAccessTokenEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> GetStreamingKeyAccessTokenEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.Publishing.VideoPlaybackMetadata GetPlaybackMetadata(System.String @sdnConfiguration)
+        {
+            return GetPlaybackMetadataEx;
+        }
+        public Microsoft.SharePoint.Client.Publishing.VideoPlaybackMetadata GetPlaybackMetadataEx { get; set;}
+
+        public override void Update()
+        {
+        }
+
+        public override void DeleteObject()
+        {
+        }
 
     }
 }

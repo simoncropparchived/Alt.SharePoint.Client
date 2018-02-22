@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.BusinessData.Runtime
 {
     public class EntityIdentityMock : EntityIdentity
@@ -14,6 +15,10 @@ namespace Microsoft.BusinessData.Runtime
 
         public override System.Int32 IdentifierCount => IdentifierCountEx;
         public System.Int32 IdentifierCountEx { get; set; }
+
+        public override void RefreshLoad()
+        {
+        }
 
     }
 }

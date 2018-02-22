@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class AttachmentMock : Attachment
@@ -10,6 +11,10 @@ namespace Microsoft.SharePoint.Client
 
         public override System.String ServerRelativeUrl => ServerRelativeUrlEx;
         public System.String ServerRelativeUrlEx { get; set; }
+
+        public override void DeleteObject()
+        {
+        }
 
     }
 }

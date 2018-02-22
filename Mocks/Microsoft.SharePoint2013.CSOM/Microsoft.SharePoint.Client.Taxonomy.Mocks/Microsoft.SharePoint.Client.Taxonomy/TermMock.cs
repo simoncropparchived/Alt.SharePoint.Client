@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client.Taxonomy
 {
     public class TermMock : Term
@@ -61,6 +62,88 @@ namespace Microsoft.SharePoint.Client.Taxonomy
 
         public override Microsoft.SharePoint.Client.Taxonomy.TermSetCollection TermSets => TermSetsEx;
         public Microsoft.SharePoint.Client.Taxonomy.TermSetCollection TermSetsEx { get; set; }
+
+        public override Microsoft.SharePoint.Client.Taxonomy.Term Copy(System.Boolean @doCopyChildren)
+        {
+            return CopyEx;
+        }
+        public Microsoft.SharePoint.Client.Taxonomy.Term CopyEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.Taxonomy.Label CreateLabel(System.String @labelName, System.Int32 @lcid, System.Boolean @isDefault)
+        {
+            return CreateLabelEx;
+        }
+        public Microsoft.SharePoint.Client.Taxonomy.Label CreateLabelEx { get; set;}
+
+        public override void DeleteLocalCustomProperty(System.String @name)
+        {
+        }
+
+        public override void DeleteAllLocalCustomProperties()
+        {
+        }
+
+        public override void Deprecate(System.Boolean @doDeprecate)
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.Taxonomy.LabelCollection GetAllLabels(System.Int32 @lcid)
+        {
+            return GetAllLabelsEx;
+        }
+        public Microsoft.SharePoint.Client.Taxonomy.LabelCollection GetAllLabelsEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> GetDefaultLabel(System.Int32 @lcid)
+        {
+            return GetDefaultLabelEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> GetDefaultLabelEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> GetDescription(System.Int32 @lcid)
+        {
+            return GetDescriptionEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> GetDescriptionEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.Taxonomy.TermCollection GetTerms(System.String @termLabel, System.Int32 @lcid, System.Boolean @defaultLabelOnly, Microsoft.SharePoint.Client.Taxonomy.StringMatchOption @stringMatchOption, System.Int32 @resultCollectionSize, System.Boolean @trimUnavailable)
+        {
+            return GetTermsEx;
+        }
+        public Microsoft.SharePoint.Client.Taxonomy.TermCollection GetTermsEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.Taxonomy.Term Merge(Microsoft.SharePoint.Client.Taxonomy.Term @termToMerge)
+        {
+            return MergeEx;
+        }
+        public Microsoft.SharePoint.Client.Taxonomy.Term MergeEx { get; set;}
+
+        public override void Move(Microsoft.SharePoint.Client.Taxonomy.TermSetItem @newParent)
+        {
+        }
+
+        public override void ReassignSourceTerm(Microsoft.SharePoint.Client.Taxonomy.Term @reusedTerm)
+        {
+        }
+
+        public override void SetDescription(System.String @description, System.Int32 @lcid)
+        {
+        }
+
+        public override void SetLocalCustomProperty(System.String @name, System.String @value)
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Boolean> GetIsDescendantOf(Microsoft.SharePoint.Client.Taxonomy.Term @ancestorTerm)
+        {
+            return GetIsDescendantOfEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Boolean> GetIsDescendantOfEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> GetPath(System.Int32 @lcid)
+        {
+            return GetPathEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> GetPathEx { get; set;}
 
     }
 }

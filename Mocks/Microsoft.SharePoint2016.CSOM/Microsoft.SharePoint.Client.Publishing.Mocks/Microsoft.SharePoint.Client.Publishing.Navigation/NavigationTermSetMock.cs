@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client.Publishing.Navigation
 {
     public class NavigationTermSetMock : NavigationTermSet
@@ -19,6 +20,36 @@ namespace Microsoft.SharePoint.Client.Publishing.Navigation
 
         public override System.Guid TermStoreId => TermStoreIdEx;
         public System.Guid TermStoreIdEx { get; set; }
+
+        public override Microsoft.SharePoint.Client.Publishing.Navigation.NavigationTermSet GetAsEditable(Microsoft.SharePoint.Client.Taxonomy.TaxonomySession @taxonomySession)
+        {
+            return GetAsEditableEx;
+        }
+        public Microsoft.SharePoint.Client.Publishing.Navigation.NavigationTermSet GetAsEditableEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.Publishing.Navigation.NavigationTermSet GetWithNewView(Microsoft.SharePoint.Client.Publishing.Navigation.NavigationTermSetView @newView)
+        {
+            return GetWithNewViewEx;
+        }
+        public Microsoft.SharePoint.Client.Publishing.Navigation.NavigationTermSet GetWithNewViewEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.Taxonomy.TermSet GetTaxonomyTermSet()
+        {
+            return GetTaxonomyTermSetEx;
+        }
+        public Microsoft.SharePoint.Client.Taxonomy.TermSet GetTaxonomyTermSetEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.Publishing.Navigation.NavigationTermCollection GetAllTerms()
+        {
+            return GetAllTermsEx;
+        }
+        public Microsoft.SharePoint.Client.Publishing.Navigation.NavigationTermCollection GetAllTermsEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.Publishing.Navigation.NavigationTerm FindTermForUrl(System.String @url)
+        {
+            return FindTermForUrlEx;
+        }
+        public Microsoft.SharePoint.Client.Publishing.Navigation.NavigationTerm FindTermForUrlEx { get; set;}
 
     }
 }

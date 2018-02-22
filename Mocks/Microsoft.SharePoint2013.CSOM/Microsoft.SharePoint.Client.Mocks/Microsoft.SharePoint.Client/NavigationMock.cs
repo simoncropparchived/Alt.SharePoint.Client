@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class NavigationMock : Navigation
@@ -13,6 +14,12 @@ namespace Microsoft.SharePoint.Client
 
         public override System.Boolean UseShared => UseSharedEx;
         public System.Boolean UseSharedEx { get; set; }
+
+        public override Microsoft.SharePoint.Client.NavigationNode GetNodeById(System.Int32 @id)
+        {
+            return GetNodeByIdEx;
+        }
+        public Microsoft.SharePoint.Client.NavigationNode GetNodeByIdEx { get; set;}
 
     }
 }

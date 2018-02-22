@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.Online.SharePoint.TenantAdministration
 {
     public class TenantMock : Tenant
@@ -244,6 +245,394 @@ namespace Microsoft.Online.SharePoint.TenantAdministration
 
         public override System.Boolean UserVoiceForFeedbackEnabled => UserVoiceForFeedbackEnabledEx;
         public System.Boolean UserVoiceForFeedbackEnabledEx { get; set; }
+
+        public override void AddSdnProvider(System.String @identifier, System.String @license)
+        {
+        }
+
+        public override void RemoveSdnProvider()
+        {
+        }
+
+        public override void CreateGroupForSite(System.String @siteUrl, System.String @displayName, System.String @alias, System.Boolean @isPublic, Microsoft.Online.SharePoint.TenantManagement.GroupCreationParams @optionalParams)
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Boolean> GetTenantCdnEnabled(Microsoft.Online.SharePoint.TenantAdministration.SPOTenantCdnType @cdnType)
+        {
+            return GetTenantCdnEnabledEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Boolean> GetTenantCdnEnabledEx { get; set;}
+
+        public override void SetTenantCdnPolicy(Microsoft.Online.SharePoint.TenantAdministration.SPOTenantCdnType @cdnType, Microsoft.Online.SharePoint.TenantAdministration.SPOTenantCdnPolicyType @policyType, System.String @policyValue)
+        {
+        }
+
+        public override System.Collections.Generic.IList<System.String> GetTenantCdnPolicies(Microsoft.Online.SharePoint.TenantAdministration.SPOTenantCdnType @cdnType)
+        {
+            return GetTenantCdnPoliciesEx;
+        }
+        public System.Collections.Generic.IList<System.String> GetTenantCdnPoliciesEx { get; set;}
+
+        public override void CreateTenantCdnDefaultOrigins(Microsoft.Online.SharePoint.TenantAdministration.SPOTenantCdnType @cdnType)
+        {
+        }
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.TenantSiteScript CreateSiteScript(Microsoft.Online.SharePoint.TenantAdministration.TenantSiteScriptCreationInfo @info)
+        {
+            return CreateSiteScriptEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.TenantSiteScript CreateSiteScriptEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientObjectList<Microsoft.Online.SharePoint.TenantAdministration.TenantSiteScript> GetSiteScripts()
+        {
+            return GetSiteScriptsEx;
+        }
+        public Microsoft.SharePoint.Client.ClientObjectList<Microsoft.Online.SharePoint.TenantAdministration.TenantSiteScript> GetSiteScriptsEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.TenantSiteScript UpdateSiteScript(Microsoft.Online.SharePoint.TenantAdministration.TenantSiteScript @updateInfo)
+        {
+            return UpdateSiteScriptEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.TenantSiteScript UpdateSiteScriptEx { get; set;}
+
+        public override void DeleteSiteScript(System.Guid @id)
+        {
+        }
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.TenantSiteDesign CreateSiteDesign(Microsoft.Online.SharePoint.TenantAdministration.TenantSiteDesignCreationInfo @info)
+        {
+            return CreateSiteDesignEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.TenantSiteDesign CreateSiteDesignEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientObjectList<Microsoft.Online.SharePoint.TenantAdministration.TenantSiteDesign> GetSiteDesigns()
+        {
+            return GetSiteDesignsEx;
+        }
+        public Microsoft.SharePoint.Client.ClientObjectList<Microsoft.Online.SharePoint.TenantAdministration.TenantSiteDesign> GetSiteDesignsEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.TenantSiteDesign UpdateSiteDesign(Microsoft.Online.SharePoint.TenantAdministration.TenantSiteDesign @updateInfo)
+        {
+            return UpdateSiteDesignEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.TenantSiteDesign UpdateSiteDesignEx { get; set;}
+
+        public override void DeleteSiteDesign(System.Guid @id)
+        {
+        }
+
+        public override void GrantSiteDesignRights(System.Guid @id, System.String[] @principalNames, Microsoft.Online.SharePoint.TenantAdministration.TenantSiteDesignPrincipalRights @grantedRights)
+        {
+        }
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.HubSiteProperties GetHubSitePropertiesByUrl(System.String @siteUrl)
+        {
+            return GetHubSitePropertiesByUrlEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.HubSiteProperties GetHubSitePropertiesByUrlEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.HubSiteProperties GetHubSitePropertiesById(System.Guid @hubSiteId)
+        {
+            return GetHubSitePropertiesByIdEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.HubSiteProperties GetHubSitePropertiesByIdEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientObjectList<Microsoft.Online.SharePoint.TenantAdministration.HubSiteProperties> GetHubSitesProperties()
+        {
+            return GetHubSitesPropertiesEx;
+        }
+        public Microsoft.SharePoint.Client.ClientObjectList<Microsoft.Online.SharePoint.TenantAdministration.HubSiteProperties> GetHubSitesPropertiesEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.HubSiteProperties RegisterHubSite(System.String @siteUrl)
+        {
+            return RegisterHubSiteEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.HubSiteProperties RegisterHubSiteEx { get; set;}
+
+        public override void UnregisterHubSite(System.String @siteUrl)
+        {
+        }
+
+        public override void ConnectSiteToHubSite(System.String @siteUrl, System.String @hubSiteUrl)
+        {
+        }
+
+        public override void DisconnectSiteFromHubSite(System.String @siteUrl)
+        {
+        }
+
+        public override void GrantHubSiteRights(System.String @hubSiteUrl, System.String[] @principals, Microsoft.Online.SharePoint.TenantAdministration.SPOHubSiteUserRights @grantedRights)
+        {
+        }
+
+        public override void RevokeHubSiteRights(System.String @hubSiteUrl, System.String[] @principals)
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Boolean> AddTenantTheme(System.String @name, System.String @themeJson)
+        {
+            return AddTenantThemeEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Boolean> AddTenantThemeEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Boolean> UpdateTenantTheme(System.String @name, System.String @themeJson)
+        {
+            return UpdateTenantThemeEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Boolean> UpdateTenantThemeEx { get; set;}
+
+        public override void DeleteTenantTheme(System.String @name)
+        {
+        }
+
+        public override Microsoft.Online.SharePoint.TenantManagement.ThemeProperties GetTenantTheme(System.String @name)
+        {
+            return GetTenantThemeEx;
+        }
+        public Microsoft.Online.SharePoint.TenantManagement.ThemeProperties GetTenantThemeEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientObjectList<Microsoft.Online.SharePoint.TenantManagement.ThemeProperties> GetAllTenantThemes()
+        {
+            return GetAllTenantThemesEx;
+        }
+        public Microsoft.SharePoint.Client.ClientObjectList<Microsoft.Online.SharePoint.TenantManagement.ThemeProperties> GetAllTenantThemesEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.Site GetSiteByUrl(System.String @url)
+        {
+            return GetSiteByUrlEx;
+        }
+        public Microsoft.SharePoint.Client.Site GetSiteByUrlEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.SiteProperties GetSitePropertiesByUrl(System.String @url, System.Boolean @includeDetail)
+        {
+            return GetSitePropertiesByUrlEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.SiteProperties GetSitePropertiesByUrlEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> GetRootSiteUrl()
+        {
+            return GetRootSiteUrlEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> GetRootSiteUrlEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.SPOSitePropertiesEnumerable GetSiteProperties(System.Int32 @startIndex, System.Boolean @includeDetail)
+        {
+            return GetSitePropertiesEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.SPOSitePropertiesEnumerable GetSitePropertiesEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.SPOSitePropertiesEnumerable GetSitePropertiesFromSharePoint(System.String @startIndex, System.Boolean @includeDetail)
+        {
+            return GetSitePropertiesFromSharePointEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.SPOSitePropertiesEnumerable GetSitePropertiesFromSharePointEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.SPOSitePropertiesEnumerable GetSitePropertiesByFilter(System.String @filter, System.Int32 @startIndex, System.Boolean @includeDetail)
+        {
+            return GetSitePropertiesByFilterEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.SPOSitePropertiesEnumerable GetSitePropertiesByFilterEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.SPOSitePropertiesEnumerable GetSitePropertiesFromSharePointByFilter(System.String @filter, System.String @startIndex, System.Boolean @includeDetail)
+        {
+            return GetSitePropertiesFromSharePointByFilterEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.SPOSitePropertiesEnumerable GetSitePropertiesFromSharePointByFilterEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.SPOSitePropertiesEnumerable GetSitePropertiesFromSharePointByFilters(Microsoft.Online.SharePoint.TenantAdministration.SPOSitePropertiesEnumerableFilter @speFilter)
+        {
+            return GetSitePropertiesFromSharePointByFiltersEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.SPOSitePropertiesEnumerable GetSitePropertiesFromSharePointByFiltersEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.UserMigrationPropertiesEnumerable GetUserMigrationPropertiesByFilter(Microsoft.Online.SharePoint.TenantAdministration.UserMigrationPropertiesEnumerableFilter @userMigrationPropertiesEnumerableFilter)
+        {
+            return GetUserMigrationPropertiesByFilterEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.UserMigrationPropertiesEnumerable GetUserMigrationPropertiesByFilterEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.UserMigrationProperties GetUserMigrationProperties(System.String @userPrincipalName)
+        {
+            return GetUserMigrationPropertiesEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.UserMigrationProperties GetUserMigrationPropertiesEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.SpoOperation CreateSite(Microsoft.Online.SharePoint.TenantAdministration.SiteCreationProperties @siteCreationProperties)
+        {
+            return CreateSiteEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.SpoOperation CreateSiteEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.SPOTenantWebTemplateCollection GetSPOTenantAllWebTemplates()
+        {
+            return GetSPOTenantAllWebTemplatesEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.SPOTenantWebTemplateCollection GetSPOTenantAllWebTemplatesEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.SPOTenantWebTemplateCollection GetSPOTenantWebTemplates(System.UInt32 @localeId, System.Int32 @compatibilityLevel)
+        {
+            return GetSPOTenantWebTemplatesEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.SPOTenantWebTemplateCollection GetSPOTenantWebTemplatesEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.SpoOperation RemoveSite(System.String @siteUrl)
+        {
+            return RemoveSiteEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.SpoOperation RemoveSiteEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.DeletedSiteProperties GetDeletedSitePropertiesByUrl(System.String @siteUrl)
+        {
+            return GetDeletedSitePropertiesByUrlEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.DeletedSiteProperties GetDeletedSitePropertiesByUrlEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.SPODeletedSitePropertiesEnumerable GetDeletedSiteProperties(System.Int32 @startIndex)
+        {
+            return GetDeletedSitePropertiesEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.SPODeletedSitePropertiesEnumerable GetDeletedSitePropertiesEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.SPODeletedSitePropertiesEnumerable GetDeletedSitePropertiesFromSharePoint(System.String @startIndex)
+        {
+            return GetDeletedSitePropertiesFromSharePointEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.SPODeletedSitePropertiesEnumerable GetDeletedSitePropertiesFromSharePointEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.SPODeletedSitePropertiesEnumerable GetDeletedPersonalSitePropertiesAllVersions(System.String @url)
+        {
+            return GetDeletedPersonalSitePropertiesAllVersionsEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.SPODeletedSitePropertiesEnumerable GetDeletedPersonalSitePropertiesAllVersionsEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.SPODeletedSitePropertiesEnumerable GetAllDeletedPersonalSitesPropertiesAllVersions(System.Int32 @startIndex)
+        {
+            return GetAllDeletedPersonalSitesPropertiesAllVersionsEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.SPODeletedSitePropertiesEnumerable GetAllDeletedPersonalSitesPropertiesAllVersionsEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.SpoOperation RequestPersonalSites(System.String[] @userIds)
+        {
+            return RequestPersonalSitesEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.SpoOperation RequestPersonalSitesEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.SpoOperation RemoveDeletedSite(System.String @siteUrl)
+        {
+            return RemoveDeletedSiteEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.SpoOperation RemoveDeletedSiteEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.SpoOperation RemoveDeletedSitePreferId(System.String @siteUrl, System.Guid @siteId)
+        {
+            return RemoveDeletedSitePreferIdEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.SpoOperation RemoveDeletedSitePreferIdEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.SpoOperation RestoreDeletedSite(System.String @siteUrl)
+        {
+            return RestoreDeletedSiteEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.SpoOperation RestoreDeletedSiteEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.SpoOperation RestoreDeletedSitePreferId(System.String @siteUrl, System.Guid @siteId)
+        {
+            return RestoreDeletedSitePreferIdEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.SpoOperation RestoreDeletedSitePreferIdEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> EncodeClaim(System.String @identifier)
+        {
+            return EncodeClaimEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> EncodeClaimEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> DecodeClaim(System.String @identifier)
+        {
+            return DecodeClaimEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> DecodeClaimEx { get; set;}
+
+        public override System.Collections.Generic.IList<System.String> EncodeClaims(System.Collections.Generic.IList<System.String> @identifiers)
+        {
+            return EncodeClaimsEx;
+        }
+        public System.Collections.Generic.IList<System.String> EncodeClaimsEx { get; set;}
+
+        public override System.Collections.Generic.IList<System.String> DecodeClaims(System.Collections.Generic.IList<System.String> @claims)
+        {
+            return DecodeClaimsEx;
+        }
+        public System.Collections.Generic.IList<System.String> DecodeClaimsEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.User SetSiteAdmin(System.String @url, System.String @loginName, System.Boolean @isSiteAdmin)
+        {
+            return SetSiteAdminEx;
+        }
+        public Microsoft.SharePoint.Client.User SetSiteAdminEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.User UpdateUserTypeFromAzureAD(System.String @url, System.String @loginName)
+        {
+            return UpdateUserTypeFromAzureADEx;
+        }
+        public Microsoft.SharePoint.Client.User UpdateUserTypeFromAzureADEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientObjectList<Microsoft.Online.SharePoint.TenantAdministration.AppErrorEntry> GetAppErrors(System.Guid @productId, System.DateTime @timeStart, System.DateTime @timeEnd)
+        {
+            return GetAppErrorsEx;
+        }
+        public Microsoft.SharePoint.Client.ClientObjectList<Microsoft.Online.SharePoint.TenantAdministration.AppErrorEntry> GetAppErrorsEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientObjectList<Microsoft.Online.SharePoint.TenantAdministration.AppInfo> GetAppInfoByProductId(System.Guid @productId)
+        {
+            return GetAppInfoByProductIdEx;
+        }
+        public Microsoft.SharePoint.Client.ClientObjectList<Microsoft.Online.SharePoint.TenantAdministration.AppInfo> GetAppInfoByProductIdEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientObjectList<Microsoft.Online.SharePoint.TenantAdministration.AppInfo> GetAppInfoByName(System.String @name)
+        {
+            return GetAppInfoByNameEx;
+        }
+        public Microsoft.SharePoint.Client.ClientObjectList<Microsoft.Online.SharePoint.TenantAdministration.AppInfo> GetAppInfoByNameEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Boolean> SetIdleSessionSignOutForUnmanagedDevices(System.Boolean @enabled, System.TimeSpan @warnAfter, System.TimeSpan @signOutAfter)
+        {
+            return SetIdleSessionSignOutForUnmanagedDevicesEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Boolean> SetIdleSessionSignOutForUnmanagedDevicesEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> GetIdleSessionSignOutForUnmanagedDevices()
+        {
+            return GetIdleSessionSignOutForUnmanagedDevicesEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> GetIdleSessionSignOutForUnmanagedDevicesEx { get; set;}
+
+        public override void AddPublicCdnOrigin(System.String @origin)
+        {
+        }
+
+        public override void RemovePublicCdnOrigin(System.String @originId)
+        {
+        }
+
+        public override System.Collections.Generic.IList<System.String> GetTenantCdnOrigins(Microsoft.Online.SharePoint.TenantAdministration.SPOTenantCdnType @cdnType)
+        {
+            return GetTenantCdnOriginsEx;
+        }
+        public System.Collections.Generic.IList<System.String> GetTenantCdnOriginsEx { get; set;}
+
+        public override void AddTenantCdnOrigin(Microsoft.Online.SharePoint.TenantAdministration.SPOTenantCdnType @cdnType, System.String @originUrl)
+        {
+        }
+
+        public override void RemoveTenantCdnOrigin(Microsoft.Online.SharePoint.TenantAdministration.SPOTenantCdnType @cdnType, System.String @originUrl)
+        {
+        }
+
+        public override void SetTenantCdnEnabled(Microsoft.Online.SharePoint.TenantAdministration.SPOTenantCdnType @cdnType, System.Boolean @isEnabled)
+        {
+        }
 
     }
 }

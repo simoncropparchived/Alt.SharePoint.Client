@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.ProjectServer.Client
 {
     public class EventHandlerMock : EventHandler
@@ -28,6 +29,10 @@ namespace Microsoft.ProjectServer.Client
 
         public override System.Int32 Order => OrderEx;
         public System.Int32 OrderEx { get; set; }
+
+        public override void DeleteObject()
+        {
+        }
 
     }
 }

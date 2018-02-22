@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client.Publishing
 {
     public class SpotlightChannelMock : SpotlightChannel
@@ -22,6 +23,14 @@ namespace Microsoft.SharePoint.Client.Publishing
 
         public override System.String VideoLibraryServerRelativeUrl => VideoLibraryServerRelativeUrlEx;
         public System.String VideoLibraryServerRelativeUrlEx { get; set; }
+
+        public override void Update()
+        {
+        }
+
+        public override void DeleteObject()
+        {
+        }
 
     }
 }

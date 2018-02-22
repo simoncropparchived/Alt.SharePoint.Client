@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client.Taxonomy
 {
     public class TermStoreMock : TermStore
@@ -40,6 +41,124 @@ namespace Microsoft.SharePoint.Client.Taxonomy
 
         public override System.Int32 WorkingLanguage => WorkingLanguageEx;
         public System.Int32 WorkingLanguageEx { get; set; }
+
+        public override void AddLanguage(System.Int32 @lcid)
+        {
+        }
+
+        public override void CommitAll()
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.Taxonomy.TermGroup CreateGroup(System.String @name, System.Guid @groupId)
+        {
+            return CreateGroupEx;
+        }
+        public Microsoft.SharePoint.Client.Taxonomy.TermGroup CreateGroupEx { get; set;}
+
+        public override void DeleteLanguage(System.Int32 @lcid)
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.Taxonomy.ChangedItemCollection GetChanges(Microsoft.SharePoint.Client.Taxonomy.ChangeInformation @changeInformation)
+        {
+            return GetChangesEx;
+        }
+        public Microsoft.SharePoint.Client.Taxonomy.ChangedItemCollection GetChangesEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.Taxonomy.TermGroup GetGroup(System.Guid @id)
+        {
+            return GetGroupEx;
+        }
+        public Microsoft.SharePoint.Client.Taxonomy.TermGroup GetGroupEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.IO.Stream> GetPackagesUpdateInformation(System.DateTime @lastUpdateTime)
+        {
+            return GetPackagesUpdateInformationEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.IO.Stream> GetPackagesUpdateInformationEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.IO.Stream> GetPackage(System.String @packageId, System.Guid @packageType, System.String @farmVersion, System.Int32 @siteCompatibilityLevel)
+        {
+            return GetPackageEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.IO.Stream> GetPackageEx { get; set;}
+
+        public override void UploadPackages(System.String @packageId, System.IO.Stream @stream, System.String @farmVersion, System.Int32 @siteCompatibilityLevel)
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.Taxonomy.Term GetTerm(System.Guid @termId)
+        {
+            return GetTermEx;
+        }
+        public Microsoft.SharePoint.Client.Taxonomy.Term GetTermEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.Taxonomy.Term GetTermInTermSet(System.Guid @termSetId, System.Guid @termId)
+        {
+            return GetTermInTermSetEx;
+        }
+        public Microsoft.SharePoint.Client.Taxonomy.Term GetTermInTermSetEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.Taxonomy.TermCollection GetTermsById(System.Guid[] @termIds)
+        {
+            return GetTermsByIdEx;
+        }
+        public Microsoft.SharePoint.Client.Taxonomy.TermCollection GetTermsByIdEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.Taxonomy.TermCollection GetTerms(Microsoft.SharePoint.Client.Taxonomy.LabelMatchInformation @labelMatchInformation)
+        {
+            return GetTermsEx;
+        }
+        public Microsoft.SharePoint.Client.Taxonomy.TermCollection GetTermsEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.Taxonomy.TermSetCollection GetTermSetsByName(System.String @termSetName, System.Int32 @lcid)
+        {
+            return GetTermSetsByNameEx;
+        }
+        public Microsoft.SharePoint.Client.Taxonomy.TermSetCollection GetTermSetsByNameEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.Taxonomy.TermCollection GetTermsWithCustomProperty(Microsoft.SharePoint.Client.Taxonomy.CustomPropertyMatchInformation @customPropertyMatchInformation)
+        {
+            return GetTermsWithCustomPropertyEx;
+        }
+        public Microsoft.SharePoint.Client.Taxonomy.TermCollection GetTermsWithCustomPropertyEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.Taxonomy.TermSet GetTermSet(System.Guid @termSetId)
+        {
+            return GetTermSetEx;
+        }
+        public Microsoft.SharePoint.Client.Taxonomy.TermSet GetTermSetEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.Taxonomy.TermSetCollection GetTermSetsByTermLabel(System.String[] @requiredTermLabels, System.Int32 @lcid)
+        {
+            return GetTermSetsByTermLabelEx;
+        }
+        public Microsoft.SharePoint.Client.Taxonomy.TermSetCollection GetTermSetsByTermLabelEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.Taxonomy.TermSetCollection GetTermSetsWithCustomProperty(Microsoft.SharePoint.Client.Taxonomy.CustomPropertyMatchInformation @customPropertyMatchInformation)
+        {
+            return GetTermSetsWithCustomPropertyEx;
+        }
+        public Microsoft.SharePoint.Client.Taxonomy.TermSetCollection GetTermSetsWithCustomPropertyEx { get; set;}
+
+        public override void RollbackAll()
+        {
+        }
+
+        public override void UpdateCache()
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.Taxonomy.TermGroup GetSiteCollectionGroup(Microsoft.SharePoint.Client.Site @currentSite, System.Boolean @createIfMissing)
+        {
+            return GetSiteCollectionGroupEx;
+        }
+        public Microsoft.SharePoint.Client.Taxonomy.TermGroup GetSiteCollectionGroupEx { get; set;}
+
+        public override void UpdateUsedTermsOnSite(Microsoft.SharePoint.Client.Site @site)
+        {
+        }
 
     }
 }

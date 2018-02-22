@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class ClientContextMock : ClientContext
@@ -19,6 +20,16 @@ namespace Microsoft.SharePoint.Client
 
         public override System.Version ServerVersion => ServerVersionEx;
         public System.Version ServerVersionEx { get; set; }
+
+        public override Microsoft.SharePoint.Client.FormDigestInfo GetFormDigestDirect()
+        {
+            return GetFormDigestDirectEx;
+        }
+        public Microsoft.SharePoint.Client.FormDigestInfo GetFormDigestDirectEx { get; set;}
+
+        public override void ExecuteQuery()
+        {
+        }
 
     }
 }

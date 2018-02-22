@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.ProjectServer.Client
 {
     public class ResourceEngagementMock : ResourceEngagement
@@ -34,6 +35,16 @@ namespace Microsoft.ProjectServer.Client
 
         public override System.TimeSpan RequestedWorkTimeSpan => RequestedWorkTimeSpanEx;
         public System.TimeSpan RequestedWorkTimeSpanEx { get; set; }
+
+        public override void DeleteObject()
+        {
+        }
+
+        public override Microsoft.ProjectServer.Client.ResourceEngagementTimephasedCollection GetTimephased(System.DateTime @start, System.DateTime @end, Microsoft.ProjectServer.Client.TimeScale @timescale, Microsoft.ProjectServer.Client.EngagementContourType @contourType)
+        {
+            return GetTimephasedEx;
+        }
+        public Microsoft.ProjectServer.Client.ResourceEngagementTimephasedCollection GetTimephasedEx { get; set;}
 
     }
 }

@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client.InformationPolicy
 {
     public class ProjectPolicyMock : ProjectPolicy
@@ -19,6 +20,10 @@ namespace Microsoft.SharePoint.Client.InformationPolicy
 
         public override System.String Name => NameEx;
         public System.String NameEx { get; set; }
+
+        public override void SavePolicy()
+        {
+        }
 
     }
 }

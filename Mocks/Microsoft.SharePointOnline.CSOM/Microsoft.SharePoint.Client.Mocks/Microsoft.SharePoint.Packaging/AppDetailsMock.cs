@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Packaging
 {
     public class AppDetailsMock : AppDetails

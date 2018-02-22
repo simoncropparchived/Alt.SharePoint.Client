@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client.Publishing.Navigation
 {
     public class NavigationTermSetViewMock : NavigationTermSetView
@@ -28,6 +29,12 @@ namespace Microsoft.SharePoint.Client.Publishing.Navigation
 
         public override System.String WebTitle => WebTitleEx;
         public System.String WebTitleEx { get; set; }
+
+        public override Microsoft.SharePoint.Client.Publishing.Navigation.NavigationTermSetView GetCopy()
+        {
+            return GetCopyEx;
+        }
+        public Microsoft.SharePoint.Client.Publishing.Navigation.NavigationTermSetView GetCopyEx { get; set;}
 
     }
 }

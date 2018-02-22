@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.Office.Client.Education
 {
     public class CourseMock : Course
@@ -46,6 +47,10 @@ namespace Microsoft.Office.Client.Education
 
         public override Microsoft.Office.Client.Education.Submissions Submissions => SubmissionsEx;
         public Microsoft.Office.Client.Education.Submissions SubmissionsEx { get; set; }
+
+        public override void PublishCourseGrades()
+        {
+        }
 
     }
 }

@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client.Publishing.Navigation
 {
     public class NavigationTermMock : NavigationTerm
@@ -49,6 +50,62 @@ namespace Microsoft.SharePoint.Client.Publishing.Navigation
 
         public override Microsoft.SharePoint.Client.Publishing.Navigation.NavigationTermSet TermSet => TermSetEx;
         public Microsoft.SharePoint.Client.Publishing.Navigation.NavigationTermSet TermSetEx { get; set; }
+
+        public override Microsoft.SharePoint.Client.Publishing.Navigation.NavigationTerm GetAsEditable(Microsoft.SharePoint.Client.Taxonomy.TaxonomySession @taxonomySession)
+        {
+            return GetAsEditableEx;
+        }
+        public Microsoft.SharePoint.Client.Publishing.Navigation.NavigationTerm GetAsEditableEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.Publishing.Navigation.NavigationTerm GetWithNewView(Microsoft.SharePoint.Client.Publishing.Navigation.NavigationTermSetView @newView)
+        {
+            return GetWithNewViewEx;
+        }
+        public Microsoft.SharePoint.Client.Publishing.Navigation.NavigationTerm GetWithNewViewEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> GetResolvedTargetUrl(System.String @browserQueryString, System.String[] @remainingUrlSegments)
+        {
+            return GetResolvedTargetUrlEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> GetResolvedTargetUrlEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> GetResolvedTargetUrlWithoutQuery()
+        {
+            return GetResolvedTargetUrlWithoutQueryEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> GetResolvedTargetUrlWithoutQueryEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> GetResolvedAssociatedFolderUrl()
+        {
+            return GetResolvedAssociatedFolderUrlEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> GetResolvedAssociatedFolderUrlEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> GetWebRelativeFriendlyUrl()
+        {
+            return GetWebRelativeFriendlyUrlEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> GetWebRelativeFriendlyUrlEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.Publishing.Navigation.NavigationTermCollection GetAllParentTerms()
+        {
+            return GetAllParentTermsEx;
+        }
+        public Microsoft.SharePoint.Client.Publishing.Navigation.NavigationTermCollection GetAllParentTermsEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.Taxonomy.Term GetTaxonomyTerm()
+        {
+            return GetTaxonomyTermEx;
+        }
+        public Microsoft.SharePoint.Client.Taxonomy.Term GetTaxonomyTermEx { get; set;}
+
+        public override void Move(Microsoft.SharePoint.Client.Publishing.Navigation.NavigationTermSetItem @newParent)
+        {
+        }
+
+        public override void DeleteObject()
+        {
+        }
 
     }
 }

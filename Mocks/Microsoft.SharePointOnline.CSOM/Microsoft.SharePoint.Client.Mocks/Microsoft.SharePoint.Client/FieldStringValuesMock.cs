@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class FieldStringValuesMock : FieldStringValues
@@ -11,6 +12,10 @@ namespace Microsoft.SharePoint.Client
         public override System.String this[System.String fieldName] => ItemEx[fieldName];
         public System.Collections.Generic.Dictionary<System.String, System.String> ItemEx { get; set; }
 
+
+        public override void RefreshLoad()
+        {
+        }
 
     }
 }

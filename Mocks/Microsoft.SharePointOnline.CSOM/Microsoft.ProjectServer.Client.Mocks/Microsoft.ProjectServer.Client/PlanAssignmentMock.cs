@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.ProjectServer.Client
 {
     public class PlanAssignmentMock : PlanAssignment
@@ -59,6 +60,14 @@ namespace Microsoft.ProjectServer.Client
 
         public override System.DateTime TerminationDate => TerminationDateEx;
         public System.DateTime TerminationDateEx { get; set; }
+
+        public override void RefreshLoad()
+        {
+        }
+
+        public override void DeleteObject()
+        {
+        }
 
     }
 }

@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.ProjectServer.Client
 {
     public class EnterpriseProjectTypeMock : EnterpriseProjectType
@@ -55,6 +56,10 @@ namespace Microsoft.ProjectServer.Client
 
         public override System.String WorkspaceTemplateName => WorkspaceTemplateNameEx;
         public System.String WorkspaceTemplateNameEx { get; set; }
+
+        public override void DeleteObject()
+        {
+        }
 
     }
 }

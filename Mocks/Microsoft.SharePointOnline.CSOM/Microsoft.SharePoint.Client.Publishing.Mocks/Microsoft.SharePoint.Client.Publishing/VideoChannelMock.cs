@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client.Publishing
 {
     public class VideoChannelMock : VideoChannel
@@ -55,6 +56,22 @@ namespace Microsoft.SharePoint.Client.Publishing
 
         public override System.Boolean YammerEnabled => YammerEnabledEx;
         public System.Boolean YammerEnabledEx { get; set; }
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Int32> GetVideoCount()
+        {
+            return GetVideoCountEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Int32> GetVideoCountEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> GetChannelPageUrl(Microsoft.SharePoint.Client.Publishing.ViewControlState @viewMode)
+        {
+            return GetChannelPageUrlEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> GetChannelPageUrlEx { get; set;}
+
+        public override void Update()
+        {
+        }
 
     }
 }

@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class FileInformationMock : FileInformation
@@ -10,6 +11,10 @@ namespace Microsoft.SharePoint.Client
 
         public override System.String ETag => ETagEx;
         public System.String ETagEx { get; set; }
+
+        public override void Dispose()
+        {
+        }
 
     }
 }

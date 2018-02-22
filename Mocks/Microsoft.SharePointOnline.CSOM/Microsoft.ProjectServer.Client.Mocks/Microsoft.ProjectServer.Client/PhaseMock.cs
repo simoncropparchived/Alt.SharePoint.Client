@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.ProjectServer.Client
 {
     public class PhaseMock : Phase
@@ -16,6 +17,10 @@ namespace Microsoft.ProjectServer.Client
 
         public override Microsoft.ProjectServer.Client.StageCollection Stages => StagesEx;
         public Microsoft.ProjectServer.Client.StageCollection StagesEx { get; set; }
+
+        public override void DeleteObject()
+        {
+        }
 
     }
 }

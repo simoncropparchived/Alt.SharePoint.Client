@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.Online.SharePoint.TenantManagement
 {
     public class Office365TenantMock : Office365Tenant
@@ -196,6 +197,186 @@ namespace Microsoft.Online.SharePoint.TenantManagement
 
         public override System.Boolean UserVoiceForFeedbackEnabled => UserVoiceForFeedbackEnabledEx;
         public System.Boolean UserVoiceForFeedbackEnabledEx { get; set; }
+
+        public override void AddSdnProvider(System.String @identifier, System.String @license)
+        {
+        }
+
+        public override void RemoveSdnProvider()
+        {
+        }
+
+        public override Microsoft.Online.SharePoint.TenantManagement.GetExternalUsersResults GetExternalUsers(System.Int32 @position, System.Int32 @pageSize, System.String @filter, Microsoft.Online.SharePoint.TenantManagement.SortOrder @sortOrder)
+        {
+            return GetExternalUsersEx;
+        }
+        public Microsoft.Online.SharePoint.TenantManagement.GetExternalUsersResults GetExternalUsersEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantManagement.GetExternalUsersResults GetExternalUsersWithSortBy(System.Int32 @position, System.Int32 @pageSize, System.String @filter, System.String @sortPropertyName, Microsoft.Online.SharePoint.TenantManagement.SortOrder @sortOrder)
+        {
+            return GetExternalUsersWithSortByEx;
+        }
+        public Microsoft.Online.SharePoint.TenantManagement.GetExternalUsersResults GetExternalUsersWithSortByEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantManagement.GetExternalUsersResults GetExternalUsersForSite(System.String @siteUrl, System.Int32 @position, System.Int32 @pageSize, System.String @filter, Microsoft.Online.SharePoint.TenantManagement.SortOrder @sortOrder)
+        {
+            return GetExternalUsersForSiteEx;
+        }
+        public Microsoft.Online.SharePoint.TenantManagement.GetExternalUsersResults GetExternalUsersForSiteEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantManagement.RemoveExternalUsersResults RemoveExternalUsers(System.String[] @uniqueIds)
+        {
+            return RemoveExternalUsersEx;
+        }
+        public Microsoft.Online.SharePoint.TenantManagement.RemoveExternalUsersResults RemoveExternalUsersEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Guid> QueueImportProfileProperties(Microsoft.Online.SharePoint.TenantManagement.ImportProfilePropertiesUserIdType @idType, System.String @sourceDataIdProperty, System.Collections.Generic.IDictionary<System.String,System.String> @propertyMap, System.String @sourceUri)
+        {
+            return QueueImportProfilePropertiesEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Guid> QueueImportProfilePropertiesEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Boolean> DeleteImportProfilePropertiesJob(System.Guid @jobId)
+        {
+            return DeleteImportProfilePropertiesJobEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Boolean> DeleteImportProfilePropertiesJobEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantManagement.ImportProfilePropertiesJobStatusCollection GetImportProfilePropertyJobs()
+        {
+            return GetImportProfilePropertyJobsEx;
+        }
+        public Microsoft.Online.SharePoint.TenantManagement.ImportProfilePropertiesJobStatusCollection GetImportProfilePropertyJobsEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantManagement.ImportProfilePropertiesJobInfo GetImportProfilePropertyJob(System.Guid @jobId)
+        {
+            return GetImportProfilePropertyJobEx;
+        }
+        public Microsoft.Online.SharePoint.TenantManagement.ImportProfilePropertiesJobInfo GetImportProfilePropertyJobEx { get; set;}
+
+        public override void DisableSharingForNonOwnersOfSite(System.String @siteUrl)
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Boolean> IsSharingDisabledForNonOwnersOfSite(System.String @siteUrl)
+        {
+            return IsSharingDisabledForNonOwnersOfSiteEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Boolean> IsSharingDisabledForNonOwnersOfSiteEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantManagement.SPOUserSessionRevocationResult RevokeAllUserSessions(System.String @userName)
+        {
+            return RevokeAllUserSessionsEx;
+        }
+        public Microsoft.Online.SharePoint.TenantManagement.SPOUserSessionRevocationResult RevokeAllUserSessionsEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientObjectList<Microsoft.Online.SharePoint.TenantManagement.SPOUserSessionRevocationResult> RevokeAllUserSessionsByPuid(System.Collections.Generic.IList<System.String> @puidList)
+        {
+            return RevokeAllUserSessionsByPuidEx;
+        }
+        public Microsoft.SharePoint.Client.ClientObjectList<Microsoft.Online.SharePoint.TenantManagement.SPOUserSessionRevocationResult> RevokeAllUserSessionsByPuidEx { get; set;}
+
+        public override void CreateGroupForSite(System.String @siteUrl, System.String @displayName, System.String @alias, System.Boolean @isPublic, Microsoft.Online.SharePoint.TenantManagement.GroupCreationParams @optionalParams)
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Boolean> SetIdleSessionSignOutForUnmanagedDevices(System.Boolean @enabled, System.TimeSpan @warnAfter, System.TimeSpan @signOutAfter)
+        {
+            return SetIdleSessionSignOutForUnmanagedDevicesEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Boolean> SetIdleSessionSignOutForUnmanagedDevicesEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> GetIdleSessionSignOutForUnmanagedDevices()
+        {
+            return GetIdleSessionSignOutForUnmanagedDevicesEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> GetIdleSessionSignOutForUnmanagedDevicesEx { get; set;}
+
+        public override void AddPublicCdnOrigin(System.String @origin)
+        {
+        }
+
+        public override void RemovePublicCdnOrigin(System.String @originId)
+        {
+        }
+
+        public override System.Collections.Generic.IList<System.String> GetTenantCdnOrigins(Microsoft.Online.SharePoint.TenantAdministration.SPOTenantCdnType @cdnType)
+        {
+            return GetTenantCdnOriginsEx;
+        }
+        public System.Collections.Generic.IList<System.String> GetTenantCdnOriginsEx { get; set;}
+
+        public override void AddTenantCdnOrigin(Microsoft.Online.SharePoint.TenantAdministration.SPOTenantCdnType @cdnType, System.String @originUrl)
+        {
+        }
+
+        public override void RemoveTenantCdnOrigin(Microsoft.Online.SharePoint.TenantAdministration.SPOTenantCdnType @cdnType, System.String @originUrl)
+        {
+        }
+
+        public override void SetTenantCdnEnabled(Microsoft.Online.SharePoint.TenantAdministration.SPOTenantCdnType @cdnType, System.Boolean @isEnabled)
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Boolean> GetTenantCdnEnabled(Microsoft.Online.SharePoint.TenantAdministration.SPOTenantCdnType @cdnType)
+        {
+            return GetTenantCdnEnabledEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Boolean> GetTenantCdnEnabledEx { get; set;}
+
+        public override void SetTenantCdnPolicy(Microsoft.Online.SharePoint.TenantAdministration.SPOTenantCdnType @cdnType, Microsoft.Online.SharePoint.TenantAdministration.SPOTenantCdnPolicyType @policy, System.String @policyValue)
+        {
+        }
+
+        public override System.Collections.Generic.IList<System.String> GetTenantCdnPolicies(Microsoft.Online.SharePoint.TenantAdministration.SPOTenantCdnType @cdnType)
+        {
+            return GetTenantCdnPoliciesEx;
+        }
+        public System.Collections.Generic.IList<System.String> GetTenantCdnPoliciesEx { get; set;}
+
+        public override void CreateTenantCdnDefaultOrigins(Microsoft.Online.SharePoint.TenantAdministration.SPOTenantCdnType @cdnType)
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Boolean> AddTenantTheme(System.String @name, System.String @themeJson)
+        {
+            return AddTenantThemeEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Boolean> AddTenantThemeEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Boolean> UpdateTenantTheme(System.String @name, System.String @themeJson)
+        {
+            return UpdateTenantThemeEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Boolean> UpdateTenantThemeEx { get; set;}
+
+        public override void DeleteTenantTheme(System.String @name)
+        {
+        }
+
+        public override Microsoft.Online.SharePoint.TenantManagement.ThemeProperties GetTenantTheme(System.String @name)
+        {
+            return GetTenantThemeEx;
+        }
+        public Microsoft.Online.SharePoint.TenantManagement.ThemeProperties GetTenantThemeEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientObjectList<Microsoft.Online.SharePoint.TenantManagement.ThemeProperties> GetAllTenantThemes()
+        {
+            return GetAllTenantThemesEx;
+        }
+        public Microsoft.SharePoint.Client.ClientObjectList<Microsoft.Online.SharePoint.TenantManagement.ThemeProperties> GetAllTenantThemesEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Boolean> GetHideDefaultThemes()
+        {
+            return GetHideDefaultThemesEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Boolean> GetHideDefaultThemesEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Boolean> SetHideDefaultThemes(System.Boolean @hideDefaultThemes)
+        {
+            return SetHideDefaultThemesEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Boolean> SetHideDefaultThemesEx { get; set;}
 
     }
 }

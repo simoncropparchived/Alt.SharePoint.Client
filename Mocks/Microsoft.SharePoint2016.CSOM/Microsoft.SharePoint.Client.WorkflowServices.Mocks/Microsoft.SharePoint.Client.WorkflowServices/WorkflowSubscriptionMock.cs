@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client.WorkflowServices
 {
     public class WorkflowSubscriptionMock : WorkflowSubscription
@@ -34,6 +35,20 @@ namespace Microsoft.SharePoint.Client.WorkflowServices
 
         public override System.String StatusFieldName => StatusFieldNameEx;
         public System.String StatusFieldNameEx { get; set; }
+
+        public override void SetProperty(System.String @name, System.String @value)
+        {
+        }
+
+        public override void SetExternalVariable(System.String @name, System.String @value)
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> GetExternalVariable(System.String @name)
+        {
+            return GetExternalVariableEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> GetExternalVariableEx { get; set;}
 
     }
 }

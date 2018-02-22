@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.ProjectServer.Client
 {
     public class ProjectServerMock : ProjectServer
@@ -64,6 +65,16 @@ namespace Microsoft.ProjectServer.Client
 
         public override Microsoft.ProjectServer.Client.WorkflowDesigner WorkflowDesigner => WorkflowDesignerEx;
         public Microsoft.ProjectServer.Client.WorkflowDesigner WorkflowDesignerEx { get; set; }
+
+        public override void StopDelegation()
+        {
+        }
+
+        public override Microsoft.ProjectServer.Client.DeletedPublishedAssignmentCollection GetDeletedPublishedAssignments(System.DateTime @deletedDate)
+        {
+            return GetDeletedPublishedAssignmentsEx;
+        }
+        public Microsoft.ProjectServer.Client.DeletedPublishedAssignmentCollection GetDeletedPublishedAssignmentsEx { get; set;}
 
     }
 }

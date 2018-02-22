@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class TimeZoneMock : TimeZone
@@ -13,6 +14,18 @@ namespace Microsoft.SharePoint.Client
 
         public override Microsoft.SharePoint.Client.TimeZoneInformation Information => InformationEx;
         public Microsoft.SharePoint.Client.TimeZoneInformation InformationEx { get; set; }
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.DateTime> LocalTimeToUTC(System.DateTime @date)
+        {
+            return LocalTimeToUTCEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.DateTime> LocalTimeToUTCEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.DateTime> UTCToLocalTime(System.DateTime @date)
+        {
+            return UTCToLocalTimeEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.DateTime> UTCToLocalTimeEx { get; set;}
 
     }
 }

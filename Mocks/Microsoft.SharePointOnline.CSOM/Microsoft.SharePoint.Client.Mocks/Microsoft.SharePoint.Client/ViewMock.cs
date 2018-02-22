@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class ViewMock : View
@@ -133,6 +134,20 @@ namespace Microsoft.SharePoint.Client
 
         public override Microsoft.SharePoint.Client.Visualization VisualizationInfo => VisualizationInfoEx;
         public Microsoft.SharePoint.Client.Visualization VisualizationInfoEx { get; set; }
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> RenderAsHtml()
+        {
+            return RenderAsHtmlEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> RenderAsHtmlEx { get; set;}
+
+        public override void Update()
+        {
+        }
+
+        public override void DeleteObject()
+        {
+        }
 
     }
 }

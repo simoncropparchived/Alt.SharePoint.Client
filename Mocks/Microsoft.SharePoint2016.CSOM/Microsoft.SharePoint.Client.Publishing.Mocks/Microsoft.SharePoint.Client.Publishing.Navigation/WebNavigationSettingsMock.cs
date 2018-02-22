@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client.Publishing.Navigation
 {
     public class WebNavigationSettingsMock : WebNavigationSettings
@@ -16,6 +17,14 @@ namespace Microsoft.SharePoint.Client.Publishing.Navigation
 
         public override Microsoft.SharePoint.Client.Publishing.Navigation.StandardNavigationSettings GlobalNavigation => GlobalNavigationEx;
         public Microsoft.SharePoint.Client.Publishing.Navigation.StandardNavigationSettings GlobalNavigationEx { get; set; }
+
+        public override void Update(Microsoft.SharePoint.Client.Taxonomy.TaxonomySession @taxonomySession)
+        {
+        }
+
+        public override void ResetToDefaults()
+        {
+        }
 
     }
 }

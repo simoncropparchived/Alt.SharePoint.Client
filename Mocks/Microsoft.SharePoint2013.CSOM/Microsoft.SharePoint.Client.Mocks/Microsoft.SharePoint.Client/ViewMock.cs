@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class ViewMock : View
@@ -118,6 +119,20 @@ namespace Microsoft.SharePoint.Client
 
         public override Microsoft.SharePoint.Client.ViewFieldCollection ViewFields => ViewFieldsEx;
         public Microsoft.SharePoint.Client.ViewFieldCollection ViewFieldsEx { get; set; }
+
+        public override void DeleteObject()
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> RenderAsHtml()
+        {
+            return RenderAsHtmlEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> RenderAsHtmlEx { get; set;}
+
+        public override void Update()
+        {
+        }
 
     }
 }

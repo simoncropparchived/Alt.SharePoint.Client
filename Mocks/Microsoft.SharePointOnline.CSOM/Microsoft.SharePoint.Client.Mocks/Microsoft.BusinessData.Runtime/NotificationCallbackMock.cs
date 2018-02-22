@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.BusinessData.Runtime
 {
     public class NotificationCallbackMock : NotificationCallback

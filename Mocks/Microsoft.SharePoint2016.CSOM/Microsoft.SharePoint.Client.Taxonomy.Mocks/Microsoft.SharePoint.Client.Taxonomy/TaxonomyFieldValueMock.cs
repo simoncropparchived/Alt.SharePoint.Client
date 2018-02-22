@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client.Taxonomy
 {
     public class TaxonomyFieldValueMock : TaxonomyFieldValue
@@ -16,6 +17,10 @@ namespace Microsoft.SharePoint.Client.Taxonomy
 
         public override System.String TypeId => TypeIdEx;
         public System.String TypeIdEx { get; set; }
+
+        public override void WriteToXml(System.Xml.XmlWriter @writer, Microsoft.SharePoint.Client.SerializationContext @serializationContext)
+        {
+        }
 
     }
 }

@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client.Taxonomy
 {
     public class TaxonomyItemMock : TaxonomyItem
@@ -19,6 +20,10 @@ namespace Microsoft.SharePoint.Client.Taxonomy
 
         public override Microsoft.SharePoint.Client.Taxonomy.TermStore TermStore => TermStoreEx;
         public Microsoft.SharePoint.Client.Taxonomy.TermStore TermStoreEx { get; set; }
+
+        public override void DeleteObject()
+        {
+        }
 
     }
 }

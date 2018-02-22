@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client.Workflow
 {
     public class WorkflowAssociationMock : WorkflowAssociation
@@ -58,6 +59,14 @@ namespace Microsoft.SharePoint.Client.Workflow
 
         public override System.Guid WebId => WebIdEx;
         public System.Guid WebIdEx { get; set; }
+
+        public override void Update()
+        {
+        }
+
+        public override void DeleteObject()
+        {
+        }
 
     }
 }

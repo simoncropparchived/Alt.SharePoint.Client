@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class RoleDefinitionMock : RoleDefinition
@@ -25,6 +26,14 @@ namespace Microsoft.SharePoint.Client
 
         public override Microsoft.SharePoint.Client.RoleType RoleTypeKind => RoleTypeKindEx;
         public Microsoft.SharePoint.Client.RoleType RoleTypeKindEx { get; set; }
+
+        public override void Update()
+        {
+        }
+
+        public override void DeleteObject()
+        {
+        }
 
     }
 }

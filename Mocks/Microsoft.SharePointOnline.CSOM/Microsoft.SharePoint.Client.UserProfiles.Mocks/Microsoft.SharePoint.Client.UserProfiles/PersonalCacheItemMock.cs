@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client.UserProfiles
 {
     public class PersonalCacheItemMock : PersonalCacheItem
@@ -28,6 +29,10 @@ namespace Microsoft.SharePoint.Client.UserProfiles
 
         public override System.String TypeId => TypeIdEx;
         public System.String TypeIdEx { get; set; }
+
+        public override void WriteToXml(System.Xml.XmlWriter @writer, Microsoft.SharePoint.Client.SerializationContext @serializationContext)
+        {
+        }
 
     }
 }

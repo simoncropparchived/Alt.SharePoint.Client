@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.ProjectServer.Client
 {
     public class ResourcePlanMock : ResourcePlan
@@ -22,6 +23,30 @@ namespace Microsoft.ProjectServer.Client
 
         public override Microsoft.ProjectServer.Client.UtilizationType UtilizationType => UtilizationTypeEx;
         public Microsoft.ProjectServer.Client.UtilizationType UtilizationTypeEx { get; set; }
+
+        public override Microsoft.ProjectServer.Client.QueueJob Update()
+        {
+            return UpdateEx;
+        }
+        public Microsoft.ProjectServer.Client.QueueJob UpdateEx { get; set;}
+
+        public override Microsoft.ProjectServer.Client.QueueJob Publish()
+        {
+            return PublishEx;
+        }
+        public Microsoft.ProjectServer.Client.QueueJob PublishEx { get; set;}
+
+        public override Microsoft.ProjectServer.Client.QueueJob ForceCheckIn()
+        {
+            return ForceCheckInEx;
+        }
+        public Microsoft.ProjectServer.Client.QueueJob ForceCheckInEx { get; set;}
+
+        public override Microsoft.ProjectServer.Client.QueueJob DeleteObject()
+        {
+            return DeleteObjectEx;
+        }
+        public Microsoft.ProjectServer.Client.QueueJob DeleteObjectEx { get; set;}
 
     }
 }

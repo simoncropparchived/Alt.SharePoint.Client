@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class GroupMock : Group
@@ -40,6 +41,10 @@ namespace Microsoft.SharePoint.Client
 
         public override Microsoft.SharePoint.Client.UserCollection Users => UsersEx;
         public Microsoft.SharePoint.Client.UserCollection UsersEx { get; set; }
+
+        public override void Update()
+        {
+        }
 
     }
 }

@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.ApplicationPages.ClientPickerQuery
 {
     public class PickerEntityInformationRequestMock : PickerEntityInformationRequest
@@ -19,6 +20,10 @@ namespace Microsoft.SharePoint.ApplicationPages.ClientPickerQuery
 
         public override System.String TypeId => TypeIdEx;
         public System.String TypeIdEx { get; set; }
+
+        public override void WriteToXml(System.Xml.XmlWriter @writer, Microsoft.SharePoint.Client.SerializationContext @serializationContext)
+        {
+        }
 
     }
 }

@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class RegionalSettingsMock : RegionalSettings
@@ -100,6 +101,10 @@ namespace Microsoft.SharePoint.Client
 
         public override System.Int16 WorkDayStartHour => WorkDayStartHourEx;
         public System.Int16 WorkDayStartHourEx { get; set; }
+
+        public override void Update()
+        {
+        }
 
     }
 }

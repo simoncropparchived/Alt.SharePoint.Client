@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.ProjectServer.Client
 {
     public class EnterpriseResourceCostRateMock : EnterpriseResourceCostRate
@@ -19,6 +20,12 @@ namespace Microsoft.ProjectServer.Client
 
         public override System.Double StandardRate => StandardRateEx;
         public System.Double StandardRateEx { get; set; }
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Boolean> DeleteObject()
+        {
+            return DeleteObjectEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Boolean> DeleteObjectEx { get; set;}
 
     }
 }

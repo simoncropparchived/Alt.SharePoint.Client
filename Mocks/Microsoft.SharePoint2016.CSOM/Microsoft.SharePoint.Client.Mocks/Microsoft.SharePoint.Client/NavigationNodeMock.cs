@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class NavigationNodeMock : NavigationNode
@@ -25,6 +26,14 @@ namespace Microsoft.SharePoint.Client
 
         public override System.String Url => UrlEx;
         public System.String UrlEx { get; set; }
+
+        public override void Update()
+        {
+        }
+
+        public override void DeleteObject()
+        {
+        }
 
     }
 }

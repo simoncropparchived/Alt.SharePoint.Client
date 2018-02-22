@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class ExceptionHandlingScopeMock : ExceptionHandlingScope
@@ -28,6 +29,30 @@ namespace Microsoft.SharePoint.Client
 
         public override System.Object ServerErrorDetails => ServerErrorDetailsEx;
         public System.Object ServerErrorDetailsEx { get; set; }
+
+        public override System.IDisposable StartScope()
+        {
+            return StartScopeEx;
+        }
+        public System.IDisposable StartScopeEx { get; set;}
+
+        public override System.IDisposable StartTry()
+        {
+            return StartTryEx;
+        }
+        public System.IDisposable StartTryEx { get; set;}
+
+        public override System.IDisposable StartCatch()
+        {
+            return StartCatchEx;
+        }
+        public System.IDisposable StartCatchEx { get; set;}
+
+        public override System.IDisposable StartFinally()
+        {
+            return StartFinallyEx;
+        }
+        public System.IDisposable StartFinallyEx { get; set;}
 
     }
 }

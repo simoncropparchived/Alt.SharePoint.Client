@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class ObjectSharingInformationMock : ObjectSharingInformation
@@ -52,6 +53,12 @@ namespace Microsoft.SharePoint.Client
 
         public override System.UInt64 TotalFileCount => TotalFileCountEx;
         public System.UInt64 TotalFileCountEx { get; set; }
+
+        public override Microsoft.SharePoint.Client.ClientObjectList<Microsoft.SharePoint.Client.ObjectSharingInformationUser> GetSharedWithUsers()
+        {
+            return GetSharedWithUsersEx;
+        }
+        public Microsoft.SharePoint.Client.ClientObjectList<Microsoft.SharePoint.Client.ObjectSharingInformationUser> GetSharedWithUsersEx { get; set;}
 
     }
 }

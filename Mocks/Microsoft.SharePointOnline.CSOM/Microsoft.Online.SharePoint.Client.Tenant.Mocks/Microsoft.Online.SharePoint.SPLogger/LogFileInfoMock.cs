@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.Online.SharePoint.SPLogger
 {
     public class LogFileInfoMock : LogFileInfo

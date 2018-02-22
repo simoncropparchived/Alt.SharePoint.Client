@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client.CompliancePolicy
 {
     public class SPContainerIdMock : SPContainerId
@@ -28,6 +29,12 @@ namespace Microsoft.SharePoint.Client.CompliancePolicy
 
         public override System.Guid WebId => WebIdEx;
         public System.Guid WebIdEx { get; set; }
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> Serialize()
+        {
+            return SerializeEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> SerializeEx { get; set;}
 
     }
 }

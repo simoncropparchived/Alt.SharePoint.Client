@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.Online.SharePoint.TenantAdministration
 {
     public class HubSitePropertiesMock : HubSiteProperties
@@ -22,6 +23,10 @@ namespace Microsoft.Online.SharePoint.TenantAdministration
 
         public override System.String Title => TitleEx;
         public System.String TitleEx { get; set; }
+
+        public override void Update()
+        {
+        }
 
     }
 }

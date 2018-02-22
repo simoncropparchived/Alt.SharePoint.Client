@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class UserCustomActionMock : UserCustomAction
@@ -67,6 +68,14 @@ namespace Microsoft.SharePoint.Client
 
         public override System.String VersionOfUserCustomAction => VersionOfUserCustomActionEx;
         public System.String VersionOfUserCustomActionEx { get; set; }
+
+        public override void Update()
+        {
+        }
+
+        public override void DeleteObject()
+        {
+        }
 
     }
 }

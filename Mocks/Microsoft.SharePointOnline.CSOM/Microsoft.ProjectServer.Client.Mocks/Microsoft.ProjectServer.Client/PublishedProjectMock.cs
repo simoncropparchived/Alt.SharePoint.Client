@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.ProjectServer.Client
 {
     public class PublishedProjectMock : PublishedProject
@@ -131,6 +132,36 @@ namespace Microsoft.ProjectServer.Client
 
         public override System.Decimal WinprojVersion => WinprojVersionEx;
         public System.Decimal WinprojVersionEx { get; set; }
+
+        public override void RefreshLoad()
+        {
+        }
+
+        public override Microsoft.ProjectServer.Client.DraftProject CheckOut()
+        {
+            return CheckOutEx;
+        }
+        public Microsoft.ProjectServer.Client.DraftProject CheckOutEx { get; set;}
+
+        public override void SubmitToWorkflow()
+        {
+        }
+
+        public override Microsoft.ProjectServer.Client.QueueJob DeleteObject()
+        {
+            return DeleteObjectEx;
+        }
+        public Microsoft.ProjectServer.Client.QueueJob DeleteObjectEx { get; set;}
+
+        public override Microsoft.ProjectServer.Client.QueueJob UpdateVisibilityCustomFields()
+        {
+            return UpdateVisibilityCustomFieldsEx;
+        }
+        public Microsoft.ProjectServer.Client.QueueJob UpdateVisibilityCustomFieldsEx { get; set;}
+
+        public override void CreateProjectSite(System.String @siteName)
+        {
+        }
 
     }
 }

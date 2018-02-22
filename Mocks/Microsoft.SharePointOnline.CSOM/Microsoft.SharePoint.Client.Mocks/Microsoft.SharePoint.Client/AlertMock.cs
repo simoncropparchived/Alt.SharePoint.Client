@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class AlertMock : Alert
@@ -64,6 +65,10 @@ namespace Microsoft.SharePoint.Client
 
         public override System.Int32 UserId => UserIdEx;
         public System.Int32 UserIdEx { get; set; }
+
+        public override void UpdateAlert()
+        {
+        }
 
     }
 }

@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.ProjectServer.Client
 {
     public class QueueJobMock : QueueJob
@@ -25,6 +26,10 @@ namespace Microsoft.ProjectServer.Client
 
         public override System.TimeSpan WaitTime => WaitTimeEx;
         public System.TimeSpan WaitTimeEx { get; set; }
+
+        public override void Cancel()
+        {
+        }
 
     }
 }

@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class FieldLinkMock : FieldLink
@@ -25,6 +26,10 @@ namespace Microsoft.SharePoint.Client
 
         public override System.Boolean ShowInDisplayForm => ShowInDisplayFormEx;
         public System.Boolean ShowInDisplayFormEx { get; set; }
+
+        public override void DeleteObject()
+        {
+        }
 
     }
 }

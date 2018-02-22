@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class WebMock : Web
@@ -292,6 +293,326 @@ namespace Microsoft.SharePoint.Client
 
         public override Microsoft.SharePoint.Client.Workflow.WorkflowTemplateCollection WorkflowTemplates => WorkflowTemplatesEx;
         public Microsoft.SharePoint.Client.Workflow.WorkflowTemplateCollection WorkflowTemplatesEx { get; set; }
+
+        public override void CreateDefaultAssociatedGroups(System.String @userLogin, System.String @userLogin2, System.String @groupNameSeed)
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.User GetUserById(System.Int32 @userId)
+        {
+            return GetUserByIdEx;
+        }
+        public Microsoft.SharePoint.Client.User GetUserByIdEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Boolean> DoesUserHavePermissions(Microsoft.SharePoint.Client.BasePermissions @permissionMask)
+        {
+            return DoesUserHavePermissionsEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Boolean> DoesUserHavePermissionsEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<Microsoft.SharePoint.Client.BasePermissions> GetUserEffectivePermissions(System.String @userName)
+        {
+            return GetUserEffectivePermissionsEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<Microsoft.SharePoint.Client.BasePermissions> GetUserEffectivePermissionsEx { get; set;}
+
+        public override Microsoft.SharePoint.ClientSideComponent.StorageEntity GetStorageEntity(System.String @key)
+        {
+            return GetStorageEntityEx;
+        }
+        public Microsoft.SharePoint.ClientSideComponent.StorageEntity GetStorageEntityEx { get; set;}
+
+        public override void SetStorageEntity(System.String @key, System.String @value, System.String @description, System.String @comments)
+        {
+        }
+
+        public override void RemoveStorageEntity(System.String @key)
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.ClientResult<Microsoft.SharePoint.Client.SharingLinkData> GetSharingLinkData(System.String @linkUrl)
+        {
+            return GetSharingLinkDataEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<Microsoft.SharePoint.Client.SharingLinkData> GetSharingLinkDataEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> MapToIcon(System.String @fileName, System.String @progId, Microsoft.SharePoint.Client.Utilities.IconSize @size)
+        {
+            return MapToIconEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> MapToIconEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.PushNotificationSubscriber RegisterPushNotificationSubscriber(System.Guid @deviceAppInstanceId, System.String @serviceToken)
+        {
+            return RegisterPushNotificationSubscriberEx;
+        }
+        public Microsoft.SharePoint.Client.PushNotificationSubscriber RegisterPushNotificationSubscriberEx { get; set;}
+
+        public override void UnregisterPushNotificationSubscriber(System.Guid @deviceAppInstanceId)
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.PushNotificationSubscriberCollection GetPushNotificationSubscribersByArgs(System.String @customArgs)
+        {
+            return GetPushNotificationSubscribersByArgsEx;
+        }
+        public Microsoft.SharePoint.Client.PushNotificationSubscriberCollection GetPushNotificationSubscribersByArgsEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.PushNotificationSubscriberCollection GetPushNotificationSubscribersByUser(System.String @userName)
+        {
+            return GetPushNotificationSubscribersByUserEx;
+        }
+        public Microsoft.SharePoint.Client.PushNotificationSubscriberCollection GetPushNotificationSubscribersByUserEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Boolean> DoesPushNotificationSubscriberExist(System.Guid @deviceAppInstanceId)
+        {
+            return DoesPushNotificationSubscriberExistEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Boolean> DoesPushNotificationSubscriberExistEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.PushNotificationSubscriber GetPushNotificationSubscriber(System.Guid @deviceAppInstanceId)
+        {
+            return GetPushNotificationSubscriberEx;
+        }
+        public Microsoft.SharePoint.Client.PushNotificationSubscriber GetPushNotificationSubscriberEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.WebTemplateCollection GetAvailableWebTemplates(System.UInt32 @lcid, System.Boolean @doIncludeCrossLanguage)
+        {
+            return GetAvailableWebTemplatesEx;
+        }
+        public Microsoft.SharePoint.Client.WebTemplateCollection GetAvailableWebTemplatesEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.List GetCatalog(System.Int32 @typeCatalog)
+        {
+            return GetCatalogEx;
+        }
+        public Microsoft.SharePoint.Client.List GetCatalogEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.RecycleBinItemCollection GetRecycleBinItems(System.String @pagingInfo, System.Int32 @rowLimit, System.Boolean @isAscending, Microsoft.SharePoint.Client.RecycleBinOrderBy @orderBy, Microsoft.SharePoint.Client.RecycleBinItemState @itemState)
+        {
+            return GetRecycleBinItemsEx;
+        }
+        public Microsoft.SharePoint.Client.RecycleBinItemCollection GetRecycleBinItemsEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.RecycleBinItemCollection GetRecycleBinItemsByQueryInfo(Microsoft.SharePoint.Client.RecycleBinQueryInformation @queryInfo)
+        {
+            return GetRecycleBinItemsByQueryInfoEx;
+        }
+        public Microsoft.SharePoint.Client.RecycleBinItemCollection GetRecycleBinItemsByQueryInfoEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ChangeCollection GetChanges(Microsoft.SharePoint.Client.ChangeQuery @query)
+        {
+            return GetChangesEx;
+        }
+        public Microsoft.SharePoint.Client.ChangeCollection GetChangesEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.File GetFileByUrl(System.String @fileUrl)
+        {
+            return GetFileByUrlEx;
+        }
+        public Microsoft.SharePoint.Client.File GetFileByUrlEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.Folder GetFolderByServerRelativeUrl(System.String @serverRelativeUrl)
+        {
+            return GetFolderByServerRelativeUrlEx;
+        }
+        public Microsoft.SharePoint.Client.Folder GetFolderByServerRelativeUrlEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.Folder GetFolderByServerRelativePath(Microsoft.SharePoint.Client.ResourcePath @serverRelativePath)
+        {
+            return GetFolderByServerRelativePathEx;
+        }
+        public Microsoft.SharePoint.Client.Folder GetFolderByServerRelativePathEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.List GetList(System.String @strUrl)
+        {
+            return GetListEx;
+        }
+        public Microsoft.SharePoint.Client.List GetListEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.List GetListUsingPath(Microsoft.SharePoint.Client.ResourcePath @path)
+        {
+            return GetListUsingPathEx;
+        }
+        public Microsoft.SharePoint.Client.List GetListUsingPathEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ListItem GetListItem(System.String @strUrl)
+        {
+            return GetListItemEx;
+        }
+        public Microsoft.SharePoint.Client.ListItem GetListItemEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ListItem GetListItemUsingPath(Microsoft.SharePoint.Client.ResourcePath @path)
+        {
+            return GetListItemUsingPathEx;
+        }
+        public Microsoft.SharePoint.Client.ListItem GetListItemUsingPathEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ListItem GetListItemByResourceId(System.String @resourceId)
+        {
+            return GetListItemByResourceIdEx;
+        }
+        public Microsoft.SharePoint.Client.ListItem GetListItemByResourceIdEx { get; set;}
+
+        public override Microsoft.BusinessData.MetadataModel.Entity GetEntity(System.String @namespace, System.String @name)
+        {
+            return GetEntityEx;
+        }
+        public Microsoft.BusinessData.MetadataModel.Entity GetEntityEx { get; set;}
+
+        public override Microsoft.BusinessData.MetadataModel.AppBdcCatalog GetAppBdcCatalogForAppInstance(System.Guid @appInstanceId)
+        {
+            return GetAppBdcCatalogForAppInstanceEx;
+        }
+        public Microsoft.BusinessData.MetadataModel.AppBdcCatalog GetAppBdcCatalogForAppInstanceEx { get; set;}
+
+        public override Microsoft.BusinessData.MetadataModel.AppBdcCatalog GetAppBdcCatalog()
+        {
+            return GetAppBdcCatalogEx;
+        }
+        public Microsoft.BusinessData.MetadataModel.AppBdcCatalog GetAppBdcCatalogEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.WebCollection GetSubwebsForCurrentUser(Microsoft.SharePoint.Client.SubwebQuery @query)
+        {
+            return GetSubwebsForCurrentUserEx;
+        }
+        public Microsoft.SharePoint.Client.WebCollection GetSubwebsForCurrentUserEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.IO.Stream> GetOnePageContextAsStream()
+        {
+            return GetOnePageContextAsStreamEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.IO.Stream> GetOnePageContextAsStreamEx { get; set;}
+
+        public override void ApplyWebTemplate(System.String @webTemplate)
+        {
+        }
+
+        public override void DeleteObject()
+        {
+        }
+
+        public override void Update()
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.View GetViewFromUrl(System.String @listUrl)
+        {
+            return GetViewFromUrlEx;
+        }
+        public Microsoft.SharePoint.Client.View GetViewFromUrlEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.View GetViewFromPath(Microsoft.SharePoint.Client.ResourcePath @listPath)
+        {
+            return GetViewFromPathEx;
+        }
+        public Microsoft.SharePoint.Client.View GetViewFromPathEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.File GetFileByServerRelativeUrl(System.String @serverRelativeUrl)
+        {
+            return GetFileByServerRelativeUrlEx;
+        }
+        public Microsoft.SharePoint.Client.File GetFileByServerRelativeUrlEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.File GetFileByServerRelativePath(Microsoft.SharePoint.Client.ResourcePath @serverRelativePath)
+        {
+            return GetFileByServerRelativePathEx;
+        }
+        public Microsoft.SharePoint.Client.File GetFileByServerRelativePathEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.List DefaultDocumentLibrary()
+        {
+            return DefaultDocumentLibraryEx;
+        }
+        public Microsoft.SharePoint.Client.List DefaultDocumentLibraryEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.File GetFileById(System.Guid @uniqueId)
+        {
+            return GetFileByIdEx;
+        }
+        public Microsoft.SharePoint.Client.File GetFileByIdEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.Folder GetFolderById(System.Guid @uniqueId)
+        {
+            return GetFolderByIdEx;
+        }
+        public Microsoft.SharePoint.Client.Folder GetFolderByIdEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.File GetFileByLinkingUrl(System.String @linkingUrl)
+        {
+            return GetFileByLinkingUrlEx;
+        }
+        public Microsoft.SharePoint.Client.File GetFileByLinkingUrlEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.File GetFileByGuestUrl(System.String @guestUrl)
+        {
+            return GetFileByGuestUrlEx;
+        }
+        public Microsoft.SharePoint.Client.File GetFileByGuestUrlEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.File GetFileByGuestUrlEnsureAccess(System.String @guestUrl, System.Boolean @ensureAccess)
+        {
+            return GetFileByGuestUrlEnsureAccessEx;
+        }
+        public Microsoft.SharePoint.Client.File GetFileByGuestUrlEnsureAccessEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.File GetFileByWOPIFrameUrl(System.String @wopiFrameUrl)
+        {
+            return GetFileByWOPIFrameUrlEx;
+        }
+        public Microsoft.SharePoint.Client.File GetFileByWOPIFrameUrlEx { get; set;}
+
+        public override void IncrementSiteClientTag()
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.AppInstance GetAppInstanceById(System.Guid @appInstanceId)
+        {
+            return GetAppInstanceByIdEx;
+        }
+        public Microsoft.SharePoint.Client.AppInstance GetAppInstanceByIdEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientObjectList<Microsoft.SharePoint.Client.AppInstance> GetAppInstancesByProductId(System.Guid @productId)
+        {
+            return GetAppInstancesByProductIdEx;
+        }
+        public Microsoft.SharePoint.Client.ClientObjectList<Microsoft.SharePoint.Client.AppInstance> GetAppInstancesByProductIdEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.AppInstance LoadAndInstallAppInSpecifiedLocale(System.IO.Stream @appPackageStream, System.Int32 @installationLocaleLCID)
+        {
+            return LoadAndInstallAppInSpecifiedLocaleEx;
+        }
+        public Microsoft.SharePoint.Client.AppInstance LoadAndInstallAppInSpecifiedLocaleEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.AppInstance LoadApp(System.IO.Stream @appPackageStream, System.Int32 @installationLocaleLCID)
+        {
+            return LoadAppEx;
+        }
+        public Microsoft.SharePoint.Client.AppInstance LoadAppEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.AppInstance LoadAndInstallApp(System.IO.Stream @appPackageStream)
+        {
+            return LoadAndInstallAppEx;
+        }
+        public Microsoft.SharePoint.Client.AppInstance LoadAndInstallAppEx { get; set;}
+
+        public override void AddSupportedUILanguage(System.Int32 @lcid)
+        {
+        }
+
+        public override void RemoveSupportedUILanguage(System.Int32 @lcid)
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.User EnsureUser(System.String @logonName)
+        {
+            return EnsureUserEx;
+        }
+        public Microsoft.SharePoint.Client.User EnsureUserEx { get; set;}
+
+        public override void ApplyTheme(System.String @colorPaletteUrl, System.String @fontSchemeUrl, System.String @backgroundImageUrl, System.Boolean @shareGenerated)
+        {
+        }
 
     }
 }

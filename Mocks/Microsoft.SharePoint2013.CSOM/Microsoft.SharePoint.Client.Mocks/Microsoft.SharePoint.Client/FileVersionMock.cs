@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class FileVersionMock : FileVersion
@@ -28,6 +29,10 @@ namespace Microsoft.SharePoint.Client
 
         public override System.String VersionLabel => VersionLabelEx;
         public System.String VersionLabelEx { get; set; }
+
+        public override void DeleteObject()
+        {
+        }
 
     }
 }

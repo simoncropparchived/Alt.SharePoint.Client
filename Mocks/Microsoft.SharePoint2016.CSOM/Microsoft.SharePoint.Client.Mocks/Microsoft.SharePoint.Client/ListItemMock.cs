@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class ListItemMock : ListItem
@@ -56,6 +57,58 @@ namespace Microsoft.SharePoint.Client
 
         public override System.String Client_Title => Client_TitleEx;
         public System.String Client_TitleEx { get; set; }
+
+        public override void RefreshLoad()
+        {
+        }
+
+        public override void DeleteObject()
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Guid> Recycle()
+        {
+            return RecycleEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Guid> RecycleEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<Microsoft.SharePoint.Client.BasePermissions> GetUserEffectivePermissions(System.String @userName)
+        {
+            return GetUserEffectivePermissionsEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<Microsoft.SharePoint.Client.BasePermissions> GetUserEffectivePermissionsEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<Microsoft.SharePoint.Client.PolicyTipUserActionResult> OverridePolicyTip(Microsoft.SharePoint.Client.PolicyTipUserAction @userAction, System.String @justification)
+        {
+            return OverridePolicyTipEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<Microsoft.SharePoint.Client.PolicyTipUserActionResult> OverridePolicyTipEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> GetWOPIFrameUrl(Microsoft.SharePoint.Client.Utilities.SPWOPIFrameAction @action)
+        {
+            return GetWOPIFrameUrlEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> GetWOPIFrameUrlEx { get; set;}
+
+        public override void Update()
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.ChangeCollection GetChanges(Microsoft.SharePoint.Client.ChangeQuery @query)
+        {
+            return GetChangesEx;
+        }
+        public Microsoft.SharePoint.Client.ChangeCollection GetChangesEx { get; set;}
+
+        public override void ParseAndSetFieldValue(System.String @fieldName, System.String @value)
+        {
+        }
+
+        public override System.Collections.Generic.IList<Microsoft.SharePoint.Client.ListItemFormUpdateValue> ValidateUpdateListItem(System.Collections.Generic.IList<Microsoft.SharePoint.Client.ListItemFormUpdateValue> @formValues, System.Boolean @bNewDocumentUpdate, System.String @checkInComment)
+        {
+            return ValidateUpdateListItemEx;
+        }
+        public System.Collections.Generic.IList<Microsoft.SharePoint.Client.ListItemFormUpdateValue> ValidateUpdateListItemEx { get; set;}
 
     }
 }

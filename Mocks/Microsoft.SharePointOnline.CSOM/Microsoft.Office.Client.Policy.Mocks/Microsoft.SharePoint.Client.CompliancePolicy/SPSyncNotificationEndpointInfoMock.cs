@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client.CompliancePolicy
 {
     public class SPSyncNotificationEndpointInfoMock : SPSyncNotificationEndpointInfo

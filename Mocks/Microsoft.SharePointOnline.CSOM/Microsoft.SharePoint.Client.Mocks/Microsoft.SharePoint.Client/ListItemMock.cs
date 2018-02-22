@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class ListItemMock : ListItem
@@ -80,6 +81,106 @@ namespace Microsoft.SharePoint.Client
 
         public override Microsoft.SharePoint.Client.ListItemVersionCollection Versions => VersionsEx;
         public Microsoft.SharePoint.Client.ListItemVersionCollection VersionsEx { get; set; }
+
+        public override void RefreshLoad()
+        {
+        }
+
+        public override void Update()
+        {
+        }
+
+        public override void SystemUpdate()
+        {
+        }
+
+        public override void UpdateOverwriteVersion()
+        {
+        }
+
+        public override void MediaServiceUpdate(Microsoft.SharePoint.Client.MediaServiceUpdateParameters @parameters)
+        {
+        }
+
+        public override void DeleteObject()
+        {
+        }
+
+        public override System.Collections.Generic.IList<Microsoft.SharePoint.Client.Hashtag> GetHashtags()
+        {
+            return GetHashtagsEx;
+        }
+        public System.Collections.Generic.IList<Microsoft.SharePoint.Client.Hashtag> GetHashtagsEx { get; set;}
+
+        public override System.Collections.Generic.IList<Microsoft.SharePoint.Client.Hashtag> UpdateHashtags(System.Collections.Generic.IList<Microsoft.SharePoint.Client.Hashtag> @hashtagsToAdd, System.Collections.Generic.IList<Microsoft.SharePoint.Client.Hashtag> @hashtagsToRemove)
+        {
+            return UpdateHashtagsEx;
+        }
+        public System.Collections.Generic.IList<Microsoft.SharePoint.Client.Hashtag> UpdateHashtagsEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Guid> Recycle()
+        {
+            return RecycleEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Guid> RecycleEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<Microsoft.SharePoint.Client.BasePermissions> GetUserEffectivePermissions(System.String @userName)
+        {
+            return GetUserEffectivePermissionsEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<Microsoft.SharePoint.Client.BasePermissions> GetUserEffectivePermissionsEx { get; set;}
+
+        public override void SetCommentsDisabled(System.Boolean @value)
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.ClientResult<Microsoft.SharePoint.Client.PolicyTipUserActionResult> OverridePolicyTip(Microsoft.SharePoint.Client.PolicyTipUserAction @userAction, System.String @justification)
+        {
+            return OverridePolicyTipEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<Microsoft.SharePoint.Client.PolicyTipUserActionResult> OverridePolicyTipEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> GetWOPIFrameUrl(Microsoft.SharePoint.Client.Utilities.SPWOPIFrameAction @action)
+        {
+            return GetWOPIFrameUrlEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> GetWOPIFrameUrlEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ChangeCollection GetChanges(Microsoft.SharePoint.Client.ChangeQuery @query)
+        {
+            return GetChangesEx;
+        }
+        public Microsoft.SharePoint.Client.ChangeCollection GetChangesEx { get; set;}
+
+        public override void SetComplianceTagWithExplicitMetasUpdate(System.String @complianceTag, System.Int32 @complianceFlags, System.DateTime @complianceTagWrittenTime, System.String @userEmailAddress)
+        {
+        }
+
+        public override void SetComplianceTag(System.String @complianceTag, System.Boolean @isTagPolicyHold, System.Boolean @isTagPolicyRecord, System.Boolean @isEventBasedTag)
+        {
+        }
+
+        public override void SetComplianceTagWithHold(System.String @complianceTag)
+        {
+        }
+
+        public override void SetComplianceTagWithRecord(System.String @complianceTag)
+        {
+        }
+
+        public override void SetComplianceTagWithNoHold(System.String @complianceTag)
+        {
+        }
+
+        public override void ParseAndSetFieldValue(System.String @fieldName, System.String @value)
+        {
+        }
+
+        public override System.Collections.Generic.IList<Microsoft.SharePoint.Client.ListItemFormUpdateValue> ValidateUpdateListItem(System.Collections.Generic.IList<Microsoft.SharePoint.Client.ListItemFormUpdateValue> @formValues, System.Boolean @bNewDocumentUpdate, System.String @checkInComment)
+        {
+            return ValidateUpdateListItemEx;
+        }
+        public System.Collections.Generic.IList<Microsoft.SharePoint.Client.ListItemFormUpdateValue> ValidateUpdateListItemEx { get; set;}
 
     }
 }

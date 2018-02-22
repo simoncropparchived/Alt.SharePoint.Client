@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.Online.SharePoint.TenantAdministration.Internal
 {
     public class SPOWebAppServicePrincipalPermissionRequestMock : SPOWebAppServicePrincipalPermissionRequest
@@ -16,6 +17,16 @@ namespace Microsoft.Online.SharePoint.TenantAdministration.Internal
 
         public override System.String Scope => ScopeEx;
         public System.String ScopeEx { get; set; }
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.Internal.SPOWebAppServicePrincipalPermissionGrant Approve()
+        {
+            return ApproveEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.Internal.SPOWebAppServicePrincipalPermissionGrant ApproveEx { get; set;}
+
+        public override void Deny()
+        {
+        }
 
     }
 }

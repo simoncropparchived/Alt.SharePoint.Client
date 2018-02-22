@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class ExternalApplicationRequestTokenMock : ExternalApplicationRequestToken
@@ -31,6 +32,12 @@ namespace Microsoft.SharePoint.Client
 
         public override System.String TokenPrefix => TokenPrefixEx;
         public System.String TokenPrefixEx { get; set; }
+
+        public override System.String ToString()
+        {
+            return ToStringEx;
+        }
+        public System.String ToStringEx { get; set;}
 
     }
 }

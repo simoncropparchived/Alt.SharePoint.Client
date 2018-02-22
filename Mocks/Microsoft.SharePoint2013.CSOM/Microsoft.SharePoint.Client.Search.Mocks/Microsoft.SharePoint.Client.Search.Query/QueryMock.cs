@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client.Search.Query
 {
     public class QueryMock : Query
@@ -115,6 +116,12 @@ namespace Microsoft.SharePoint.Client.Search.Query
 
         public override System.Int32 UILanguage => UILanguageEx;
         public System.Int32 UILanguageEx { get; set; }
+
+        public override Microsoft.SharePoint.Client.ClientResult<Microsoft.SharePoint.Client.Search.Query.QuerySuggestionResults> GetQuerySuggestionsWithResults(System.Int32 @iNumberOfQuerySuggestions, System.Int32 @iNumberOfResultSuggestions, System.Boolean @fPreQuerySuggestions, System.Boolean @fHitHighlighting, System.Boolean @fCapitalizeFirstLetters, System.Boolean @fPrefixMatchAllTerms)
+        {
+            return GetQuerySuggestionsWithResultsEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<Microsoft.SharePoint.Client.Search.Query.QuerySuggestionResults> GetQuerySuggestionsWithResultsEx { get; set;}
 
     }
 }

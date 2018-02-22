@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class UserMock : User
@@ -28,6 +29,10 @@ namespace Microsoft.SharePoint.Client
 
         public override Microsoft.SharePoint.Client.UserIdInfo UserId => UserIdEx;
         public Microsoft.SharePoint.Client.UserIdInfo UserIdEx { get; set; }
+
+        public override void Update()
+        {
+        }
 
     }
 }

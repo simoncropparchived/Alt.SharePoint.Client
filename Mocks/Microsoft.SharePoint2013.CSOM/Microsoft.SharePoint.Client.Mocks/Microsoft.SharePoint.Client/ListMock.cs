@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class ListMock : List
@@ -193,6 +194,92 @@ namespace Microsoft.SharePoint.Client
 
         public override Microsoft.SharePoint.Client.Workflow.WorkflowAssociationCollection WorkflowAssociations => WorkflowAssociationsEx;
         public Microsoft.SharePoint.Client.Workflow.WorkflowAssociationCollection WorkflowAssociationsEx { get; set; }
+
+        public override Microsoft.SharePoint.Client.ListItem GetItemById(System.String @id)
+        {
+            return GetItemByIdStringEx;
+        }
+        public Microsoft.SharePoint.Client.ListItem GetItemByIdStringEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ListItem GetItemById(System.Int32 @id)
+        {
+            return GetItemByIdInt32Ex;
+        }
+        public Microsoft.SharePoint.Client.ListItem GetItemByIdInt32Ex { get; set;}
+
+        public override Microsoft.SharePoint.Client.ChangeCollection GetChanges(Microsoft.SharePoint.Client.ChangeQuery @query)
+        {
+            return GetChangesEx;
+        }
+        public Microsoft.SharePoint.Client.ChangeCollection GetChangesEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<Microsoft.SharePoint.Client.BasePermissions> GetUserEffectivePermissions(System.String @userName)
+        {
+            return GetUserEffectivePermissionsEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<Microsoft.SharePoint.Client.BasePermissions> GetUserEffectivePermissionsEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> SaveAsNewView(System.String @oldName, System.String @newName, System.Boolean @privateView, System.String @uri)
+        {
+            return SaveAsNewViewEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> SaveAsNewViewEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.RelatedFieldCollection GetRelatedFields()
+        {
+            return GetRelatedFieldsEx;
+        }
+        public Microsoft.SharePoint.Client.RelatedFieldCollection GetRelatedFieldsEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> RenderListFormData(System.Int32 @itemId, System.String @formId, System.Int32 @mode)
+        {
+            return RenderListFormDataEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> RenderListFormDataEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> RenderListData(System.String @viewXml)
+        {
+            return RenderListDataEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> RenderListDataEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Int32> ReserveListItemId()
+        {
+            return ReserveListItemIdEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Int32> ReserveListItemIdEx { get; set;}
+
+        public override void Update()
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.View GetView(System.Guid @viewGuid)
+        {
+            return GetViewEx;
+        }
+        public Microsoft.SharePoint.Client.View GetViewEx { get; set;}
+
+        public override void DeleteObject()
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Guid> Recycle()
+        {
+            return RecycleEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Guid> RecycleEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ListItemCollection GetItems(Microsoft.SharePoint.Client.CamlQuery @query)
+        {
+            return GetItemsEx;
+        }
+        public Microsoft.SharePoint.Client.ListItemCollection GetItemsEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ListItem AddItem(Microsoft.SharePoint.Client.ListItemCreationInformation @parameters)
+        {
+            return AddItemEx;
+        }
+        public Microsoft.SharePoint.Client.ListItem AddItemEx { get; set;}
 
     }
 }

@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class ListTemplateMock : ListTemplate
@@ -40,6 +41,12 @@ namespace Microsoft.SharePoint.Client
 
         public override System.Boolean Unique => UniqueEx;
         public System.Boolean UniqueEx { get; set; }
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.IO.Stream> GetGlobalSchemaXml()
+        {
+            return GetGlobalSchemaXmlEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.IO.Stream> GetGlobalSchemaXmlEx { get; set;}
 
     }
 }

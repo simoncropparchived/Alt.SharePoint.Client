@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client.Search.ContentPush
 {
     public class PushTenantServiceInfoMock : PushTenantServiceInfo

@@ -1,4 +1,5 @@
 
+// ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
     public class EventReceiverDefinitionMock : EventReceiverDefinition
@@ -28,6 +29,14 @@ namespace Microsoft.SharePoint.Client
 
         public override System.String ReceiverUrl => ReceiverUrlEx;
         public System.String ReceiverUrlEx { get; set; }
+
+        public override void Update()
+        {
+        }
+
+        public override void DeleteObject()
+        {
+        }
 
     }
 }
