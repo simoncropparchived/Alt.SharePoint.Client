@@ -276,6 +276,12 @@ namespace Microsoft.SharePoint.Client
         }
         public Microsoft.SharePoint.Client.ListItem GetItemByIdInt32Ex { get; set;}
 
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> GetWebDavUrl(System.String @sourceUrl)
+        {
+            return GetWebDavUrlEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> GetWebDavUrlEx { get; set;}
+
         public override Microsoft.SharePoint.Client.ListBloomFilter GetBloomFilter(System.Int32 @startItemId)
         {
             return GetBloomFilterEx;
@@ -402,12 +408,6 @@ namespace Microsoft.SharePoint.Client
         }
         public Microsoft.SharePoint.Client.ClientResult<System.String> GetSpecialFolderUrlEx { get; set;}
 
-        public override Microsoft.SharePoint.Client.ClientResult<System.String> GetWebDavUrl(System.String @sourceUrl)
-        {
-            return GetWebDavUrlEx;
-        }
-        public Microsoft.SharePoint.Client.ClientResult<System.String> GetWebDavUrlEx { get; set;}
-
         public override void SaveAsTemplate(System.String @strFileName, System.String @strName, System.String @strDescription, System.Boolean @bSaveData)
         {
         }
@@ -449,6 +449,12 @@ namespace Microsoft.SharePoint.Client
             return GetUserEffectivePermissionsEx;
         }
         public Microsoft.SharePoint.Client.ClientResult<Microsoft.SharePoint.Client.BasePermissions> GetUserEffectivePermissionsEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> RenderExtendedListFormData(System.Int32 @itemId, System.String @formId, System.Int32 @mode, Microsoft.SharePoint.Client.RenderListFormDataOptions @options)
+        {
+            return RenderExtendedListFormDataEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> RenderExtendedListFormDataEx { get; set;}
 
         public override Microsoft.SharePoint.Client.ClientResult<System.String> RenderListFormData(System.Int32 @itemId, System.String @formId, System.Int32 @mode)
         {
@@ -501,12 +507,6 @@ namespace Microsoft.SharePoint.Client
             return GetRelatedFieldsEx;
         }
         public Microsoft.SharePoint.Client.RelatedFieldCollection GetRelatedFieldsEx { get; set;}
-
-        public override Microsoft.SharePoint.Client.ClientResult<System.String> RenderExtendedListFormData(System.Int32 @itemId, System.String @formId, System.Int32 @mode, Microsoft.SharePoint.Client.RenderListFormDataOptions @options)
-        {
-            return RenderExtendedListFormDataEx;
-        }
-        public Microsoft.SharePoint.Client.ClientResult<System.String> RenderExtendedListFormDataEx { get; set;}
 
         public override Microsoft.SharePoint.Client.ListItem AddItem(Microsoft.SharePoint.Client.ListItemCreationInformation @parameters)
         {

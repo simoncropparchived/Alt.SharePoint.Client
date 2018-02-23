@@ -18,6 +18,9 @@ namespace Microsoft.Online.SharePoint.TenantManagement
         public override System.Boolean AllowLimitedAccessOnUnmanagedDevices => AllowLimitedAccessOnUnmanagedDevicesEx;
         public System.Boolean AllowLimitedAccessOnUnmanagedDevicesEx { get; set; }
 
+        public override System.Boolean ApplyAppEnforcedRestrictionsToAdHocRecipients => ApplyAppEnforcedRestrictionsToAdHocRecipientsEx;
+        public System.Boolean ApplyAppEnforcedRestrictionsToAdHocRecipientsEx { get; set; }
+
         public override System.Boolean BccExternalSharingInvitations => BccExternalSharingInvitationsEx;
         public System.Boolean BccExternalSharingInvitationsEx { get; set; }
 
@@ -185,6 +188,9 @@ namespace Microsoft.Online.SharePoint.TenantManagement
 
         public override System.String SignInAccelerationDomain => SignInAccelerationDomainEx;
         public System.String SignInAccelerationDomainEx { get; set; }
+
+        public override System.Boolean SocialBarOnSitePagesDisabled => SocialBarOnSitePagesDisabledEx;
+        public System.Boolean SocialBarOnSitePagesDisabledEx { get; set; }
 
         public override System.String StartASiteFormUrl => StartASiteFormUrlEx;
         public System.String StartASiteFormUrlEx { get; set; }

@@ -141,6 +141,9 @@ namespace Microsoft.SharePoint.Client
         public override System.Boolean ShowUrlStructure => ShowUrlStructureEx;
         public System.Boolean ShowUrlStructureEx { get; set; }
 
+        public override System.Boolean SocialBarOnSitePagesDisabled => SocialBarOnSitePagesDisabledEx;
+        public System.Boolean SocialBarOnSitePagesDisabledEx { get; set; }
+
         public override System.String StatusBarLink => StatusBarLinkEx;
         public System.String StatusBarLinkEx { get; set; }
 
@@ -179,6 +182,18 @@ namespace Microsoft.SharePoint.Client
 
         public override Microsoft.SharePoint.Client.UserCustomActionCollection UserCustomActions => UserCustomActionsEx;
         public Microsoft.SharePoint.Client.UserCustomActionCollection UserCustomActionsEx { get; set; }
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Guid> CreateMigrationJobEncrypted(System.Guid @gWebId, System.String @azureContainerSourceUri, System.String @azureContainerManifestUri, System.String @azureQueueReportUri, Microsoft.SharePoint.Client.EncryptionOption @options)
+        {
+            return CreateMigrationJobEncryptedEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Guid> CreateMigrationJobEncryptedEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Guid> CreateMigrationIngestionJob(System.Guid @gWebId, System.String @azureContainerSourceUri, System.String @azureContainerManifestUri, System.String @azureQueueReportUri, Microsoft.SharePoint.Client.IngestionTaskKey @ingestionTaskKey)
+        {
+            return CreateMigrationIngestionJobEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Guid> CreateMigrationIngestionJobEx { get; set;}
 
         public override Microsoft.SharePoint.Client.ClientResult<Microsoft.SharePoint.Client.CopyMigrationInfo> CreateCopyJob(System.String[] @exportObjectUris, System.String @destinationUri, Microsoft.SharePoint.Client.CopyMigrationOptions @options)
         {
@@ -293,18 +308,6 @@ namespace Microsoft.SharePoint.Client
             return CreateMigrationJobEx;
         }
         public Microsoft.SharePoint.Client.ClientResult<System.Guid> CreateMigrationJobEx { get; set;}
-
-        public override Microsoft.SharePoint.Client.ClientResult<System.Guid> CreateMigrationJobEncrypted(System.Guid @gWebId, System.String @azureContainerSourceUri, System.String @azureContainerManifestUri, System.String @azureQueueReportUri, Microsoft.SharePoint.Client.EncryptionOption @options)
-        {
-            return CreateMigrationJobEncryptedEx;
-        }
-        public Microsoft.SharePoint.Client.ClientResult<System.Guid> CreateMigrationJobEncryptedEx { get; set;}
-
-        public override Microsoft.SharePoint.Client.ClientResult<System.Guid> CreateMigrationIngestionJob(System.Guid @gWebId, System.String @azureContainerSourceUri, System.String @azureContainerManifestUri, System.String @azureQueueReportUri, Microsoft.SharePoint.Client.IngestionTaskKey @ingestionTaskKey)
-        {
-            return CreateMigrationIngestionJobEx;
-        }
-        public Microsoft.SharePoint.Client.ClientResult<System.Guid> CreateMigrationIngestionJobEx { get; set;}
 
         public override Microsoft.SharePoint.Client.RecycleBinItemCollection GetRecycleBinItems(System.String @pagingInfo, System.Int32 @rowLimit, System.Boolean @isAscending, Microsoft.SharePoint.Client.RecycleBinOrderBy @orderBy, Microsoft.SharePoint.Client.RecycleBinItemState @itemState)
         {

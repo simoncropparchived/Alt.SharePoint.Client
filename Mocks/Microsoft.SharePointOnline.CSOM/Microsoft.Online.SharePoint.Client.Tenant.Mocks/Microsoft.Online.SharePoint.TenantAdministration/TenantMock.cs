@@ -18,6 +18,9 @@ namespace Microsoft.Online.SharePoint.TenantAdministration
         public override System.Boolean AllowLimitedAccessOnUnmanagedDevices => AllowLimitedAccessOnUnmanagedDevicesEx;
         public System.Boolean AllowLimitedAccessOnUnmanagedDevicesEx { get; set; }
 
+        public override System.Boolean ApplyAppEnforcedRestrictionsToAdHocRecipients => ApplyAppEnforcedRestrictionsToAdHocRecipientsEx;
+        public System.Boolean ApplyAppEnforcedRestrictionsToAdHocRecipientsEx { get; set; }
+
         public override System.Boolean BccExternalSharingInvitations => BccExternalSharingInvitationsEx;
         public System.Boolean BccExternalSharingInvitationsEx { get; set; }
 
@@ -225,6 +228,9 @@ namespace Microsoft.Online.SharePoint.TenantAdministration
         public override System.String SignInAccelerationDomain => SignInAccelerationDomainEx;
         public System.String SignInAccelerationDomainEx { get; set; }
 
+        public override System.Boolean SocialBarOnSitePagesDisabled => SocialBarOnSitePagesDisabledEx;
+        public System.Boolean SocialBarOnSitePagesDisabledEx { get; set; }
+
         public override Microsoft.Online.SharePoint.TenantManagement.SpecialCharactersState SpecialCharactersStateInFileFolderNames => SpecialCharactersStateInFileFolderNamesEx;
         public Microsoft.Online.SharePoint.TenantManagement.SpecialCharactersState SpecialCharactersStateInFileFolderNamesEx { get; set; }
 
@@ -255,6 +261,20 @@ namespace Microsoft.Online.SharePoint.TenantAdministration
         }
 
         public override void CreateGroupForSite(System.String @siteUrl, System.String @displayName, System.String @alias, System.Boolean @isPublic, Microsoft.Online.SharePoint.TenantManagement.GroupCreationParams @optionalParams)
+        {
+        }
+
+        public override Microsoft.SharePoint.Client.ClientObjectList<Microsoft.Online.SharePoint.TenantAdministration.SPOTenantInstance> GetTenantInstances()
+        {
+            return GetTenantInstancesEx;
+        }
+        public Microsoft.SharePoint.Client.ClientObjectList<Microsoft.Online.SharePoint.TenantAdministration.SPOTenantInstance> GetTenantInstancesEx { get; set;}
+
+        public override void RemoveTenantCdnOrigin(Microsoft.Online.SharePoint.TenantAdministration.SPOTenantCdnType @cdnType, System.String @originUrl)
+        {
+        }
+
+        public override void SetTenantCdnEnabled(Microsoft.Online.SharePoint.TenantAdministration.SPOTenantCdnType @cdnType, System.Boolean @isEnabled)
         {
         }
 
@@ -326,6 +346,12 @@ namespace Microsoft.Online.SharePoint.TenantAdministration
         {
         }
 
+        public override Microsoft.SharePoint.Client.ClientObjectList<Microsoft.Online.SharePoint.TenantAdministration.TenantSiteScriptActionResult> ApplySiteDesign(System.String @webUrl, System.Guid @siteDesignId)
+        {
+            return ApplySiteDesignEx;
+        }
+        public Microsoft.SharePoint.Client.ClientObjectList<Microsoft.Online.SharePoint.TenantAdministration.TenantSiteScriptActionResult> ApplySiteDesignEx { get; set;}
+
         public override Microsoft.Online.SharePoint.TenantAdministration.HubSiteProperties GetHubSitePropertiesByUrl(System.String @siteUrl)
         {
             return GetHubSitePropertiesByUrlEx;
@@ -362,13 +388,17 @@ namespace Microsoft.Online.SharePoint.TenantAdministration
         {
         }
 
-        public override void GrantHubSiteRights(System.String @hubSiteUrl, System.String[] @principals, Microsoft.Online.SharePoint.TenantAdministration.SPOHubSiteUserRights @grantedRights)
+        public override Microsoft.Online.SharePoint.TenantAdministration.HubSiteProperties GrantHubSiteRights(System.String @hubSiteUrl, System.String[] @principals, Microsoft.Online.SharePoint.TenantAdministration.SPOHubSiteUserRights @grantedRights)
         {
+            return GrantHubSiteRightsEx;
         }
+        public Microsoft.Online.SharePoint.TenantAdministration.HubSiteProperties GrantHubSiteRightsEx { get; set;}
 
-        public override void RevokeHubSiteRights(System.String @hubSiteUrl, System.String[] @principals)
+        public override Microsoft.Online.SharePoint.TenantAdministration.HubSiteProperties RevokeHubSiteRights(System.String @hubSiteUrl, System.String[] @principals)
         {
+            return RevokeHubSiteRightsEx;
         }
+        public Microsoft.Online.SharePoint.TenantAdministration.HubSiteProperties RevokeHubSiteRightsEx { get; set;}
 
         public override Microsoft.SharePoint.Client.ClientResult<System.Boolean> AddTenantTheme(System.String @name, System.String @themeJson)
         {
@@ -397,6 +427,12 @@ namespace Microsoft.Online.SharePoint.TenantAdministration
             return GetAllTenantThemesEx;
         }
         public Microsoft.SharePoint.Client.ClientObjectList<Microsoft.Online.SharePoint.TenantManagement.ThemeProperties> GetAllTenantThemesEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.String> SetWebTheme(System.String @themeName, System.String @webUrl)
+        {
+            return SetWebThemeEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.String> SetWebThemeEx { get; set;}
 
         public override Microsoft.SharePoint.Client.Site GetSiteByUrl(System.String @url)
         {
@@ -566,17 +602,29 @@ namespace Microsoft.Online.SharePoint.TenantAdministration
         }
         public System.Collections.Generic.IList<System.String> DecodeClaimsEx { get; set;}
 
-        public override Microsoft.SharePoint.Client.User SetSiteAdmin(System.String @url, System.String @loginName, System.Boolean @isSiteAdmin)
+        public override Microsoft.SharePoint.Client.User SetSiteAdmin(System.String @siteUrl, System.String @loginName, System.Boolean @isSiteAdmin)
         {
             return SetSiteAdminEx;
         }
         public Microsoft.SharePoint.Client.User SetSiteAdminEx { get; set;}
 
-        public override Microsoft.SharePoint.Client.User UpdateUserTypeFromAzureAD(System.String @url, System.String @loginName)
+        public override Microsoft.SharePoint.Client.User UpdateUserTypeFromAzureAD(System.String @siteUrl, System.String @loginName)
         {
             return UpdateUserTypeFromAzureADEx;
         }
         public Microsoft.SharePoint.Client.User UpdateUserTypeFromAzureADEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientObjectList<Microsoft.SharePoint.Client.User> UpdateUserTypesFromAzureADForSite(System.String @siteUrl)
+        {
+            return UpdateUserTypesFromAzureADForSiteEx;
+        }
+        public Microsoft.SharePoint.Client.ClientObjectList<Microsoft.SharePoint.Client.User> UpdateUserTypesFromAzureADForSiteEx { get; set;}
+
+        public override Microsoft.Online.SharePoint.TenantAdministration.SPOSitePropertiesEnumerable UpdateUserTypeFromAzureADForAllSites(System.String @loginName)
+        {
+            return UpdateUserTypeFromAzureADForAllSitesEx;
+        }
+        public Microsoft.Online.SharePoint.TenantAdministration.SPOSitePropertiesEnumerable UpdateUserTypeFromAzureADForAllSitesEx { get; set;}
 
         public override Microsoft.SharePoint.Client.ClientObjectList<Microsoft.Online.SharePoint.TenantAdministration.AppErrorEntry> GetAppErrors(System.Guid @productId, System.DateTime @timeStart, System.DateTime @timeEnd)
         {
@@ -623,14 +671,6 @@ namespace Microsoft.Online.SharePoint.TenantAdministration
         public System.Collections.Generic.IList<System.String> GetTenantCdnOriginsEx { get; set;}
 
         public override void AddTenantCdnOrigin(Microsoft.Online.SharePoint.TenantAdministration.SPOTenantCdnType @cdnType, System.String @originUrl)
-        {
-        }
-
-        public override void RemoveTenantCdnOrigin(Microsoft.Online.SharePoint.TenantAdministration.SPOTenantCdnType @cdnType, System.String @originUrl)
-        {
-        }
-
-        public override void SetTenantCdnEnabled(Microsoft.Online.SharePoint.TenantAdministration.SPOTenantCdnType @cdnType, System.Boolean @isEnabled)
         {
         }
 

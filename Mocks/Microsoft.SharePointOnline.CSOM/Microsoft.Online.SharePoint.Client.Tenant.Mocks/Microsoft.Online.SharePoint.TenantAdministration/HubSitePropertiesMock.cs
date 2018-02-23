@@ -15,6 +15,9 @@ namespace Microsoft.Online.SharePoint.TenantAdministration
         public override System.String LogoUrl => LogoUrlEx;
         public System.String LogoUrlEx { get; set; }
 
+        public override System.Collections.Generic.IList<Microsoft.Online.SharePoint.TenantAdministration.HubSitePermission> Permissions => PermissionsEx;
+        public System.Collections.Generic.IList<Microsoft.Online.SharePoint.TenantAdministration.HubSitePermission> PermissionsEx { get; set; }
+
         public override System.Guid SiteId => SiteIdEx;
         public System.Guid SiteIdEx { get; set; }
 

@@ -6,6 +6,9 @@ namespace Microsoft.Office.Server.Search.REST
     {
 
 
+        public override System.String PortalUrl => PortalUrlEx;
+        public System.String PortalUrlEx { get; set; }
+
         public override System.Guid SpSiteId => SpSiteIdEx;
         public System.Guid SpSiteIdEx { get; set; }
 

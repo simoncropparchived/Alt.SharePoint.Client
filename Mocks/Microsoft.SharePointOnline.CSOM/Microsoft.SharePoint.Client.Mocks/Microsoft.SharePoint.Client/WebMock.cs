@@ -298,6 +298,24 @@ namespace Microsoft.SharePoint.Client
         {
         }
 
+        public override Microsoft.SharePoint.Client.PushNotificationSubscriberCollection GetPushNotificationSubscribersByUser(System.String @userName)
+        {
+            return GetPushNotificationSubscribersByUserEx;
+        }
+        public Microsoft.SharePoint.Client.PushNotificationSubscriberCollection GetPushNotificationSubscribersByUserEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.ClientResult<System.Boolean> DoesPushNotificationSubscriberExist(System.Guid @deviceAppInstanceId)
+        {
+            return DoesPushNotificationSubscriberExistEx;
+        }
+        public Microsoft.SharePoint.Client.ClientResult<System.Boolean> DoesPushNotificationSubscriberExistEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.PushNotificationSubscriber GetPushNotificationSubscriber(System.Guid @deviceAppInstanceId)
+        {
+            return GetPushNotificationSubscriberEx;
+        }
+        public Microsoft.SharePoint.Client.PushNotificationSubscriber GetPushNotificationSubscriberEx { get; set;}
+
         public override Microsoft.SharePoint.Client.User GetUserById(System.Int32 @userId)
         {
             return GetUserByIdEx;
@@ -358,24 +376,6 @@ namespace Microsoft.SharePoint.Client
         }
         public Microsoft.SharePoint.Client.PushNotificationSubscriberCollection GetPushNotificationSubscribersByArgsEx { get; set;}
 
-        public override Microsoft.SharePoint.Client.PushNotificationSubscriberCollection GetPushNotificationSubscribersByUser(System.String @userName)
-        {
-            return GetPushNotificationSubscribersByUserEx;
-        }
-        public Microsoft.SharePoint.Client.PushNotificationSubscriberCollection GetPushNotificationSubscribersByUserEx { get; set;}
-
-        public override Microsoft.SharePoint.Client.ClientResult<System.Boolean> DoesPushNotificationSubscriberExist(System.Guid @deviceAppInstanceId)
-        {
-            return DoesPushNotificationSubscriberExistEx;
-        }
-        public Microsoft.SharePoint.Client.ClientResult<System.Boolean> DoesPushNotificationSubscriberExistEx { get; set;}
-
-        public override Microsoft.SharePoint.Client.PushNotificationSubscriber GetPushNotificationSubscriber(System.Guid @deviceAppInstanceId)
-        {
-            return GetPushNotificationSubscriberEx;
-        }
-        public Microsoft.SharePoint.Client.PushNotificationSubscriber GetPushNotificationSubscriberEx { get; set;}
-
         public override Microsoft.SharePoint.Client.WebTemplateCollection GetAvailableWebTemplates(System.UInt32 @lcid, System.Boolean @doIncludeCrossLanguage)
         {
             return GetAvailableWebTemplatesEx;
@@ -405,6 +405,42 @@ namespace Microsoft.SharePoint.Client
             return GetChangesEx;
         }
         public Microsoft.SharePoint.Client.ChangeCollection GetChangesEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.File GetFileById(System.Guid @uniqueId)
+        {
+            return GetFileByIdEx;
+        }
+        public Microsoft.SharePoint.Client.File GetFileByIdEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.Folder GetFolderById(System.Guid @uniqueId)
+        {
+            return GetFolderByIdEx;
+        }
+        public Microsoft.SharePoint.Client.Folder GetFolderByIdEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.File GetFileByLinkingUrl(System.String @linkingUrl)
+        {
+            return GetFileByLinkingUrlEx;
+        }
+        public Microsoft.SharePoint.Client.File GetFileByLinkingUrlEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.File GetFileByGuestUrl(System.String @guestUrl)
+        {
+            return GetFileByGuestUrlEx;
+        }
+        public Microsoft.SharePoint.Client.File GetFileByGuestUrlEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.File GetFileByGuestUrlEnsureAccess(System.String @guestUrl, System.Boolean @ensureAccess)
+        {
+            return GetFileByGuestUrlEnsureAccessEx;
+        }
+        public Microsoft.SharePoint.Client.File GetFileByGuestUrlEnsureAccessEx { get; set;}
+
+        public override Microsoft.SharePoint.Client.File GetFileByWOPIFrameUrl(System.String @wopiFrameUrl)
+        {
+            return GetFileByWOPIFrameUrlEx;
+        }
+        public Microsoft.SharePoint.Client.File GetFileByWOPIFrameUrlEx { get; set;}
 
         public override Microsoft.SharePoint.Client.File GetFileByUrl(System.String @fileUrl)
         {
@@ -525,42 +561,6 @@ namespace Microsoft.SharePoint.Client
             return DefaultDocumentLibraryEx;
         }
         public Microsoft.SharePoint.Client.List DefaultDocumentLibraryEx { get; set;}
-
-        public override Microsoft.SharePoint.Client.File GetFileById(System.Guid @uniqueId)
-        {
-            return GetFileByIdEx;
-        }
-        public Microsoft.SharePoint.Client.File GetFileByIdEx { get; set;}
-
-        public override Microsoft.SharePoint.Client.Folder GetFolderById(System.Guid @uniqueId)
-        {
-            return GetFolderByIdEx;
-        }
-        public Microsoft.SharePoint.Client.Folder GetFolderByIdEx { get; set;}
-
-        public override Microsoft.SharePoint.Client.File GetFileByLinkingUrl(System.String @linkingUrl)
-        {
-            return GetFileByLinkingUrlEx;
-        }
-        public Microsoft.SharePoint.Client.File GetFileByLinkingUrlEx { get; set;}
-
-        public override Microsoft.SharePoint.Client.File GetFileByGuestUrl(System.String @guestUrl)
-        {
-            return GetFileByGuestUrlEx;
-        }
-        public Microsoft.SharePoint.Client.File GetFileByGuestUrlEx { get; set;}
-
-        public override Microsoft.SharePoint.Client.File GetFileByGuestUrlEnsureAccess(System.String @guestUrl, System.Boolean @ensureAccess)
-        {
-            return GetFileByGuestUrlEnsureAccessEx;
-        }
-        public Microsoft.SharePoint.Client.File GetFileByGuestUrlEnsureAccessEx { get; set;}
-
-        public override Microsoft.SharePoint.Client.File GetFileByWOPIFrameUrl(System.String @wopiFrameUrl)
-        {
-            return GetFileByWOPIFrameUrlEx;
-        }
-        public Microsoft.SharePoint.Client.File GetFileByWOPIFrameUrlEx { get; set;}
 
         public override void IncrementSiteClientTag()
         {

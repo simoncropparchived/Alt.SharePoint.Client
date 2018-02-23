@@ -27,6 +27,9 @@ namespace Microsoft.SharePoint.Client.CompliancePolicy
         public override System.Boolean ContainsSiteLabel => ContainsSiteLabelEx;
         public System.Boolean ContainsSiteLabelEx { get; set; }
 
+        public override System.String DisplayName => DisplayNameEx;
+        public System.String DisplayNameEx { get; set; }
+
         public override System.Boolean HasRetentionAction => HasRetentionActionEx;
         public System.Boolean HasRetentionActionEx { get; set; }
 

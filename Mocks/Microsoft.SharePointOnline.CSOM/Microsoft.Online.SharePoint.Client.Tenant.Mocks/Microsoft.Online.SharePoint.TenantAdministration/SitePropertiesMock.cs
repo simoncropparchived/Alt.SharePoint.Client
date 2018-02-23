@@ -45,6 +45,12 @@ namespace Microsoft.Online.SharePoint.TenantAdministration
         public override System.Boolean HasHolds => HasHoldsEx;
         public System.Boolean HasHoldsEx { get; set; }
 
+        public override System.Guid HubSiteId => HubSiteIdEx;
+        public System.Guid HubSiteIdEx { get; set; }
+
+        public override System.Boolean IsHubSite => IsHubSiteEx;
+        public System.Boolean IsHubSiteEx { get; set; }
+
         public override System.DateTime LastContentModifiedDate => LastContentModifiedDateEx;
         public System.DateTime LastContentModifiedDateEx { get; set; }
 
@@ -66,6 +72,9 @@ namespace Microsoft.Online.SharePoint.TenantAdministration
         public override System.String OwnerEmail => OwnerEmailEx;
         public System.String OwnerEmailEx { get; set; }
 
+        public override System.String OwnerName => OwnerNameEx;
+        public System.String OwnerNameEx { get; set; }
+
         public override Microsoft.Online.SharePoint.TenantAdministration.PWAEnabledStatus PWAEnabled => PWAEnabledEx;
         public Microsoft.Online.SharePoint.TenantAdministration.PWAEnabledStatus PWAEnabledEx { get; set; }
 
@@ -74,6 +83,9 @@ namespace Microsoft.Online.SharePoint.TenantAdministration
 
         public override Microsoft.Online.SharePoint.TenantAdministration.SandboxedCodeActivationCapabilities SandboxedCodeActivationCapability => SandboxedCodeActivationCapabilityEx;
         public Microsoft.Online.SharePoint.TenantAdministration.SandboxedCodeActivationCapabilities SandboxedCodeActivationCapabilityEx { get; set; }
+
+        public override System.Boolean SetOwnerWithoutUpdatingSecondaryAdmin => SetOwnerWithoutUpdatingSecondaryAdminEx;
+        public System.Boolean SetOwnerWithoutUpdatingSecondaryAdminEx { get; set; }
 
         public override System.String SharingAllowedDomainList => SharingAllowedDomainListEx;
         public System.String SharingAllowedDomainListEx { get; set; }
@@ -92,6 +104,9 @@ namespace Microsoft.Online.SharePoint.TenantAdministration
 
         public override Microsoft.Online.SharePoint.TenantManagement.SharingCapabilities SiteDefinedSharingCapability => SiteDefinedSharingCapabilityEx;
         public Microsoft.Online.SharePoint.TenantManagement.SharingCapabilities SiteDefinedSharingCapabilityEx { get; set; }
+
+        public override System.Boolean SocialBarOnSitePagesDisabled => SocialBarOnSitePagesDisabledEx;
+        public System.Boolean SocialBarOnSitePagesDisabledEx { get; set; }
 
         public override System.String Status => StatusEx;
         public System.String StatusEx { get; set; }
