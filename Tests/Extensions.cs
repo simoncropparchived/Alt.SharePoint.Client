@@ -72,11 +72,7 @@ static class Extensions
             }
             value = type.Namespace;
         }
-
-        if (type.Name.Contains("IDic"))
-        {
-            Debug.WriteLine("sd");
-        }
+        
         var builder = new StringBuilder(value + "." + type.Name.Split('`').First());
 
         if (type is GenericInstanceType genericInstanceType)
