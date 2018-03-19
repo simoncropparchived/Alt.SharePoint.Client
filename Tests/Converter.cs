@@ -90,8 +90,7 @@ public class Converter
             !type.IsClass ||
             type.IsStatic() ||
             type.IsAbstract ||
-            //TODO: support generics
-            type.HasGenericParameters ||
+            !type.HasGenericParameters ||
             type.IsEnum ||
             type.IsValueType ||
             type.IsDelegate() ||
@@ -101,12 +100,31 @@ public class Converter
         }
 
         var builder = new StringBuilder();
+        string typeName;
+        if (type.HasGenericParameters)
+        {
+            typeName = type.Name.Replace("`1", "Mock<T>");
+        }
+        else
+        {
+            typeName = type.Name+ "Mock";
+        }
+        string parentName;
+        if (type.HasGenericParameters)
+        {
+            parentName = type.Name.Replace("`1", "<T>");
+        }
+        else
+        {
+            parentName = type.Name;
+        }
+
         builder.AppendLine(
             $@"
 // ReSharper disable IdentifierTypo
 namespace {type.Namespace}
 {{
-    public class {type.Name}Mock : {type.Name}
+    public class {typeName} : {parentName}
     {{
 ");
         foreach (var property in type.Properties)
@@ -127,7 +145,7 @@ namespace {type.Namespace}
 ");
         var namespacePath = Path.Combine(mocksSubDir, type.Namespace);
         Directory.CreateDirectory(namespacePath);
-        var filePath = Path.Combine(namespacePath, $"{type.Name}Mock.cs");
+        var filePath = Path.Combine(namespacePath, $"{type.Name.Replace("`","_")}Mock.cs");
         File.WriteAllText(filePath, builder.ToString());
     }
 

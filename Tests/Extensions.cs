@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
+using System.Text;
 using Mono.Cecil;
 
 static class Extensions
@@ -42,22 +42,44 @@ static class Extensions
         return attributes.Any(attribute => attribute.Constructor.DeclaringType.Name == attributeName);
     }
 
-    public static MethodDefinition GetEmptyConstructor(this TypeDefinition typeDefinition)
+    public static MethodDefinition GetEmptyConstructor(this TypeDefinition type)
     {
-        return typeDefinition.Methods.FirstOrDefault(IsEmptyConstructor);
+        return type.Methods.FirstOrDefault(IsEmptyConstructor);
     }
 
-    public static bool IsStatic(this TypeDefinition typeDefinition)
+    public static bool IsStatic(this TypeDefinition type)
     {
-        return !typeDefinition.Methods.Any(x => x.IsConstructor && !x.IsStatic);
+        return !type.Methods.Any(x => x.IsConstructor && !x.IsStatic);
     }
 
-    public static string CSharpName(this TypeReference typeDefinition)
+    public static string CSharpName(this TypeReference type)
     {
-        return typeDefinition.ToString()
-            .Replace("&", "")
-            .Replace("`1", "")
-            .Replace("`2", "");
+        string value;
+        if (type.IsNested)
+        {
+            value = type.DeclaringType.CSharpName();
+        }
+        else
+        {
+            value = type.Namespace;
+        }
+
+        var builder = new StringBuilder(value + "." + type.Name.Split('`').First());
+
+        if (type is GenericInstanceType genericInstanceType)
+        {
+            builder.Append("<");
+            foreach (var argument in genericInstanceType.GenericArguments)
+            {
+                builder.Append(argument.CSharpName());
+                if (genericInstanceType.GenericArguments.Last() != argument)
+                {
+                    builder.Append(", ");
+                }
+            }
+            builder.Append(">");
+        }
+        return builder.ToString();
     }
 
     public static bool IsStatic(this PropertyDefinition propertyDefinition)
