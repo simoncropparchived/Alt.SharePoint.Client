@@ -78,14 +78,9 @@ public class Converter
             return;
         }
 
-        foreach (var file in Directory.EnumerateFiles(dir))
+        foreach (var file in Directory.EnumerateFiles(dir, "*.*", SearchOption.AllDirectories))
         {
             File.Delete(file);
-        }
-
-        foreach (var subDir in Directory.EnumerateDirectories(dir))
-        {
-            Directory.Delete(subDir, true);
         }
     }
 
