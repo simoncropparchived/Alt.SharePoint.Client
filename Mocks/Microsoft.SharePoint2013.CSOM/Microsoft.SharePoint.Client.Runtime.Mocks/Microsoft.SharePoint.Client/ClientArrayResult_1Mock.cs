@@ -6,8 +6,8 @@ namespace Microsoft.SharePoint.Client
     {
 
 
-        public override .T[] Value => ValueEx;
-        public .T[] ValueEx { get; set; }
+        public override T[] Value => ValueEx;
+        public T[] ValueEx { get; set; }
 
     }
 }

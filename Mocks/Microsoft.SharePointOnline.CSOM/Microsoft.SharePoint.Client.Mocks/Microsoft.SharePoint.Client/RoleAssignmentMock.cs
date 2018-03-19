@@ -1,0 +1,32 @@
+
+// ReSharper disable IdentifierTypo
+namespace Microsoft.SharePoint.Client
+{
+    public class RoleAssignmentMock : RoleAssignment
+    {
+
+
+        public override Microsoft.SharePoint.Client.Principal Member => MemberEx;
+        public Microsoft.SharePoint.Client.Principal MemberEx { get; set; }
+
+        public override System.Int32 PrincipalId => PrincipalIdEx;
+        public System.Int32 PrincipalIdEx { get; set; }
+
+        public override Microsoft.SharePoint.Client.RoleDefinitionBindingCollection RoleDefinitionBindings => RoleDefinitionBindingsEx;
+        public Microsoft.SharePoint.Client.RoleDefinitionBindingCollection RoleDefinitionBindingsEx { get; set; }
+
+        public override void ImportRoleDefinitionBindings(Microsoft.SharePoint.Client.RoleDefinitionBindingCollection @roleDefinitionBindings)
+        {
+        }
+
+        public override void Update()
+        {
+        }
+
+        public override void DeleteObject()
+        {
+        }
+
+    }
+}
+

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using Mono.Cecil;
@@ -54,6 +55,10 @@ static class Extensions
 
     public static string CSharpName(this TypeReference type)
     {
+        if (type.IsGenericParameter)
+        {
+            return type.Name;
+        }
         string value;
         if (type.IsNested)
         {
@@ -61,22 +66,32 @@ static class Extensions
         }
         else
         {
+            if (type.Namespace == string.Empty)
+            {
+                return type.Name;
+            }
             value = type.Namespace;
         }
 
+        if (type.Name.Contains("IDic"))
+        {
+            Debug.WriteLine("sd");
+        }
         var builder = new StringBuilder(value + "." + type.Name.Split('`').First());
 
         if (type is GenericInstanceType genericInstanceType)
         {
             builder.Append("<");
-            foreach (var argument in genericInstanceType.GenericArguments)
+            for (var index = 0; index < genericInstanceType.GenericArguments.Count; index++)
             {
+                var argument = genericInstanceType.GenericArguments[index];
                 builder.Append(argument.CSharpName());
-                if (genericInstanceType.GenericArguments.Last() != argument)
+                if (index < genericInstanceType.GenericArguments.Count-1)
                 {
                     builder.Append(", ");
                 }
             }
+
             builder.Append(">");
         }
         return builder.ToString();

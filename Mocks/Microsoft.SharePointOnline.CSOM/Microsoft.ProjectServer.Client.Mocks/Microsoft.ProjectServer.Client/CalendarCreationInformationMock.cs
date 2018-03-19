@@ -1,0 +1,27 @@
+
+// ReSharper disable IdentifierTypo
+namespace Microsoft.ProjectServer.Client
+{
+    public class CalendarCreationInformationMock : CalendarCreationInformation
+    {
+
+
+        public override System.Guid Id => IdEx;
+        public System.Guid IdEx { get; set; }
+
+        public override System.String Name => NameEx;
+        public System.String NameEx { get; set; }
+
+        public override System.Guid OriginalId => OriginalIdEx;
+        public System.Guid OriginalIdEx { get; set; }
+
+        public override System.String TypeId => TypeIdEx;
+        public System.String TypeIdEx { get; set; }
+
+        public override void WriteToXml(System.Xml.XmlWriter @writer, Microsoft.SharePoint.Client.SerializationContext @serializationContext)
+        {
+        }
+
+    }
+}
+

@@ -90,7 +90,6 @@ public class Converter
             !type.IsClass ||
             type.IsStatic() ||
             type.IsAbstract ||
-            !type.HasGenericParameters ||
             type.IsEnum ||
             type.IsValueType ||
             type.IsDelegate() ||
@@ -103,7 +102,7 @@ public class Converter
         string typeName;
         if (type.HasGenericParameters)
         {
-            typeName = type.Name.Replace("`1", "Mock<T>");
+            typeName = type.Name.Replace("`1", $"Mock<{type.GenericParameters.Single().Name}>");
         }
         else
         {
@@ -112,7 +111,12 @@ public class Converter
         string parentName;
         if (type.HasGenericParameters)
         {
-            parentName = type.Name.Replace("`1", "<T>");
+            var genericParameter = type.GenericParameters.Single();
+            parentName = type.Name.Replace("`1", $"<{genericParameter.Name}>");
+            if (genericParameter.HasConstraints)
+            {
+                parentName += $" where {genericParameter.Name} : {genericParameter.Constraints.Single().Name}";
+            }
         }
         else
         {

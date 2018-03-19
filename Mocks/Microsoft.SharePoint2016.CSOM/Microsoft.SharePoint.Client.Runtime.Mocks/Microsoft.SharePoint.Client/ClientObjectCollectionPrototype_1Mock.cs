@@ -2,15 +2,15 @@
 // ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
-    public class ClientObjectCollectionPrototypeMock<T> : ClientObjectCollectionPrototype<T>
+    public class ClientObjectCollectionPrototypeMock<ItemType> : ClientObjectCollectionPrototype<ItemType>
     {
 
 
-        public override Microsoft.SharePoint.Client.ClientObjectPrototype<Microsoft.SharePoint.Client.ClientObjectCollectionPrototype.ItemType> RetrieveItems()
+        public override Microsoft.SharePoint.Client.ClientObjectPrototype<ItemType> RetrieveItems()
         {
             return RetrieveItemsEx;
         }
-        public Microsoft.SharePoint.Client.ClientObjectPrototype<Microsoft.SharePoint.Client.ClientObjectCollectionPrototype.ItemType> RetrieveItemsEx { get; set;}
+        public Microsoft.SharePoint.Client.ClientObjectPrototype<ItemType> RetrieveItemsEx { get; set;}
 
     }
 }

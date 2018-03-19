@@ -2,7 +2,7 @@
 // ReSharper disable IdentifierTypo
 namespace Microsoft.SharePoint.Client
 {
-    public class ClientObjectListMock<T> : ClientObjectList<T>
+    public class ClientObjectListMock<T> : ClientObjectList<T> where T : ClientObject
     {
 
 
