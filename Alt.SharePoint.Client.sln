@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2026
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28714.193
 MinimumVisualStudioVersion = 15.0.26711.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D38E547B-EABE-40FC-80B9-7AD8CB41374F}"
 	ProjectSection(SolutionItems) = preProject
@@ -22,18 +22,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alt.SharePointOnline.CSOM", "Alt.SharePointOnline.CSOM\Alt.SharePointOnline.CSOM.csproj", "{01758914-2DD3-4D6E-8089-6A18AA4F711F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alt.SharePointOnline.CSOM.Min", "Alt.SharePointOnline.CSOM.Min\Alt.SharePointOnline.CSOM.Min.csproj", "{1C59ECAB-E7BD-4C6A-BCAB-84AED59F219C}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alt.SharePoint2013.CSOM.Min.Mocks", "Alt.SharePoint2013.CSOM.Min.Mocks\Alt.SharePoint2013.CSOM.Min.Mocks.csproj", "{BFE6DB6F-BE3F-4672-9FC3-C4018CE7EE5C}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alt.SharePoint2013.CSOM.Mocks", "Alt.SharePoint2013.CSOM.Mocks\Alt.SharePoint2013.CSOM.Mocks.csproj", "{1CFC02A9-8447-41DF-AB80-FCFE124EB30F}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alt.SharePoint2016.CSOM.Min.Mocks", "Alt.SharePoint2016.CSOM.Min.Mocks\Alt.SharePoint2016.CSOM.Min.Mocks.csproj", "{FBB172AB-B459-437C-95E0-45DB13F22578}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alt.SharePoint2016.CSOM.Mocks", "Alt.SharePoint2016.CSOM.Mocks\Alt.SharePoint2016.CSOM.Mocks.csproj", "{23C0F1A3-F0FD-42C9-8E63-EE006E7242BE}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alt.SharePointOnline.CSOM.Min.Mocks", "Alt.SharePointOnline.CSOM.Min.Mocks\Alt.SharePointOnline.CSOM.Min.Mocks.csproj", "{982955BE-15A7-4603-8590-EE3CF2226A66}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alt.SharePointOnline.CSOM.Mocks", "Alt.SharePointOnline.CSOM.Mocks\Alt.SharePointOnline.CSOM.Mocks.csproj", "{FCCA1B6A-1F5F-4CDE-994C-95EFD2DCB125}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples", "Samples\Samples.csproj", "{9FD1BAA5-E9F6-4754-82D2-0A162CD4EC0C}"
 EndProject
@@ -80,36 +68,6 @@ Global
 		{1C59ECAB-E7BD-4C6A-BCAB-84AED59F219C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C59ECAB-E7BD-4C6A-BCAB-84AED59F219C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C59ECAB-E7BD-4C6A-BCAB-84AED59F219C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BFE6DB6F-BE3F-4672-9FC3-C4018CE7EE5C}.ConvertOnly|Any CPU.ActiveCfg = Release|Any CPU
-		{BFE6DB6F-BE3F-4672-9FC3-C4018CE7EE5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BFE6DB6F-BE3F-4672-9FC3-C4018CE7EE5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BFE6DB6F-BE3F-4672-9FC3-C4018CE7EE5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BFE6DB6F-BE3F-4672-9FC3-C4018CE7EE5C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1CFC02A9-8447-41DF-AB80-FCFE124EB30F}.ConvertOnly|Any CPU.ActiveCfg = Release|Any CPU
-		{1CFC02A9-8447-41DF-AB80-FCFE124EB30F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1CFC02A9-8447-41DF-AB80-FCFE124EB30F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1CFC02A9-8447-41DF-AB80-FCFE124EB30F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1CFC02A9-8447-41DF-AB80-FCFE124EB30F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FBB172AB-B459-437C-95E0-45DB13F22578}.ConvertOnly|Any CPU.ActiveCfg = Release|Any CPU
-		{FBB172AB-B459-437C-95E0-45DB13F22578}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FBB172AB-B459-437C-95E0-45DB13F22578}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FBB172AB-B459-437C-95E0-45DB13F22578}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FBB172AB-B459-437C-95E0-45DB13F22578}.Release|Any CPU.Build.0 = Release|Any CPU
-		{23C0F1A3-F0FD-42C9-8E63-EE006E7242BE}.ConvertOnly|Any CPU.ActiveCfg = Release|Any CPU
-		{23C0F1A3-F0FD-42C9-8E63-EE006E7242BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{23C0F1A3-F0FD-42C9-8E63-EE006E7242BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{23C0F1A3-F0FD-42C9-8E63-EE006E7242BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{23C0F1A3-F0FD-42C9-8E63-EE006E7242BE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{982955BE-15A7-4603-8590-EE3CF2226A66}.ConvertOnly|Any CPU.ActiveCfg = Release|Any CPU
-		{982955BE-15A7-4603-8590-EE3CF2226A66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{982955BE-15A7-4603-8590-EE3CF2226A66}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{982955BE-15A7-4603-8590-EE3CF2226A66}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{982955BE-15A7-4603-8590-EE3CF2226A66}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FCCA1B6A-1F5F-4CDE-994C-95EFD2DCB125}.ConvertOnly|Any CPU.ActiveCfg = Release|Any CPU
-		{FCCA1B6A-1F5F-4CDE-994C-95EFD2DCB125}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FCCA1B6A-1F5F-4CDE-994C-95EFD2DCB125}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FCCA1B6A-1F5F-4CDE-994C-95EFD2DCB125}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FCCA1B6A-1F5F-4CDE-994C-95EFD2DCB125}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9FD1BAA5-E9F6-4754-82D2-0A162CD4EC0C}.ConvertOnly|Any CPU.ActiveCfg = Debug|Any CPU
 		{9FD1BAA5-E9F6-4754-82D2-0A162CD4EC0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9FD1BAA5-E9F6-4754-82D2-0A162CD4EC0C}.Debug|Any CPU.Build.0 = Debug|Any CPU

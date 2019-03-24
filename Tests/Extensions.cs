@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using Mono.Cecil;
@@ -72,7 +71,7 @@ static class Extensions
             }
             value = type.Namespace;
         }
-        
+
         var builder = new StringBuilder(value + "." + type.Name.Split('`').First());
 
         if (type is GenericInstanceType genericInstanceType)
