@@ -8,6 +8,6 @@
   <ItemGroup>
     <Content Include="../Binaries/Converted/Microsoft.SharePoint2016.CSOM/Microsoft.SharePoint.Client.dll" PackagePath="lib/net46" />
     <Content Include="../Binaries/Converted/Microsoft.SharePoint2016.CSOM/Microsoft.SharePoint.Client.Runtime.dll" PackagePath="lib/net46" />
-    <PackageReference Include="ProjectDefaults" Version="1.0.3" PrivateAssets="All" />
+    <PackageReference Include="ProjectDefaults" Version="1.0.8" PrivateAssets="All" />
   </ItemGroup>
 </Project>
