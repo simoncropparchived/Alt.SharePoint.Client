@@ -65,7 +65,7 @@ public partial class Virtual
         }
     }
 
-    MethodReference DetermineMethodTo_Ldvirtftn(object operand)
+    MethodReference? DetermineMethodTo_Ldvirtftn(object operand)
     {
         foreach (var method in MethodCache)
         {

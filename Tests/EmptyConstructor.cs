@@ -7,7 +7,7 @@ public class EmptyConstructor
 {
     public static void Execute(ModuleDefinition  moduleDefinition)
     {
-        var processed = new Dictionary<TypeDefinition, MethodReference>();
+        var processed = new Dictionary<TypeDefinition, MethodReference?>();
         var external = new Dictionary<TypeReference, MethodReference>();
         foreach (var type in moduleDefinition.GetTypes())
         {
@@ -47,7 +47,7 @@ public class EmptyConstructor
                 continue;
             }
 
-            MethodReference baseEmptyConstructor;
+            MethodReference? baseEmptyConstructor;
             if (baseType is TypeDefinition baseTypeDefinition)
             {
                 baseEmptyConstructor = processed[baseTypeDefinition];

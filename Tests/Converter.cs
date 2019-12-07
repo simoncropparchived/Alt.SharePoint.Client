@@ -84,10 +84,8 @@ public class Converter
 
     StrongNameKeyPair GetStrongName()
     {
-        using (var keyPairFile = File.OpenRead(keyPath))
-        {
-            return new StrongNameKeyPair(keyPairFile);
-        }
+        using var keyPairFile = File.OpenRead(keyPath);
+        return new StrongNameKeyPair(keyPairFile);
     }
 
     static string GetBinariesPath()

@@ -18,9 +18,9 @@ public class Sample
     public void CustomMock()
     {
         var listItem = new MockListItem
-        {
-            DisplayNameEx = "The Display Name"
-        };
+        (
+            displayName: "The Display Name"
+        );
         Assert.Equal("The Display Name", listItem.DisplayName);
     }
 
@@ -28,6 +28,10 @@ public class Sample
     {
         public override string DisplayName => DisplayNameEx;
 
-        public string DisplayNameEx { get; set; }
+        public MockListItem(string displayName)
+        {
+            DisplayNameEx = displayName;
+        }
+        public string DisplayNameEx { get; }
     }
 }

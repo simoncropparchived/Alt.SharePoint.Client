@@ -6,9 +6,7 @@
   <ItemGroup>
     <PackageReference Include="Xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="FakeItEasy" Version="5.4.1" />
+    <PackageReference Include="FakeItEasy" Version="5.5.0" />
     <Reference Include="Microsoft.SharePoint.Client">
       <HintPath>..\Binaries\Converted\Microsoft.SharePoint2016.CSOM\Microsoft.SharePoint.Client.dll</HintPath>
     </Reference>
@@ -16,7 +14,7 @@
       <HintPath>..\Binaries\Converted\Microsoft.SharePoint2016.CSOM\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http" />
-    <PackageReference Include="ProjectDefaults" Version="1.0.30" PrivateAssets="All" />
+    <PackageReference Include="ProjectDefaults" Version="1.0.34" PrivateAssets="All" />
   </ItemGroup>
 
 </Project>
