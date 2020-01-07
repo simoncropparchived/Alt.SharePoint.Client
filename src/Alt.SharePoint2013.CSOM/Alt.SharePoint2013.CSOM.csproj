@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net46</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="../Binaries/Converted/Microsoft.SharePoint2013.CSOM/*.dll" PackagePath="lib/net46" />
+    <PackageReference Include="ProjectDefaults" Version="1.0.40" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" Condition="$(Configuration) == 'Release'" />
+    <Content Include="$(SolutionDir)..\src\icon.png" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+</Project>
