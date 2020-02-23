@@ -74,13 +74,14 @@ public partial class Virtual
                 return method;
             }
 
-            if (operand is MethodReference operandMethodReference)
+            if (!(operand is MethodReference operandMethodReference))
             {
-                var operandMethodDefinition = operandMethodReference.Resolve();
-                if (operandMethodDefinition == method)
-                {
-                    return operandMethodReference;
-                }
+                continue;
+            }
+            var operandMethodDefinition = operandMethodReference.Resolve();
+            if (operandMethodDefinition == method)
+            {
+                return operandMethodReference;
             }
         }
 
