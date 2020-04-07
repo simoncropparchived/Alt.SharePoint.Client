@@ -7,7 +7,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="../Binaries/Converted/Microsoft.SharePointOnline.CSOM/*.dll" PackagePath="lib/net46" />
-    <PackageReference Include="ProjectDefaults" Version="1.0.41" PrivateAssets="All" />
+    <PackageReference Include="ProjectDefaults" Version="1.0.42" PrivateAssets="All" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" Condition="$(Configuration) == 'Release'" />
     <Content Include="$(SolutionDir)..\src\icon.png" Pack="true" PackagePath="\"/>
   </ItemGroup>
