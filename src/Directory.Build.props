@@ -2,6 +2,7 @@
 <Project>
   <PropertyGroup>
     <Version>1.2.0</Version>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
     <PackageLicenseUrl>http://go.microsoft.com/fwlink/?LinkId=280198</PackageLicenseUrl>
     <PackageRequireLicenseAcceptance>yes</PackageRequireLicenseAcceptance>
     <Authors>Simon Cropp</Authors>
