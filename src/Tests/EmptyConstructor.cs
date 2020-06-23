@@ -35,10 +35,6 @@ public class EmptyConstructor
             }
 
             var typeEmptyConstructor = type.GetEmptyConstructor();
-            if (type.Name == "FormDigestInfo")
-            {
-                Debug.WriteLine("sds");
-            }
             if (typeEmptyConstructor != null)
             {
                 MakeConstructorVisible(typeEmptyConstructor);
