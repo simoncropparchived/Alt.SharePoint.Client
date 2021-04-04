@@ -8,7 +8,7 @@ static class Extensions
 {
     public static List<TypeDefinition> GetAllClasses(this ModuleDefinition moduleDefinition)
     {
-        var definitions = new List<TypeDefinition>();
+        List<TypeDefinition> definitions = new();
         //First is always module so we will skip that;
         GetTypes(moduleDefinition.Types.Skip(1), definitions);
         return definitions;
@@ -42,7 +42,7 @@ static class Extensions
         return attributes.Any(attribute => attribute.Constructor.DeclaringType.Name == attributeName);
     }
 
-    public static MethodDefinition GetEmptyConstructor(this TypeDefinition type)
+    public static MethodDefinition? GetEmptyConstructor(this TypeDefinition type)
     {
         return type.Methods.FirstOrDefault(IsEmptyConstructor);
     }
@@ -72,7 +72,7 @@ static class Extensions
             value = type.Namespace;
         }
 
-        var builder = new StringBuilder(value + "." + type.Name.Split('`').First());
+        StringBuilder builder = new(value + "." + type.Name.Split('`').First());
 
         if (type is GenericInstanceType genericInstanceType)
         {

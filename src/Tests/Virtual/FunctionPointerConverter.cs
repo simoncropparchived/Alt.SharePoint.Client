@@ -15,7 +15,7 @@ public partial class Virtual
         }
     }
 
-    void ReplaceUnmanaged(MethodDefinition method)
+    void ReplaceUnmanaged(MethodDefinition? method)
     {
         if (method == null)
         {

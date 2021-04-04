@@ -17,7 +17,7 @@ public class Sample
     [Fact]
     public void CustomMock()
     {
-        var listItem = new MockListItem
+        MockListItem listItem = new
         (
             displayName: "The Display Name"
         );

@@ -7,8 +7,8 @@ public class EmptyConstructor
 {
     public static void Execute(ModuleDefinition  moduleDefinition)
     {
-        var processed = new Dictionary<TypeDefinition, MethodReference?>();
-        var external = new Dictionary<TypeReference, MethodReference>();
+        Dictionary<TypeDefinition, MethodReference?> processed = new();
+        Dictionary<TypeReference, MethodReference> external = new();
         foreach (var type in moduleDefinition.GetTypes())
         {
             if (!type.IsClass)
@@ -82,9 +82,9 @@ public class EmptyConstructor
     static MethodDefinition AddEmptyConstructor(TypeDefinition type)
     {
         var methodAttributes = MethodAttributes.Public | MethodAttributes.HideBySig | MethodAttributes.SpecialName | MethodAttributes.RTSpecialName;
-        var method = new MethodDefinition(".ctor", methodAttributes, type.Module.TypeSystem.Void);
+        MethodDefinition method = new(".ctor", methodAttributes, type.Module.TypeSystem.Void);
         method.Body.Instructions.Add(Instruction.Create(OpCodes.Ldarg_0));
-        var methodReference = new MethodReference(".ctor", type.Module.TypeSystem.Void,type.BaseType){HasThis = true};
+        MethodReference methodReference = new(".ctor", type.Module.TypeSystem.Void,type.BaseType){HasThis = true};
         method.Body.Instructions.Add(Instruction.Create(OpCodes.Call, methodReference));
         method.Body.Instructions.Add(Instruction.Create(OpCodes.Ret));
         type.Methods.Add(method);

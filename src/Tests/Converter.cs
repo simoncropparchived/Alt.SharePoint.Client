@@ -34,7 +34,7 @@ public class Converter
     {
         var newDirPath = Path.Combine(converted, Path.GetFileName(directory));
         PurgeDirectory(newDirPath);
-        var readerParameters = new ReaderParameters
+        ReaderParameters readerParameters = new()
         {
             AssemblyResolver = new AssemblyResolver(newDirPath)
         };
@@ -76,7 +76,7 @@ public class Converter
 
     WriterParameters GetWriterParameters()
     {
-        return new WriterParameters
+        return new()
         {
             StrongNameKeyPair = GetStrongName()
         };
@@ -85,7 +85,7 @@ public class Converter
     StrongNameKeyPair GetStrongName()
     {
         using var keyPairFile = File.OpenRead(keyPath);
-        return new StrongNameKeyPair(keyPairFile);
+        return new(keyPairFile);
     }
 
     static string GetBinariesPath()

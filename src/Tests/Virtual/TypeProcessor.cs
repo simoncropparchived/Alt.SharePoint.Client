@@ -23,7 +23,7 @@ public partial class Virtual
         }
     }
 
-    void ProcessMethod(MethodDefinition method)
+    void ProcessMethod(MethodDefinition? method)
     {
         if (method == null)
         {

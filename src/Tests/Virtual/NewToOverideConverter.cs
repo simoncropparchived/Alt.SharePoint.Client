@@ -36,7 +36,7 @@ public partial class Virtual
 
     IEnumerable<TypeReference> GetBaseTypes(TypeDefinition typeDefinition)
     {
-        var typeReferences = new List<TypeReference>();
+        List<TypeReference> typeReferences = new();
         do
         {
             if (typeDefinition.BaseType == null)
@@ -57,7 +57,7 @@ public partial class Virtual
         return typeReferences;
     }
 
-    void Replace(MethodDefinition methodDefinition, List<MethodDefinition> baseMethods)
+    void Replace(MethodDefinition? methodDefinition, List<MethodDefinition> baseMethods)
     {
         if (methodDefinition == null)
         {

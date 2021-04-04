@@ -22,7 +22,7 @@ public partial class Virtual
         }
     }
 
-    void Replace(MethodDefinition methodDefinition)
+    void Replace(MethodDefinition? methodDefinition)
     {
         if (methodDefinition == null)
         {

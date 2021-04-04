@@ -8,5 +8,5 @@ public partial class Virtual
         MethodCache.Add(methodDefinition);
     }
 
-    public List<MethodDefinition> MethodCache = new List<MethodDefinition>();
+    public List<MethodDefinition> MethodCache = new();
 }

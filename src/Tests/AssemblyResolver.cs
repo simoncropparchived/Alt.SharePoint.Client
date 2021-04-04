@@ -5,7 +5,7 @@ using Mono.Cecil;
 class AssemblyResolver : DefaultAssemblyResolver
 {
     string converted;
-    Dictionary<string, AssemblyDefinition> refs = new Dictionary<string, AssemblyDefinition>();
+    Dictionary<string, AssemblyDefinition> refs = new();
 
     public AssemblyResolver(string converted)
     {
